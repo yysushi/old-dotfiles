@@ -1,0 +1,13 @@
+[user]
+  name = koketani
+  email = ykoketani@gmail.com
+
+[color]
+  ui = true
+
+[core]
+  editor = vim
+
+[ghq]
+  root = ~/.ghq
+  root = ~/.go/src

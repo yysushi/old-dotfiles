@@ -1,0 +1,14 @@
+defencoding utf-8
+encoding utf-8 utf-8
+#setenv LANG ja_JP.UTF-8
+
+caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w"
+escape ^Jj
+
+defscrollback 10000
+
+term screen-256color
+
+shell -$SHELL
+
+maptimeout 0
