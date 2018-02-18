@@ -6,7 +6,7 @@ export PATH="$PATH":/usr/local/bin
 
 # default editor
 export EDITOR=nvim
-export TERM=xterm-256color
+export TERM=screen-256color
 
 # alias
 alias ll='ls -alh'
@@ -15,11 +15,7 @@ alias vim='nvim'
 alias view='nvim -R'
 
 # tmux
-# => https://github.com/tmux/tmux/issues/475
-export EVENT_NOKQUEUE=1
-alias tmux="TERM=screen-256color-bce tmux"
 mkdir -p "$HOME"/.tmux/log
-#alias screen="TERM=screen-256color-bce /usr/local/Cellar/screen/4.4.0/bin/screen"
 
 # virtualenv configuration
 export WORKON_HOME="$HOME"/.virtualenvs
