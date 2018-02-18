@@ -3,12 +3,9 @@ call plug#begin()
 tnoremap <silent> <ESC> <C-\><C-n>
 
 "" general
-" stop to use
-" Plug 'scrooloose/syntastic'
-" instead of the above
-Plug 'w0rp/ale'
 Plug 'chriskempson/base16-vim'
 Plug 'Shougo/vimshell'
+Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'junegunn/vim-easy-align'
@@ -18,6 +15,16 @@ let g:deoplete#enable_at_startup = 1
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
+
+"" git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+"" general syntax
+" stop to use
+" Plug 'scrooloose/syntastic'
+" instead of the above
+Plug 'w0rp/ale'
 
 "" golang
 Plug 'fatih/vim-go'
