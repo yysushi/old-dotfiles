@@ -25,6 +25,9 @@ mkdir -p "$HOME"/.tmux/log
 export WORKON_HOME="$HOME"/.virtualenvs
 . "$HOME"/.local/bin/virtualenvwrapper.sh
 
+# dev
+export DEV_ROOT_PATH=$HOME/git
+
 # golang
 source "$HOME"/.gvm/scripts/gvm
 gvm use go1.9.1 > /dev/null

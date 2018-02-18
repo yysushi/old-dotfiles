@@ -8,6 +8,7 @@
 * [ghq](https://github.com/motemen/ghq#installation)
 * [fzf](https://github.com/junegunn/fzf#installation)
 * [peco](https://github.com/peco/peco/releases)
+* [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal#installation)
 
 # Place Configurations
 ```bash
