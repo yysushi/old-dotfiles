@@ -1,0 +1,38 @@
+# vi mode in bash
+set -o vi
+
+# include local bin path
+export PATH="$PATH":/usr/local/bin
+
+# default editor
+export EDITOR=nvim
+export TERM=screen-256color
+
+# alias
+alias ll='ls -alh'
+alias vim='nvim'
+alias view='nvim -R'
+
+# tmux
+mkdir -p "$HOME"/.tmux/log
+
+# virtualenv configuration
+export WORKON_HOME="$HOME"/.virtualenvs
+. "$HOME"/.local/bin/virtualenvwrapper.sh
+
+# dev
+export DEV_ROOT_PATH=$HOME/git
+
+# golang
+source "$HOME"/.gvm/scripts/gvm
+gvm use go1.9.1 > /dev/null
+export GOPATH="$HOME"/.go
+export PATH="$PATH":"$GOPATH"/bin
+export PATH="$PATH":/usr/local/go/bin
+
+# ghq
+export GHQ_ROOT="$HOME"/.ghq
+export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
+
+# gvm
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

@@ -5,6 +5,7 @@ here=$(cd $(dirname $0); pwd -P)
 # under $HOME
 ln -Ffs $here/tmux.conf $HOME/.tmux.conf
 ln -Ffs $here/bashrc $HOME/.bashrc
+ln -Ffs $here/mybashrc $HOME/.mybashrc
 ln -Ffs $here/screenrc $HOME/.screenrc
 ln -Ffs $here/gitconfig $HOME/.gitconfig
 
