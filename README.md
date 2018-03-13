@@ -9,6 +9,7 @@
 * [fzf](https://github.com/junegunn/fzf#installation)
 * [peco](https://github.com/peco/peco/releases)
 * [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal#installation)
+* [global protect](https://github.com/dlenski/openconnect#installation)
 
 # Place Configurations
 ```bash
