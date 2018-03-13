@@ -36,3 +36,6 @@ export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
 
 # gvm
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
