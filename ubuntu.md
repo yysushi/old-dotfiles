@@ -7,8 +7,8 @@ XKBOPTIONS="ctrl:nocaps"
 # japanese input
 https://hirooka.pro/?p=8373
 
-# connect palo alto vpn globalprotect by using openconnect
-https://github.com/dlenski/openconnect#building-from-source-on-linux
-
 # anti virus software
 clamtk
+
+# workspace
+System Settings -> Appearance -> Behavior -> Enable workspaces
