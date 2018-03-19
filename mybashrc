@@ -39,3 +39,6 @@ export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# locale
+export LC_ALL=C
