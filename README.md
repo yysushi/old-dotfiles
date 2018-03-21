@@ -10,6 +10,8 @@
 * [peco](https://github.com/peco/peco/releases)
 * [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal#installation)
 * [global protect](https://github.com/dlenski/openconnect#installation)
+* [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L8)
+* [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
 
 # Place Configurations
 ```bash
