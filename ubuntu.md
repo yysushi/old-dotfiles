@@ -11,4 +11,12 @@ https://hirooka.pro/?p=8373
 clamtk
 
 # workspace
+- enable workspace
+```
 System Settings -> Appearance -> Behavior -> Enable workspaces
+```
+
+- configure to switch workspace by vim-like key
+```
+System Settings -> Keyboard -> Shortcuts -> Navigation 
+```
