@@ -36,6 +36,7 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " Plug 'nvie/vim-flake8', { 'for': 'python' }
 " Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+let g:jedi#force_py_version=3
 " let g:syntastic_python_checkers = ["flake8"]
 " let g:syntastic_python_flake8_args="--max-line-length=100"
 
@@ -56,8 +57,6 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 call plug#end()
 
-"" leader key
-let mapleader = ","
 "" coloring
 " set termguicolors
 " let base16colorspace=256  " Access colors present in 256 colorspace
