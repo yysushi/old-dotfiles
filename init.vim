@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'
 " Plug 'scrooloose/syntastic'
 " instead of the above
 Plug 'w0rp/ale'
+let g:ale_fixers = { 'javascript': ['eslint'], }
 
 "" golang
 Plug 'fatih/vim-go'
@@ -41,7 +42,6 @@ let g:jedi#force_py_version=3
 " let g:syntastic_python_flake8_args="--max-line-length=100"
 
 "" javascript
-let g:ale_fixers = { 'javascript': ['eslint'], }
 " Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 " Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
@@ -52,8 +52,16 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 "" yaml
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
 
+"" toml
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+
 "" ruby
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+
+"" rust
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+" https://github.com/rust-lang-nursery/rustfmt#installation
+let g:rustfmt_autosave = 1
 
 call plug#end()
 
