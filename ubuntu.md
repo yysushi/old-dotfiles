@@ -18,5 +18,18 @@ System Settings -> Appearance -> Behavior -> Enable workspaces
 
 - configure to switch workspace by vim-like key
 ```
-System Settings -> Keyboard -> Shortcuts -> Navigation 
+System Settings -> Keyboard -> Shortcuts -> Navigation
+```
+
+# mouse
+```
+System Settings -> Mouse & Touchpad -> General -> Double-click
+System Settings -> Mouse & Touchpad -> Touchpad -> Pointer speed
+System Settings -> Mouse & Touchpad -> Touchpad -> Tap to click
+System Settings -> Mouse & Touchpad -> Touchpad -> Natural scrolling
+```
+
+# mouse
+```
+System Settings -> Keyboard -> Typing -> Repeat keys
 ```
