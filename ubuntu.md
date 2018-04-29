@@ -33,3 +33,11 @@ System Settings -> Mouse & Touchpad -> Touchpad -> Natural scrolling
 ```
 System Settings -> Keyboard -> Typing -> Repeat keys
 ```
+
+# notes for other apps
+* hipchat
+* slack
+* clamav, clamtk
+* chromium
+* chrome
+* zoom
