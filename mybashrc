@@ -12,6 +12,7 @@ export TERM=screen-256color
 
 # alias
 alias ll='ls -alh'
+alias vi='nvim'
 alias vim='nvim'
 alias view='nvim -R'
 
