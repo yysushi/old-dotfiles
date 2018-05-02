@@ -41,6 +41,7 @@ System Settings -> Keyboard -> Typing -> Repeat keys
 * chromium
 * chrome
 * zoom
+* tig
 
 # fix bluetooth
 * [paired but no connection](https://askubuntu.com/questions/787023/bluetooth-not-working-on-ubuntu-16-04-lts)
