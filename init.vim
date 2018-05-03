@@ -69,8 +69,9 @@ call plug#end()
 "" coloring
 " set termguicolors
 " let base16colorspace=256  " Access colors present in 256 colorspace
-" colorscheme base16-tomorrow-night
 colorscheme base16-ocean
+" colorscheme base16-materia
+" colorscheme base16-solarized-dark
 "" numbering
 set number
 set ruler
