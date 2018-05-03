@@ -42,6 +42,10 @@ System Settings -> Keyboard -> Typing -> Repeat keys
 * chrome
 * zoom
 * tig
+* ls-colors
+```
+curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark > ~/.dircolors
+```
 
 # fix bluetooth
 * [paired but no connection](https://askubuntu.com/questions/787023/bluetooth-not-working-on-ubuntu-16-04-lts)

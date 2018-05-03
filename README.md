@@ -12,10 +12,6 @@
 * [global protect](https://github.com/dlenski/openconnect#installation)
 * [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L8)
 * [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
-* [ls-colors](https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark)
-```
-curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark > ~/.dircolors
-```
 
 # Place Configurations
 ```bash
