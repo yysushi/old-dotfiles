@@ -75,5 +75,6 @@ colorscheme base16-ocean
 "" numbering
 set number
 set ruler
+set spell
 "" clipboard; share vim's yank and mac's clipboard
 set clipboard+=unnamedplus
