@@ -57,3 +57,5 @@ GIT_PS1_SHOWUPSTREAM=auto
 # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\u\[\033[00m\]:\[\033[01;34m\]\w$(__git_ps1 " (%s)")\[\033[00m\]\$ '
 # export PS1='\u:\w$(__git_ps1 " (%s)")\$ '
 export PROMPT_COMMAND='__git_ps1 "\[\033[01;34m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]" "\\\$ "'
+
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
