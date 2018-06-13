@@ -52,6 +52,7 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 
 "" yaml
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
+Plug 'adrienverge/yamllint', { 'for': 'yaml' }
 
 "" toml
 Plug 'cespare/vim-toml', { 'for': 'toml' }
