@@ -27,6 +27,7 @@ export WORKON_HOME="$HOME"/.virtualenvs
 
 # dev
 mkdir -p "$HOME"/Developments
+cd "$HOME"/Developments
 
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
