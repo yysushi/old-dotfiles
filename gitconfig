@@ -8,3 +8,7 @@
 [core]
   editor = vi
   excludesfile = ~/.gitignore
+
+[ghq]
+  root = ~/Developments/git
+  root = ~/Developments/go/src
