@@ -26,19 +26,15 @@ export WORKON_HOME="$HOME"/.virtualenvs
 . "$HOME"/.local/bin/virtualenvwrapper.sh
 
 # dev
-export DEV_ROOT_PATH=$HOME/git
+mkdir -p "$HOME"/Developments
 
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 source "$HOME"/.gvm/scripts/gvm
 gvm use go1.10 > /dev/null
-export GOPATH="$HOME"/.go
+export GOPATH="$HOME"/Developments/go
 export PATH="$PATH":"$GOPATH"/bin
 export PATH="$PATH":/usr/local/go/bin
-
-# ghq
-export GHQ_ROOT="$HOME"/.ghq
-export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
