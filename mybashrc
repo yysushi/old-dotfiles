@@ -26,7 +26,8 @@ export WORKON_HOME="$HOME"/.virtualenvs
 . "$HOME"/.local/bin/virtualenvwrapper.sh
 
 # dev
-mkdir -p "$HOME"/Developments
+export DEV="$HOME"/Developments
+mkdir -p "$DEV"
 
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
