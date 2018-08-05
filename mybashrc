@@ -19,6 +19,7 @@ alias fgrep='fgrep --color=none'
 alias view='nvim -R'
 
 # tmux
+alias tmux='tmux -u'
 mkdir -p "$HOME"/.tmux/log
 
 # virtualenv configuration
