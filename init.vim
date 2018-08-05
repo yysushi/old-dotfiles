@@ -27,6 +27,14 @@ Plug 'tpope/vim-fugitive'
 " instead of the above
 Plug 'w0rp/ale'
 let g:ale_fixers = { 'javascript': ['eslint'], }
+Plug 'mattn/sonictemplate-vim'
+let g:sonictemplate_vim_template_dir = [
+\ '$HOME/.config/nvim/plugged/sonictemplate-vim/template',
+\ '$HOME/.dotfiles/template'
+\]
+
+"" cpp
+Plug 'vim-jp/vim-cpp', { 'for': 'cpp'}
 
 "" golang
 Plug 'fatih/vim-go'
