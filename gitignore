@@ -4,6 +4,9 @@
 id_rsa
 id_rsa.pub
 
+a.out
+a.exe
+
 build/
 
 typescript
