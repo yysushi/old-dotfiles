@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
-	cout << "Hello, world!" << endl;
-	{{_cursor_}}
+	int {{_cursor_}};
+	cin >> a;
+	cout << a << endl;
+	return 0;
 }
