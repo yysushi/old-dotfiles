@@ -9,6 +9,7 @@ ln -Ffs $here/mybashrc $HOME/.mybashrc
 ln -Ffs $here/screenrc $HOME/.screenrc
 ln -Ffs $here/gitconfig $HOME/.gitconfig
 ln -Ffs $here/gitignore $HOME/.gitignore
+ln -Ffs $here/gitmessage.txt $HOME/.gitmessage.txt
 
 # under $HOME/.config
 ## nvim

@@ -9,6 +9,9 @@
   editor = vi
   excludesfile = ~/.gitignore
 
+[commit]
+  template = ~/.gitmessage.txt
+
 [ghq]
   root = ~/Developments/git
   root = ~/Developments/go/src
