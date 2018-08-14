@@ -30,6 +30,11 @@ export WORKON_HOME="$HOME"/.virtualenvs
 export DEV="$HOME"/Developments
 mkdir -p "$DEV"
 
+# cpp for make command and make built-in plugin in vim
+export CXX="g++"
+export CXXFLAGS+="-g -Wall -O2 -std=c++14"
+# export LDFLAGS
+
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 source "$HOME"/.gvm/scripts/gvm
