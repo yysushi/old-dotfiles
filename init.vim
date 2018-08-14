@@ -13,6 +13,8 @@ Plug 'terryma/vim-multiple-cursors'
 " Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
+" autocmd FileType python
+"        \ call deoplete#custom#buffer_option('auto_complete', v:false)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
@@ -23,21 +25,32 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 "" general syntax
-" stop to use
-" Plug 'scrooloose/syntastic'
-" instead of the above
 Plug 'w0rp/ale'
-let g:ale_fixers = { 'javascript': ['eslint'], }
+let g:ale_lint_delay = 1000
+let g:ale_linters_explicit = 1
+" gem install rubocop
+" pip install flake8 yamllint
+let g:ale_linters = {
+    \ 'javascript': ['eslint', 'prettier'],
+    \ 'python': ['flake8'],
+    \ 'ruby': ['rubocup'],
+    \ 'typescript': ['tslint', 'prettier'],
+    \ 'yaml': ['yamllint']
+    \ }
+let g:ale_fix_on_save = 0
+let g:ale_completion_enabled = 0
+
+"" template
 Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = [
-\ '$HOME/.config/nvim/plugged/sonictemplate-vim/template',
-\ '$HOME/.dotfiles/template'
-\]
+    \ '$HOME/.config/nvim/plugged/sonictemplate-vim/template',
+    \ '$HOME/.dotfiles/template'
+    \]
 
 "" cpp
+" apt install clang llvm build-essentials
 Plug 'vim-jp/vim-cpp', { 'for': ['c', 'cpp'] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
-" Plug 'lyuts/vim-rtags', { 'for': 'cpp'}
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-3.8/lib/clang'
@@ -54,26 +67,12 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#force_py_version=3
-" let g:syntastic_python_checkers = ["flake8"]
-" let g:syntastic_python_flake8_args="--max-line-length=100"
-
-"" javascript
-" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-" Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
 
 "" java
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 
-"" yaml
-Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
-Plug 'adrienverge/yamllint', { 'for': 'yaml' }
-
 "" toml
 Plug 'cespare/vim-toml', { 'for': 'toml' }
-
-"" ruby
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 "" rust
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -86,11 +85,7 @@ Plug 'honza/dockerfile.vim'
 call plug#end()
 
 "" coloring
-" set termguicolors
-" let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-ocean
-" colorscheme base16-materia
-" colorscheme base16-solarized-dark
 "" numbering
 set number
 set ruler
