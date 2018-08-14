@@ -31,7 +31,7 @@ export DEV="$HOME"/Developments
 mkdir -p "$DEV"
 
 # cpp for make command and make built-in plugin in vim
-export CXX="g++"
+export CXX="clang++"
 export CXXFLAGS+="-g -Wall -O2 -std=c++14"
 # export LDFLAGS
 

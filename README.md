@@ -12,6 +12,7 @@
 * [global protect](https://github.com/dlenski/openconnect#installation)
 * [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L8)
 * [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
+* clang
 
 # Place Configurations
 ```bash

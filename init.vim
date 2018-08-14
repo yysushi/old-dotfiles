@@ -16,6 +16,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 "" git
 Plug 'airblade/vim-gitgutter'
@@ -34,9 +35,13 @@ let g:sonictemplate_vim_template_dir = [
 \]
 
 "" cpp
-Plug 'vim-jp/vim-cpp', { 'for': 'cpp'}
+Plug 'vim-jp/vim-cpp', { 'for': ['c', 'cpp'] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 " Plug 'lyuts/vim-rtags', { 'for': 'cpp'}
+Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-3.8/lib/clang'
+let g:deoplete#sources#clang#std = { 'cpp': 'c++14' }
 
 "" golang
 Plug 'fatih/vim-go'
