@@ -35,6 +35,8 @@ let g:sonictemplate_vim_template_dir = [
 
 "" cpp
 Plug 'vim-jp/vim-cpp', { 'for': 'cpp'}
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+" Plug 'lyuts/vim-rtags', { 'for': 'cpp'}
 
 "" golang
 Plug 'fatih/vim-go'
@@ -72,6 +74,9 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " https://github.com/rust-lang-nursery/rustfmt#installation
 let g:rustfmt_autosave = 1
+
+"" docker
+Plug 'honza/dockerfile.vim'
 
 call plug#end()
 
