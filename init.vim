@@ -64,7 +64,7 @@ let g:sonictemplate_vim_template_dir = [
 
 "" cpp
 " apt install clang llvm build-essentials
-Plug 'vim-jp/vim-cpp', { 'for': ['c', 'cpp'] }
+Plug 'vim-jp/vim-cpp'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
