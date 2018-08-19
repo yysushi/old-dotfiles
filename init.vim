@@ -32,7 +32,7 @@ let g:quickrun_config._ = {
     \ }
 let g:quickrun_config.cpp = {
     \ 'command' : 'clang++',
-    \ 'cmdopt' : '-std=c++14 -g -Wall -Wextra -O2 -o a.out',
+    \ 'cmdopt' : '-std=c++14 -g -Wall -Wextra -O2',
     \ }
 
 "" git
@@ -46,13 +46,17 @@ let g:ale_linters_explicit = 1
 " gem install rubocop
 " pip install flake8 yamllint
 let g:ale_linters = {
-    \ 'javascript': ['eslint', 'prettier'],
+    \ 'cpp': ['clang'],
+    \ 'javascript': ['eslint'],
     \ 'python': ['flake8'],
-    \ 'ruby': ['rubocup'],
-    \ 'typescript': ['tslint', 'prettier'],
     \ 'yaml': ['yamllint']
     \ }
-let g:ale_fix_on_save = 0
+let g:ale_cpp_clang_executable = 'clang++'
+let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
+let g:ale_fixers = {
+    \ 'cpp': ['clang-format'],
+    \ }
+" let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 0
 
 "" template
@@ -64,7 +68,6 @@ let g:sonictemplate_vim_template_dir = [
 
 "" cpp
 " apt install clang llvm build-essentials
-Plug 'vim-jp/vim-cpp'
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
