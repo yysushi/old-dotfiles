@@ -54,6 +54,7 @@ let g:ale_linters = {
 let g:ale_cpp_clang_executable = 'clang++'
 let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
 let g:ale_fixers = {
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
     \ }
 " let g:ale_fix_on_save = 1
