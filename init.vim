@@ -58,6 +58,7 @@ let g:ale_fixers = {
     \ 'cpp': ['clang-format'],
     \ }
 " let g:ale_fix_on_save = 1
+let g:ale_cpp_clangformat_options = '-style=google'
 let g:ale_completion_enabled = 0
 
 "" template
@@ -111,3 +112,8 @@ set ruler
 " set spell
 "" clipboard; share vim's yank and mac's clipboard
 set clipboard+=unnamedplus
+set autoindent
+set cindent
+" set cpp's indent size according to clang-format
+" check `cinoptions-values`
+autocmd Filetype cpp setlocal sw=2 sts=2
