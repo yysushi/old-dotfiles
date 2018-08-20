@@ -63,10 +63,7 @@ let g:ale_completion_enabled = 0
 
 "" template
 Plug 'mattn/sonictemplate-vim'
-let g:sonictemplate_vim_template_dir = [
-    \ '$HOME/.config/nvim/plugged/sonictemplate-vim/template',
-    \ '$HOME/.dotfiles/template'
-    \ ]
+let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
 
 "" cpp
 " apt install clang llvm build-essentials
