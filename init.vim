@@ -34,6 +34,7 @@ let g:quickrun_config.cpp = {
     \ 'command' : 'clang++',
     \ 'cmdopt' : '-std=c++14 -g -Wall -Wextra -O2',
     \ }
+let g:quickrun_no_default_key_mappings = 1
 
 "" git
 Plug 'airblade/vim-gitgutter'
