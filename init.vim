@@ -81,8 +81,6 @@ Plug 'fatih/vim-go'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
 "" python
-" Plug 'nvie/vim-flake8', { 'for': 'python' }
-" Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#force_py_version=3
 
