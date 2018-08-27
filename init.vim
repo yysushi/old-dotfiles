@@ -98,6 +98,11 @@ let g:rustfmt_autosave = 1
 "" docker
 Plug 'honza/dockerfile.vim'
 
+"" plantuml
+Plug 'scrooloose/vim-slumlord'
+Plug 'aklt/plantuml-syntax'
+let g:slumlord_separate_win = 1
+
 call plug#end()
 
 "" coloring
