@@ -13,6 +13,7 @@ int main() {
     s.at(0) = '0';
     a.push_back(stoi(s));
   }
+  sort(a.begin(), a.end(), greater<int>());
   int sum = accumulate(a.begin(), a.end(), 0);
   cout << sum << endl;
   return 0;
