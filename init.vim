@@ -74,6 +74,21 @@ let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
 "" lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_signs_warning = {'text': '‼'}
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"" lsp for python
+" pip install python-language-server
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 "" cpp
 " requisite: apt install clang llvm build-essentials
@@ -88,10 +103,6 @@ Plug 'fatih/vim-go'
 
 "" scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-
-"" python
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
-let g:jedi#force_py_version=3
 
 "" java
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
