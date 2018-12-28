@@ -1,4 +1,4 @@
-""" junegunn/vim-plug {{{
+""" junegunn/vim-plug
 call plug#begin()
 "" general
 Plug 'chriskempson/base16-vim'
@@ -93,9 +93,8 @@ Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 let g:slumlord_separate_win = 1
 call plug#end()
-""" }}}
 
-""" general {{{
+""" general
 "" exit from terminal mode
 " tnoremap <ESC> <C-\><C-n>
 "" coloring
@@ -104,13 +103,12 @@ colorscheme base16-ocean
 set number
 set ruler
 " set spell
-"" clipboard; share vim's yank and mac's clipboard
-set clipboard+=unnamedplus
+set clipboard&
+set clipboard^=unnamedplus
 set autoindent
 set cindent
-""" }}}
 
-""" language {{{
+""" language
 "" c++
 "" set cpp's indent size according to clang-format
 "" check `cinoptions-values`
@@ -125,4 +123,3 @@ if executable('pyls')
         \ 'whitelist': ['python'],
         \ })
 endif
-""" }}}
