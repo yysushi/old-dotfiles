@@ -71,6 +71,10 @@ let g:ale_completion_enabled = 0
 Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
 
+"" lsp
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
 "" cpp
 " requisite: apt install clang llvm build-essentials
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
