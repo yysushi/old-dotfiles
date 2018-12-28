@@ -4,19 +4,25 @@ tnoremap <silent> <ESC> <C-\><C-n>
 
 "" general
 Plug 'chriskempson/base16-vim'
-Plug 'Shougo/vimshell'
 Plug 'scrooloose/nerdtree'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
-Plug 'terryma/vim-multiple-cursors'
+" Plug 'terryma/vim-multiple-cursors'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'jiangmiao/auto-pairs'
+
+"" completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
+
+"" fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ntpeters/vim-better-whitespace'
+
+"" run command
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Plug 'Shougo/vimshell'
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config._ = {
@@ -40,12 +46,11 @@ let g:quickrun_no_default_key_mappings = 1
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
-"" general syntax
+"" lint/fix/completion/definition/reference/hover/symbol by ale
 Plug 'w0rp/ale'
 let g:ale_lint_delay = 1000
 let g:ale_linters_explicit = 1
-" gem install rubocop
-" pip install flake8 yamllint
+" requsite: pip install flake8 yamllint
 let g:ale_linters = {
     \ 'cpp': ['clang'],
     \ 'javascript': ['eslint'],
@@ -58,7 +63,7 @@ let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
     \ }
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_cpp_clangformat_options = '-style=google'
 let g:ale_completion_enabled = 0
 
@@ -67,7 +72,7 @@ Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
 
 "" cpp
-" apt install clang llvm build-essentials
+" requisite: apt install clang llvm build-essentials
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'

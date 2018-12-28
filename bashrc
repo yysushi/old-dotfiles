@@ -118,3 +118,5 @@ fi
 
 # source my bashrc
 source "$HOME/.mybashrc"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
