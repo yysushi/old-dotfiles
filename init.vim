@@ -67,14 +67,11 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+let g:lsp_async_completion = 1
 "" cpp
-"" requisite: apt install clang llvm build-essentials
+"" requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
-Plug 'zchee/deoplete-clang', { 'for': ['c', 'cpp'] }
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang.so.1'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-3.8/lib/clang'
-let g:deoplete#sources#clang#std = { 'cpp': 'c++14' }
-"" golang
+"" golang; possibly can be removed
 Plug 'fatih/vim-go'
 "" scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -113,6 +110,15 @@ set cindent
 "" set cpp's indent size according to clang-format
 "" check `cinoptions-values`
 autocmd Filetype cpp setlocal sw=2 sts=2
+"" setu cpp's lsp
+"" requisuite: clangd
+if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+        \ })
+endif
 "" python
 "" set python's lsp
 "" requisite: pip install python-language-server
@@ -121,5 +127,14 @@ if executable('pyls')
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
         \ 'whitelist': ['python'],
+        \ })
+endif
+"" golang
+"" set golang's lsp
+if executable('go-langserver')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'go-langserver',
+        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+        \ 'whitelist': ['go'],
         \ })
 endif
