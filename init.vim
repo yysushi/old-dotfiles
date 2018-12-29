@@ -131,6 +131,7 @@ if executable('pyls')
 endif
 "" golang
 "" set golang's lsp
+"" requisite: go get -u github.com/sourcegraph/go-langserver
 if executable('go-langserver')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'go-langserver',
