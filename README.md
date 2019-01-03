@@ -14,6 +14,7 @@
 * [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
 * [git-open](https://github.com/paulirish/git-open#basic-install)
 * clang
+* nodejs, npm
 
 # Place Configurations
 ```bash

@@ -10,7 +10,8 @@ ln -Ffs $here/screenrc $HOME/.screenrc
 ln -Ffs $here/gitconfig $HOME/.gitconfig
 ln -Ffs $here/gitignore $HOME/.gitignore
 ln -Ffs $here/agignore $HOME/.agignore
-ln -Ffs $here/gitmessage.txt $HOME/.gitmessage.txt
+ln -Ffs $here/tslint.json $HOME/.tslint.json
+ln -Ffs $here/eslintrc.json $HOME/.eslintrc.json
 
 # under $HOME/.config
 ## nvim

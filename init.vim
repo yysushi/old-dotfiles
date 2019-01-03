@@ -44,18 +44,30 @@ Plug 'w0rp/ale'
 let g:ale_lint_delay = 1000
 let g:ale_linters_explicit = 1
 "" requisite: pip install flake8 yamllint
+""            npm install -g jsonlint
+""            npm install -g eslint
+""            npm install -g tsserver tslint
+""            npm install -g markdownlint-cli
 let g:ale_linters = {
     \ 'cpp': ['clang'],
+    \ 'json': ['jsonlint'],
     \ 'javascript': ['eslint'],
+    \ 'typescript': ['tslint'],
+    \ 'markdown': ['markdownlint'],
     \ 'python': ['flake8'],
     \ 'yaml': ['yamllint']
     \ }
+""    \ 'typescript': ['tslint', 'tsserver'],
 let g:ale_cpp_clang_executable = 'clang++'
 let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
+"" requisite: npm install -g prettier eslint tslint
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
+    \ 'json': ['prettier']
     \ }
+"    \ 'javascript': ['eslint', 'prettier'],
+"    \ 'typescript': ['tslint', 'prettier'],
 let g:ale_fix_on_save = 0
 let g:ale_cpp_clangformat_options = '-style=google'
 let g:ale_completion_enabled = 0
@@ -68,6 +80,9 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 let g:lsp_async_completion = 1
+" for debugging
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand("~/.vim-lsp.log")
 "" cpp
 "" requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
@@ -83,6 +98,9 @@ Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " https://github.com/rust-lang-nursery/rustfmt#installation
 let g:rustfmt_autosave = 1
+"" typescript
+"" coloring
+Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 "" docker
 Plug 'honza/dockerfile.vim'
 "" plantuml
@@ -137,5 +155,25 @@ if executable('go-langserver')
         \ 'name': 'go-langserver',
         \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
         \ 'whitelist': ['go'],
+        \ })
+endif
+"" typescript
+"" set lsp for js and ts
+"" requisite: apt install -y nodejs npm
+"" requisite: npm install -g typescript typescript-language-server
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server-ts',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
+        \ 'whitelist': ['typescript', 'typescript.tsx'],
+        \ })
+endif
+if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server-js',
+        \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+        \ 'whitelist': ['javascript', 'javascript.jsx'],
         \ })
 endif
