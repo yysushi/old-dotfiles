@@ -1,4 +1,7 @@
-# Prerequisite Software Links
+# Dotfiles
+
+## Prerequisite Software Links
+
 * [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 * [vim plugin](https://github.com/junegunn/vim-plug#neovim)
 * [tpm](https://github.com/tmux-plugins/tpm#installation)
@@ -16,7 +19,8 @@
 * clang
 * nodejs, npm
 
-# Place Configurations
+## Place Configurations
+
 ```bash
 bash install.sh
 ```
