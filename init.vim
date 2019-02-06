@@ -86,8 +86,6 @@ let g:lsp_async_completion = 1
 "" cpp
 "" requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
-"" golang; possibly can be removed
-Plug 'fatih/vim-go'
 "" scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 "" java
@@ -149,15 +147,8 @@ if executable('pyls')
 endif
 "" golang
 "" set golang's lsp
-"" requisite: go get -u golang.org/x/tools/cmd/gopls
 "" requisite: go get -u github.com/sourcegraph/go-langserver
-if executable('gopls')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'gopls',
-        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-        \ 'whitelist': ['go'],
-        \ })
-elseif executable('go-langserver')
+if executable('go-langserver')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'go-langserver',
         \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
