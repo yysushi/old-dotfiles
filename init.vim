@@ -149,8 +149,15 @@ if executable('pyls')
 endif
 "" golang
 "" set golang's lsp
+"" requisite: go get -u golang.org/x/tools/cmd/gopls
 "" requisite: go get -u github.com/sourcegraph/go-langserver
-if executable('go-langserver')
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+elseif executable('go-langserver')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'go-langserver',
         \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
