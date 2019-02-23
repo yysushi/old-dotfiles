@@ -175,3 +175,28 @@ if executable('typescript-language-server')
         \ 'whitelist': ['javascript', 'javascript.jsx'],
         \ })
 endif
+"" java
+"" set lsp for java
+"" requisite: https://download.eclipse.org/jdtls/milestones
+if executable('java')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'eclipse.jdt.ls',
+        \ 'cmd': {server_info->[
+        \     '/usr/bin/java',
+        \     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+        \     '-Dosgi.bundles.defaultStartLevel=4',
+        \     '-Declipse.product=org.eclipse.jdt.ls.core.product',
+        \     '-Dlog.level=ALL',
+        \     '-noverify',
+        \     '-Dfile.encoding=UTF-8',
+        \     '-Xmx1G',
+        \     '-jar',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar',
+        \     '-configuration',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/config_linux',
+        \     '-data',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/workspace'
+        \ ]},
+        \ 'whitelist': ['java'],
+        \ })
+endif
