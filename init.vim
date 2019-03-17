@@ -86,6 +86,9 @@ let g:lsp_async_completion = 1
 "" cpp
 "" requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+"" golang
+Plug 'fatih/vim-go', { 'for': 'go' }
+let g:go_gocode_propose_builtins = 0
 "" scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 "" java
