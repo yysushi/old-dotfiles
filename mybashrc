@@ -26,6 +26,7 @@ mkdir -p "$HOME"/.tmux/log
 export WORKON_HOME="$HOME"/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 . "$HOME"/.local/bin/virtualenvwrapper.sh
+export PATH=$PATH:"$HOME"/.local/bin
 
 # dev
 export DEV="$HOME"/Developments
