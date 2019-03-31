@@ -1,12 +1,12 @@
 """ junegunn/vim-plug
 call plug#begin()
 "" general
-Plug 'chriskempson/base16-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'Yggdroot/indentLine'
-Plug 'chriskempson/base16-vim'
 let g:indentLine_char = '|'
+Plug 'chriskempson/base16-vim'
+let base16colorspace=256  " Access colors present in 256 colorspace
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'jiangmiao/auto-pairs'
@@ -101,7 +101,6 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 " https://github.com/rust-lang-nursery/rustfmt#installation
 let g:rustfmt_autosave = 1
 "" typescript
-"" coloring
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 "" docker
 Plug 'honza/dockerfile.vim'
@@ -114,11 +113,13 @@ call plug#end()
 """ general
 "" exit from terminal mode
 " tnoremap <ESC> <C-\><C-n>
-"" coloring
+"" coloring: just make sure and load from background
+colorscheme base16-ocean
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+set termguicolors
 "" numbering
 set number
 set ruler
