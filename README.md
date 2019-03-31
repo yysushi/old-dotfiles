@@ -11,7 +11,7 @@
 * [ghq](https://github.com/motemen/ghq#installation)
 * [fzf](https://github.com/junegunn/fzf#installation)
 * [peco](https://github.com/peco/peco/releases)
-* [base16-gnome-terminal](https://github.com/aaron-williamson/base16-gnome-terminal#installation)
+* [base16-shell](https://github.com/chriskempson/base16-shell#installatio://github.com/chriskempson/base16-shell#installation)
 * [global protect](https://github.com/dlenski/openconnect#installation)
 * [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L8)
 * [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
