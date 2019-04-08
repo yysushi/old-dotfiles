@@ -165,7 +165,6 @@ if executable('go-langserver')
 endif
 "" typescript
 "" set lsp for js and ts
-"" requisite: apt install -y nodejs npm
 "" requisite: npm install -g typescript typescript-language-server
 if executable('typescript-language-server')
     au User lsp_setup call lsp#register_server({
