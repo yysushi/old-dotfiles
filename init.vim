@@ -61,16 +61,17 @@ let g:ale_linters = {
 ""    \ 'typescript': ['tslint', 'tsserver'],
 let g:ale_cpp_clang_executable = 'clang++'
 let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
-"" requisite: npm install -g prettier eslint tslint
+"" requisite: npm install -g prettier eslint tslint prettier
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
+    \ 'javascript': ['prettier'],
     \ 'json': ['prettier']
     \ }
-"    \ 'javascript': ['eslint', 'prettier'],
 "    \ 'typescript': ['tslint', 'prettier'],
 let g:ale_fix_on_save = 0
 let g:ale_cpp_clangformat_options = '-style=google'
+let g:ale_javascript_prettier_options = '--tab-width 4 --quote-props preserve'
 let g:ale_completion_enabled = 0
 "" template
 Plug 'mattn/sonictemplate-vim'
