@@ -44,18 +44,21 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 let g:ale_lint_delay = 1000
 let g:ale_linters_explicit = 1
-"" requisite: pip install flake8 yamllint
+"" requisite: pip install flake8 yamllint proselint
 ""            npm install -g jsonlint
 ""            npm install -g eslint
 ""            npm install -g tsserver tslint
 ""            npm install -g markdownlint-cli
+""            apt install tidy
 let g:ale_linters = {
     \ 'cpp': ['clang'],
+    \ 'html': ['tidy'],
     \ 'json': ['jsonlint'],
     \ 'javascript': ['eslint'],
-    \ 'typescript': ['tslint'],
-    \ 'markdown': ['markdownlint'],
+    \ 'markdown': ['markdownlint', 'proselint'],
     \ 'python': ['flake8'],
+    \ 'text': ['proselint'],
+    \ 'typescript': ['tslint'],
     \ 'yaml': ['yamllint']
     \ }
 ""    \ 'typescript': ['tslint', 'tsserver'],
@@ -65,6 +68,7 @@ let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
+    \ 'html': ['prettier'],
     \ 'javascript': ['eslint'],
     \ 'json': ['prettier']
     \ }
