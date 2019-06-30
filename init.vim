@@ -10,6 +10,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'junegunn/vim-easy-align'
 " Plug 'jiangmiao/auto-pairs'
+
 "" completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
@@ -18,7 +19,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "" run command
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-" Plug 'Shougo/vimshell'
 Plug 'thinca/vim-quickrun'
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config._ = {
@@ -50,8 +50,10 @@ let g:ale_linters_explicit = 1
 ""            npm install -g tsserver tslint
 ""            npm install -g markdownlint-cli
 ""            apt install tidy
+""            apt install golint
 let g:ale_linters = {
     \ 'cpp': ['clang'],
+    \ 'go': ['golint', 'govet'],
     \ 'html': ['tidy'],
     \ 'json': ['jsonlint'],
     \ 'javascript': ['eslint'],
@@ -68,6 +70,7 @@ let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'cpp': ['clang-format'],
+    \ 'go': ['gofmt'],
     \ 'html': ['prettier'],
     \ 'javascript': ['eslint'],
     \ 'json': ['prettier']
@@ -91,8 +94,6 @@ let g:lsp_async_completion = 1
 "" cpp
 "" requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
-"" golang
-Plug 'fatih/vim-go', { 'for': 'go' }
 let g:go_gocode_propose_builtins = 0
 "" scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -114,9 +115,24 @@ Plug 'aklt/plantuml-syntax'
 let g:slumlord_separate_win = 1
 call plug#end()
 
-""" general
-"" exit from terminal mode
-" tnoremap <ESC> <C-\><C-n>
+
+""" basic settings
+
+"" allocate space as leader key
+let mapleader = ' '
+let maplocalleader = ' '
+"" key mappings
+nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>f :ALEFix<cr>
+nnoremap <leader>d :LspDefinition<cr>
+nnoremap <leader>h :LspHover<cr>
+nnoremap <leader>rn :LspRename<cr>
+nnoremap <leader>rf :LspReference<cr>
+nnoremap <leader>td :LspTypeDefinition<cr>
+
 "" coloring: just make sure and load from background
 colorscheme base16-ocean
 if filereadable(expand("~/.vimrc_background"))
