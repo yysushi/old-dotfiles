@@ -113,6 +113,8 @@ Plug 'honza/dockerfile.vim'
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
 let g:slumlord_separate_win = 1
+"" markdown
+Plug 'previm/previm'
 call plug#end()
 
 
