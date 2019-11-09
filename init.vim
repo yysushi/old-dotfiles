@@ -218,6 +218,7 @@ if executable('java')
         \     '-noverify',
         \     '-Dfile.encoding=UTF-8',
         \     '-Xmx1G',
+        \     '-classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar',
         \     '-jar',
         \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar',
         \     '-configuration',
