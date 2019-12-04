@@ -15,6 +15,10 @@
 [merge]
   tool = vimdiff
 
+[mergetool]
+  prompt = false
+  keepBackup = false
+
 [tig "bind"]
   generic = <Ctrl-f> scroll-page-down
   generic = <Ctrl-b> scroll-page-up
