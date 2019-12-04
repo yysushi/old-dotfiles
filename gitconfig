@@ -9,6 +9,12 @@
   editor = vi
   excludesfile = ~/.gitignore
 
+[diff]
+  tool = vimdiff
+
+[merge]
+  tool = vimdiff
+
 [ghq]
   root = ~/Developments/git
   root = ~/Developments/go/src
