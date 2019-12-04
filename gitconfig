@@ -15,6 +15,10 @@
 [merge]
   tool = vimdiff
 
+[tig "bind"]
+  generic = <Ctrl-f> scroll-page-down
+  generic = <Ctrl-b> scroll-page-up
+
 [ghq]
   root = ~/Developments/git
   root = ~/Developments/go/src
