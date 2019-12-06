@@ -1,3 +1,6 @@
-source $HOME/.bashrc
+if [ -f /etc/profile ]; then
+  PATH=
+  source /etc/profile
+fi
 
-[[ -s "/Users/y-tsuji/.gvm/scripts/gvm" ]] && source "/Users/y-tsuji/.gvm/scripts/gvm"
+. $HOME/.bashrc

@@ -1,5 +1,11 @@
 #!/bin/bash
 
+here=$(cd $(dirname $0); pwd -P)
+
+# default bashrc
+export PLATFORM=$(uname -s)
+[ -f /etc/bashrc ] && . /etc/bashrc
+
 # vi mode in bash
 set -o vi
 
@@ -19,9 +25,10 @@ mkdir -p "$HOME"/.tmux/log
 # virtualenv configuration
 export WORKON_HOME="$HOME"/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-. "$HOME"/Library/Python/3.7/bin/virtualenvwrapper.sh
-
-export PATH=$PATH:"$HOME"/Library/Python/3.7/bin
+## pip3 install virtualenvwrapper \
+## && mkvirtualenv global --python=python3 \
+## && pip install -r "$HOME"/.dotfiles/global-requirements.txt
+[[ -s "$WORKON_HOME"/global ]] && source "$WORKON_HOME"/global/bin/activate
 
 # dev
 export DEV="$HOME"/Developments
@@ -34,7 +41,6 @@ export CXXFLAGS="-std=c++14 -g -Wall -Wextra -O2"
 
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-source "$HOME"/.gvm/scripts/gvm
 gvm use go1.13 > /dev/null
 export GOPATH="$HOME"/Developments/go
 export PATH="$PATH":"$GOPATH"/bin
@@ -47,7 +53,8 @@ export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # locale
-export LC_ALL=C
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # git completion and git prompt
 [[ -s "$HOME/.git-completion.bash" ]] && source "$HOME/.git-completion.bash"

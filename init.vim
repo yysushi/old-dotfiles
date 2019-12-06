@@ -148,6 +148,7 @@ set clipboard&
 set clipboard^=unnamedplus
 set autoindent
 set cindent
+set noswapfile
 
 """ language
 "" c++
