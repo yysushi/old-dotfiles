@@ -1,10 +1,8 @@
 #!/bin/bash
 
-here=$(cd $(dirname $0); pwd -P)
-
 # default bashrc
 export PLATFORM=$(uname -s)
-[ -f /etc/bashrc ] && . /etc/bashrc
+[ -f /etc/bashrc ] && source /etc/bashrc
 
 # vi mode in bash
 set -o vi
