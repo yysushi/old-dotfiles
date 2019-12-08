@@ -4,3 +4,4 @@ flake8
 yamllint
 python-language-server
 neovim
+proselint
