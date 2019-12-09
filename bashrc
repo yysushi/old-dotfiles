@@ -80,6 +80,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
-
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
