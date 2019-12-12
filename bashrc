@@ -26,7 +26,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 ## pip3 install virtualenvwrapper \
 ## && mkvirtualenv global --python=python3 \
 ## && pip install -r "$HOME"/.dotfiles/global-requirements.txt
-[[ -s "$WORKON_HOME"/global ]] && source "$WORKON_HOME"/global/bin/activate
+[[ -s "$WORKON_HOME"/global ]] && source "$WORKON_HOME"/global/bin/activate && source virtualenvwrapper.sh
 
 # dev
 export DEV="$HOME"/Developments
