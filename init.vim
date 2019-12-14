@@ -1,4 +1,5 @@
 """ junegunn/vim-plug
+""" as for filetype: https://github.com/vim/vim/blob/master/runtime/filetype.vim
 call plug#begin()
 "" general
 Plug 'scrooloose/nerdtree'
@@ -84,6 +85,36 @@ let g:ale_completion_enabled = 0
 "" template
 Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
+"" golang
+Plug 'fatih/vim-go', { 'for': 'go' }
+""" koketani:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
+let g:go_version_warning = 0
+let g:go_code_completion_enabled = 0
+let g:go_play_open_browser = 0
+let g:go_jump_to_error = 0
+let g:go_fmt_autosave = 0
+let g:go_mod_fmt_autosave = 0
+let g:go_doc_keywordprg_enabled = 0
+let g:go_def_mapping_enabled = 0
+let g:go_search_bin_path_first = 0
+let g:go_get_update = 0
+let g:go_textobj_enabled = 0
+let g:go_textobj_include_function_doc = 0
+let g:go_textobj_include_variable = 0
+let g:go_list_autoclose = 0
+let g:go_term_close_on_exit = 0
+let g:go_gocode_propose_builtins = 0
+let g:go_gopls_enabled = 0
+let g:go_gopls_deep_completion = 0
+let g:go_gopls_fuzzy_matching = 0
+let g:go_template_autocreate = 0
+let g:go_echo_command_info = 0
+let g:go_echo_go_info = 0
+let g:go_highlight_string_spellcheck = 0
+let g:go_highlight_format_strings = 0
+let g:go_highlight_diagnostic_errors = 0
+let g:go_highlight_diagnostic_warnings = 0
+let g:go_highlight_debug = 0
 "" lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
