@@ -136,7 +136,8 @@ nnoremap <leader>d :LspDefinition<cr>
 nnoremap <leader>h :LspHover<cr>
 nnoremap <leader>rn :LspRename<cr>
 nnoremap <leader>rf :LspReference<cr>
-nnoremap <leader>td :LspTypeDefinition<cr>
+" gopls not support..
+" nnoremap <leader>td :LspTypeDefinition<cr>
 
 "" coloring: just make sure and load from background
 colorscheme base16-ocean
