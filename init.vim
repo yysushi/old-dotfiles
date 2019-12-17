@@ -250,6 +250,7 @@ endif
 "" java
 "" set lsp for java
 "" requisite: https://download.eclipse.org/jdtls/milestones
+"        \     '-classpath /usr/local/Cellar/maven/3.6.3/libexec/boot/plexus-classworlds-2.6.0.jar',
 if executable('java')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'eclipse.jdt.ls',
@@ -262,11 +263,10 @@ if executable('java')
         \     '-noverify',
         \     '-Dfile.encoding=UTF-8',
         \     '-Xmx1G',
-        \     '-classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar',
         \     '-jar',
-        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar',
         \     '-configuration',
-        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/config_linux',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/config_mac',
         \     '-data',
         \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/workspace'
         \ ]},
