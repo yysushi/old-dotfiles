@@ -13,6 +13,9 @@ Plug 'chriskempson/base16-vim'
 "" for uri open (vim has similar feature, but it is only for url)
 Plug 'tyru/open-browser.vim'
 nmap gx <Plug>(openbrowser-open)
+Plug 'tyru/open-browser-github.vim'
+"" for grammer check
+Plug 'rhysd/vim-grammarous'
 
 "" completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
