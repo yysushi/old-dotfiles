@@ -19,6 +19,7 @@ mkdir -p "$HOME/.tmux/log"
 
 # venv configuration
 global_venv="$HOME/.global-venv"
+venvs_dir="$HOME/.venvs"
 test -d ${global_venv}
 installed=$?
 if [ 0 -ne $installed ]; then
@@ -30,6 +31,7 @@ if [ 0 -ne $installed ]; then
 	echo "### install packages for global venv"
 	python -m pip install -r "$HOME/.dotfiles/global-requirements.txt"
 fi
+mkdir -p "${venvs_dir}"
 
 # dev
 export DEV="$HOME/Developments"

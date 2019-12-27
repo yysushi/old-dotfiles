@@ -1,4 +1,3 @@
-virtualenvwrapper
 docker-compose
 flake8
 yamllint
