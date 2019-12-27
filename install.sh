@@ -17,3 +17,4 @@ ln -Ffs $here/eslintrc.json $HOME/.eslintrc.json
 ## nvim
 mkdir -p $HOME/.config/nvim
 ln -Ffs $here/init.vim $HOME/.config/nvim/init.vim
+ln -Ffs $here/init.vim $HOME/.vimrc
