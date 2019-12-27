@@ -15,18 +15,24 @@ export EDITOR=vim
 
 # tmux
 alias tmux='tmux -u'
-mkdir -p "$HOME"/.tmux/log
+mkdir -p "$HOME/.tmux/log"
 
-# virtualenv configuration
-export WORKON_HOME="$HOME"/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-## pip3 install virtualenvwrapper \
-## && mkvirtualenv global --python=python3 \
-## && pip install -r "$HOME"/.dotfiles/global-requirements.txt
-[[ -s "$WORKON_HOME"/global ]] && source "$WORKON_HOME"/global/bin/activate && source virtualenvwrapper.sh
+# venv configuration
+global_venv="$HOME/.global-venv"
+test -d ${global_venv}
+installed=$?
+if [ 0 -ne $installed ]; then
+        echo "### create global venv at ${global_venv}"
+	python3 -m venv ${global_venv}
+fi
+source ${global_venv}/bin/activate
+if [ 0 -ne $installed ]; then
+	echo "### install packages for global venv"
+	python -m pip install -r "$HOME/.dotfiles/global-requirements.txt"
+fi
 
 # dev
-export DEV="$HOME"/Developments
+export DEV="$HOME/Developments"
 mkdir -p "$DEV"
 
 # cpp for make command and make built-in plugin in vim
@@ -37,12 +43,12 @@ export CXXFLAGS="-std=c++14 -g -Wall -Wextra -O2"
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 gvm use go1.13 > /dev/null
-export GOPATH="$HOME"/Developments/go
-export PATH="$PATH":"$GOPATH"/bin
+export GOPATH="$HOME/Developments/go"
+export PATH="$PATH":"$GOPATH/bin"
 
 # ghq
-export GHQ_ROOT="$HOME"/Developments/git
-export GHQ_ROOT="$GHQ_ROOT":"$GOPATH"/src
+export GHQ_ROOT="$HOME/Developments/git"
+export GHQ_ROOT="$GHQ_ROOT":"$GOPATH/src"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -66,9 +72,7 @@ export PATH="$PATH":/opt/maven/bin
 
 # base16 shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+[ -n "$PS1" ] && [ -s "$BASE16_SHELL/profile_helper.sh" ] && eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
