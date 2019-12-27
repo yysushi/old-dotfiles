@@ -11,10 +11,7 @@ set -o vi
 export PATH="$PATH":/usr/local/bin
 
 # default editor
-export EDITOR=nvim
-
-# alias
-alias view='nvim -R'
+export EDITOR=vim
 
 # tmux
 alias tmux='tmux -u'
