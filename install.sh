@@ -12,6 +12,7 @@ ln -Ffs $here/gitignore $HOME/.gitignore
 ln -Ffs $here/agignore $HOME/.agignore
 ln -Ffs $here/tslint.json $HOME/.tslint.json
 ln -Ffs $here/eslintrc.json $HOME/.eslintrc.json
-
-# under $HOME/.config
 ln -Ffs $here/vimrc $HOME/.vimrc
+## # under $HOME/.vim
+## mkdir -p $HOME/.vim
+## ln -Ffs $here/vim_config $HOME/.vim/_config
