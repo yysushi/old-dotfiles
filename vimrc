@@ -164,8 +164,8 @@ call plug#end()
 """ basic settings
 
 "" allocate space as leader key
-let mapleader = ' '
-let maplocalleader = ' '
+let mapleader = '\'
+let maplocalleader = ','
 "" key mappings
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>gb :Gblame<cr>
