@@ -83,3 +83,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
+
+# llvm
+export PATH="/usr/local/opt/llvm/bin:$PATH"
