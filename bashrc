@@ -86,3 +86,6 @@ export PATH=~/.npm-global/bin:$PATH
 
 # llvm
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
