@@ -52,9 +52,6 @@ export PATH="$PATH":"$GOPATH/bin"
 export GHQ_ROOT="$HOME/Developments/git"
 export GHQ_ROOT="$GHQ_ROOT":"$GOPATH/src"
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 # locale
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -89,3 +86,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
