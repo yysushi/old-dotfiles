@@ -188,8 +188,7 @@ colorscheme base16-ocean
 set number
 set ruler
 " set spell
-set clipboard&
-set clipboard^=unnamedplus
+set clipboard=unnamed
 set autoindent
 set cindent
 set noswapfile
