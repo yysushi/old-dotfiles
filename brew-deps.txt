@@ -1,3 +1,4 @@
+# brew deps --installed >> brew-deps.txt
 bash-completion: 
 clang-format: 
 fzf: 
