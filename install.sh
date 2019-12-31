@@ -14,7 +14,4 @@ ln -Ffs $here/tslint.json $HOME/.tslint.json
 ln -Ffs $here/eslintrc.json $HOME/.eslintrc.json
 
 # under $HOME/.config
-## nvim
-mkdir -p $HOME/.config/nvim
-ln -Ffs $here/init.vim $HOME/.config/nvim/init.vim
-ln -Ffs $here/init.vim $HOME/.vimrc
+ln -Ffs $here/vimrc $HOME/.vimrc
