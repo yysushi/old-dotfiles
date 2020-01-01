@@ -1,5 +1,7 @@
 #!/bin/bash
 
+USERNAME=koketani
+
 # default bashrc
 export PLATFORM=$(uname -s)
 [ -f /etc/bashrc ] && source /etc/bashrc
@@ -65,7 +67,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
-export PROMPT_COMMAND='__git_ps1 "\[\033[01;34m\]\u\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]" "\\\$ "'
+export PROMPT_COMMAND='__git_ps1 "\[\033[01;34m\]$USERNAME\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]" "\\\$ "'
 
 # java
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
