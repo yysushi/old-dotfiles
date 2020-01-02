@@ -43,7 +43,7 @@ mkdir -p "$DEV"
 
 # cpp for make command and make built-in plugin in vim
 export CXX="clang++"
-export CXXFLAGS="-std=c++14 -g -Wall -Wextra -O2"
+export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
 
 # golang
