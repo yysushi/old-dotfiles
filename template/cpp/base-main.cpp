@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int main(int argc, char *argv[]) {
+int main() {
   {{_cursor_}}
   return 0;
 }
