@@ -1,34 +1,39 @@
 # brew deps --installed >> brew-deps.txt
-bash-completion: 
-clang-format: 
-fzf: 
-gdbm: 
-gettext: 
-ghq: 
+bash-completion:
+clang-format:
+fzf:
+gcc: gmp isl libmpc mpfr
+gdbm:
+gettext:
+ghq:
 git: gettext pcre2
+gmp:
 htop: ncurses
+isl: gmp
 jq: oniguruma
 libevent: openssl@1.1
-libffi: 
+libffi:
+libmpc: gmp mpfr
 libtermkey: unibilium
-libuv: 
-libvterm: 
-libyaml: 
+libuv:
+libvterm:
+libyaml:
 llvm: libffi pcre swig
-lua: 
-luajit: 
-maven: 
-msgpack: 
-ncurses: 
-nvm: 
-oniguruma: 
-openssl@1.1: 
-pcre: 
-pcre2: 
-peco: 
-perl: 
+lua:
+luajit:
+maven:
+mpfr: gmp
+msgpack:
+ncurses:
+nvm:
+oniguruma:
+openssl@1.1:
+pcre:
+pcre2:
+peco:
+perl:
 python: gdbm openssl@1.1 readline sqlite xz
-readline: 
+readline:
 ruby: libyaml openssl@1.1 readline
 sqlite: readline
 swig: pcre
@@ -36,7 +41,7 @@ the_silver_searcher: pcre xz
 tig: readline
 tmux: libevent ncurses openssl@1.1
 tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
-tree: 
-unibilium: 
+tree:
+unibilium:
 vim: gdbm gettext libyaml lua openssl@1.1 perl python readline ruby sqlite xz
-xz: 
+xz:
