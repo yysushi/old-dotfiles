@@ -46,7 +46,7 @@ let g:quickrun_config._ = {
     \ }
 let g:quickrun_config.cpp = {
     \ 'command' : 'clang++',
-    \ 'cmdopt' : '-std=c++14 -g -Wall -Wextra -O2',
+    \ 'cmdopt' : '-std=c++14 -Wall -Wextra -O2',
     \ }
 let g:quickrun_no_default_key_mappings = 1
 "" git
@@ -77,7 +77,7 @@ let g:ale_linters = {
     \ }
 ""    \ 'typescript': ['tslint', 'tsserver'],
 let g:ale_cpp_clang_executable = 'clang++'
-let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
+let g:ale_cpp_clang_options = '-std=c++14 -Wall -Wextra -O2'
 "" requisite: npm install -g prettier eslint tslint prettier
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
