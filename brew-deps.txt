@@ -1,4 +1,4 @@
-# brew deps --installed >> brew-deps.txt
+# brew deps --installed
 bash-completion:
 clang-format:
 fzf:
@@ -8,6 +8,7 @@ gettext:
 ghq:
 git: gettext pcre2
 gmp:
+gnu-sed:
 htop: ncurses
 isl: gmp
 jq: oniguruma
@@ -32,6 +33,7 @@ pcre:
 pcre2:
 peco:
 perl:
+knqyf263/pet/pet: fzf
 python: gdbm openssl@1.1 readline sqlite xz
 readline:
 ruby: libyaml openssl@1.1 readline

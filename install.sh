@@ -16,3 +16,7 @@ ln -Ffs $here/vimrc $HOME/.vimrc
 ## # under $HOME/.vim
 ## mkdir -p $HOME/.vim
 ## ln -Ffs $here/vim_config $HOME/.vim/_config
+
+# under $HOME/.config/pet
+mkdir -p $HOME/.config/pet
+ln -Ffs $here/pet_config.toml $HOME/.config/pet/config.toml
