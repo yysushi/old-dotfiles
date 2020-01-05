@@ -219,7 +219,7 @@ if executable('pyls')
 endif
 "" golang
 "" set golang's lsp
-"" requisite: go get -u golang.org/x/tools/cmd/gopls
+"" requisite: go get -u golang.org/x/tools/gopls
 if executable('gopls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'gopls',
