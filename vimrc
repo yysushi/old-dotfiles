@@ -1,4 +1,5 @@
 """ junegunn/vim-plug
+""" as for filetype: https://github.com/vim/vim/blob/master/runtime/filetype.vim
 call plug#begin()
 "" general
 Plug 'scrooloose/nerdtree'
@@ -12,9 +13,18 @@ Plug 'chriskempson/base16-vim'
 "" for uri open (vim has similar feature, but it is only for url)
 Plug 'tyru/open-browser.vim'
 nmap gx <Plug>(openbrowser-open)
+Plug 'tyru/open-browser-github.vim'
+"" for grammer check
+Plug 'rhysd/vim-grammarous'
 
 "" completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 let g:deoplete#enable_at_startup = 1
 "" fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -36,7 +46,7 @@ let g:quickrun_config._ = {
     \ }
 let g:quickrun_config.cpp = {
     \ 'command' : 'clang++',
-    \ 'cmdopt' : '-std=c++14 -g -Wall -Wextra -O2',
+    \ 'cmdopt' : '-std=c++14 -Wall -Wextra -O2',
     \ }
 let g:quickrun_no_default_key_mappings = 1
 "" git
@@ -67,7 +77,7 @@ let g:ale_linters = {
     \ }
 ""    \ 'typescript': ['tslint', 'tsserver'],
 let g:ale_cpp_clang_executable = 'clang++'
-let g:ale_cpp_clang_options = '-std=c++14 -g -Wall -Wextra -O2'
+let g:ale_cpp_clang_options = '-std=c++14 -Wall -Wextra -O2'
 "" requisite: npm install -g prettier eslint tslint prettier
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -84,6 +94,36 @@ let g:ale_completion_enabled = 0
 "" template
 Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
+"" golang
+Plug 'fatih/vim-go', { 'for': 'go' }
+""" koketani:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
+let g:go_version_warning = 0
+let g:go_code_completion_enabled = 0
+let g:go_play_open_browser = 0
+let g:go_jump_to_error = 0
+let g:go_fmt_autosave = 0
+let g:go_mod_fmt_autosave = 0
+let g:go_doc_keywordprg_enabled = 0
+let g:go_def_mapping_enabled = 0
+let g:go_search_bin_path_first = 0
+let g:go_get_update = 0
+let g:go_textobj_enabled = 0
+let g:go_textobj_include_function_doc = 0
+let g:go_textobj_include_variable = 0
+let g:go_list_autoclose = 0
+let g:go_term_close_on_exit = 0
+let g:go_gocode_propose_builtins = 0
+let g:go_gopls_enabled = 0
+let g:go_gopls_deep_completion = 0
+let g:go_gopls_fuzzy_matching = 0
+let g:go_template_autocreate = 0
+let g:go_echo_command_info = 0
+let g:go_echo_go_info = 0
+let g:go_highlight_string_spellcheck = 0
+let g:go_highlight_format_strings = 0
+let g:go_highlight_diagnostic_errors = 0
+let g:go_highlight_diagnostic_warnings = 0
+let g:go_highlight_debug = 0
 "" lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -124,8 +164,8 @@ call plug#end()
 """ basic settings
 
 "" allocate space as leader key
-let mapleader = ' '
-let maplocalleader = ' '
+let mapleader = '\'
+let maplocalleader = ','
 "" key mappings
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>gb :Gblame<cr>
@@ -136,7 +176,11 @@ nnoremap <leader>d :LspDefinition<cr>
 nnoremap <leader>h :LspHover<cr>
 nnoremap <leader>rn :LspRename<cr>
 nnoremap <leader>rf :LspReference<cr>
-nnoremap <leader>td :LspTypeDefinition<cr>
+nnoremap <leader>ne :LspNextError<cr>
+nnoremap <leader>e :LspNextError<cr>
+nnoremap <leader>pe :LspPreviousError<cr>
+" gopls not support..
+" nnoremap <leader>td :LspTypeDefinition<cr>
 
 "" coloring: just make sure and load from background
 colorscheme base16-ocean
@@ -144,10 +188,10 @@ colorscheme base16-ocean
 set number
 set ruler
 " set spell
-set clipboard&
-set clipboard^=unnamedplus
+set clipboard=unnamed
 set autoindent
 set cindent
+set noswapfile
 
 """ language
 "" c++
@@ -175,14 +219,23 @@ if executable('pyls')
 endif
 "" golang
 "" set golang's lsp
-"" requisite: go get -u github.com/sourcegraph/go-langserver
-if executable('go-langserver')
+"" requisite: go get -u golang.org/x/tools/gopls
+if executable('gopls')
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'go-langserver',
-        \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls']},
         \ 'whitelist': ['go'],
         \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
 endif
+"" requisite: go get -u github.com/sourcegraph/go-langserver
+"" if executable('go-langserver')
+""     au User lsp_setup call lsp#register_server({
+""         \ 'name': 'go-langserver',
+""         \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
+""         \ 'whitelist': ['go'],
+""         \ })
+"" endif
 "" typescript
 "" set lsp for js and ts
 "" requisite: npm install -g typescript typescript-language-server
@@ -205,6 +258,7 @@ endif
 "" java
 "" set lsp for java
 "" requisite: https://download.eclipse.org/jdtls/milestones
+"        \     '-classpath /usr/local/Cellar/maven/3.6.3/libexec/boot/plexus-classworlds-2.6.0.jar',
 if executable('java')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'eclipse.jdt.ls',
@@ -217,11 +271,10 @@ if executable('java')
         \     '-noverify',
         \     '-Dfile.encoding=UTF-8',
         \     '-Xmx1G',
-        \     '-classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar',
         \     '-jar',
-        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar',
         \     '-configuration',
-        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/config_linux',
+        \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/config_mac',
         \     '-data',
         \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/workspace'
         \ ]},

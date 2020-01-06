@@ -1,20 +1,24 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <numeric>
+#include <string>
+#include <vector>
 
 int main() {
-  // {{_cursor_}}
   int n;
-  cin >> n;
-  vector<string> ss(n, "0");
-  vector<int> a(n, 0);
+  std::cin >> n;
+  std::vector<int> a(n);
   for (int i = 0; i < n; i++) {
-    string s;
-    cin >> s;
+    std::string s;
+    std::cin >> s;
+    a.at(i) = stoi(s);
     s.at(0) = '0';
     a.push_back(stoi(s));
   }
-  sort(a.begin(), a.end(), greater<int>());
+  sort(a.begin(), a.end(), std::greater<int>());
   int sum = accumulate(a.begin(), a.end(), 0);
-  cout << sum << endl;
+  std::cout << "sum: " << sum << std::endl;
+  for (const auto &e : a) {
+    std::cout << e << std::endl;
+  }
   return 0;
 }
