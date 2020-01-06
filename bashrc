@@ -3,8 +3,10 @@
 USERNAME=koketani
 
 # default bashrc
-export PLATFORM=$(uname -s)
-[ -f /etc/bashrc ] && source /etc/bashrc
+## For Linux
+[ -f /etc/bash.bashrc ] && source /etc/bash.bashrc
+## For Darwin
+[ -f /etc/bash ] && source /etc/bash
 
 # vi mode in bash
 set -o vi
@@ -31,7 +33,7 @@ fi
 source ${global_venv}/bin/activate
 if [ 0 -ne $installed ]; then
 	echo "### install packages for global venv"
-	python -m pip install -r "$HOME/.dotfiles/global-requirements.txt"
+	python -m pip install --user -r "$HOME/.dotfiles/global-requirements.txt"
 fi
 mkdir -p "${venvs_dir}"
 ## create alway project environment for pipenv

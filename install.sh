@@ -1,10 +1,12 @@
 #!/bin/bash
 
 here=$(cd $(dirname $0); pwd -P)
+platform=$(uname -s)
 
 # under $HOME
 ln -Ffs $here/tmux.conf $HOME/.tmux.conf
-ln -Ffs $here/bash_profile $HOME/.bash_profile
+## For Linux, load the default profile
+[ $platform = "Darwin" ] && ln -Ffs $here/bash_profile $HOME/.bash_profile
 ln -Ffs $here/bashrc $HOME/.bashrc
 ln -Ffs $here/screenrc $HOME/.screenrc
 ln -Ffs $here/gitconfig $HOME/.gitconfig
