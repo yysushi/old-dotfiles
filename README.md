@@ -19,6 +19,7 @@
 * [nvm](https://github.com/creationix/nvm#install--update-script)
 * clang
 * nodejs, npm
+* [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
 
 ## Place Configurations
 

@@ -96,3 +96,5 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# rbenv
+eval "$(rbenv init -)"
