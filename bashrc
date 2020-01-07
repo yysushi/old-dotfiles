@@ -56,7 +56,6 @@ export PATH="$PATH":"$GOPATH/bin"
 
 # ghq
 export GHQ_ROOT="$HOME/Developments/git"
-export GHQ_ROOT="$GHQ_ROOT":"$GOPATH/src"
 
 # locale
 export LANG=en_US.UTF-8
