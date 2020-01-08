@@ -1,4 +1,5 @@
 # brew deps --installed
+autoconf:
 bash-completion:
 clang-format:
 fzf:
@@ -34,9 +35,12 @@ pcre2:
 peco:
 perl:
 knqyf263/pet/pet: fzf
+pkg-config:
 python: gdbm openssl@1.1 readline sqlite xz
+rbenv: autoconf pkg-config readline ruby-build
 readline:
 ruby: libyaml openssl@1.1 readline
+ruby-build: autoconf pkg-config readline
 sqlite: readline
 swig: pcre
 the_silver_searcher: pcre xz
