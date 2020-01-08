@@ -20,6 +20,7 @@
 * clang
 * nodejs, npm
 * [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
+* [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
 
 ## Place Configurations
 

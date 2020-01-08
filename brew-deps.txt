@@ -8,6 +8,7 @@ gdbm:
 gettext:
 ghq:
 git: gettext pcre2
+rhysd/git-brws/git-brws:
 gmp:
 gnu-sed:
 htop: ncurses
