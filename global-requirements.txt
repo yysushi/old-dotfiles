@@ -2,7 +2,6 @@ docker-compose
 flake8
 yamllint
 python-language-server
-proselint
 pipenv
 tox
 pynvim
