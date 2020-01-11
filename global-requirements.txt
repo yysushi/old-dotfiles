@@ -5,3 +5,4 @@ python-language-server
 pipenv
 tox
 pynvim
+vint

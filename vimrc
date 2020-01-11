@@ -71,6 +71,7 @@ let g:ale_linters = {
     \ 'markdown': ['markdownlint'],
     \ 'python': ['flake8'],
     \ 'typescript': ['tslint'],
+    \ 'vim': ['vint'],
     \ 'yaml': ['yamllint']
     \ }
 ""    \ 'typescript': ['tslint', 'tsserver'],
