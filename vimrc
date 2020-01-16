@@ -63,6 +63,7 @@ let g:ale_linters_explicit = 1
 ""            npm install -g shellcheck
 ""            apt install tidy
 ""            apt install golint
+""            gem install sqlint
 let g:ale_linters = {
     \ 'cpp': ['clang'],
     \ 'go': ['golint', 'govet'],
@@ -72,6 +73,7 @@ let g:ale_linters = {
     \ 'markdown': ['markdownlint'],
     \ 'python': ['flake8'],
     \ 'sh': ['shellcheck'],
+    \ 'sql': ['sqlint'],
     \ 'typescript': ['tslint'],
     \ 'vim': ['vint'],
     \ 'yaml': ['yamllint']
