@@ -22,7 +22,3 @@ ln -Ffs $here/vimrc $HOME/.vimrc
 # under $HOME/.config/pet
 mkdir -p $HOME/.config/pet
 ln -Ffs $here/pet_config.toml $HOME/.config/pet/config.toml
-
-# under $HOME/Vagrant/ubuntu
-mkdir -p $HOME/Vagrant/ubuntu
-ln -Ffs $here/Vagrantfile $HOME/Vagrant/ubuntu/Vagrantfile
