@@ -1,7 +1,9 @@
+
 $ brew deps --installed
 autoconf:
 bash-completion:
 clang-format:
+fping:
 fzf:
 gcc: gmp isl libmpc mpfr
 gdbm:
@@ -15,6 +17,7 @@ htop: ncurses
 iproute2mac:
 isl: gmp
 jq: oniguruma
+kubernetes-cli:
 libevent: openssl@1.1
 libffi:
 libidn2: gettext libunistring
@@ -28,9 +31,11 @@ llvm: libffi pcre swig
 lua:
 luajit:
 maven:
+minikube: kubernetes-cli
 mpfr: gmp
 msgpack:
 ncurses:
+nmap: openssl@1.1
 nvm:
 oniguruma:
 openssl@1.1:
