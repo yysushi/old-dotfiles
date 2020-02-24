@@ -3,6 +3,7 @@ flake8
 yamllint
 python-language-server
 pipenv
+tldr
 tox
 pynvim
 vint
