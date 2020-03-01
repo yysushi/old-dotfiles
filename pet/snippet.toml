@@ -1,0 +1,29 @@
+[[snippets]]
+  description = "Replace \"hoge\" with \"fuga\" text files recursively under current directory"
+  command = "find ./ -type f -name *.txt -exec gsed -i -e 's/hoge/fuga/g' {} \\;"
+  output = ""
+
+[[snippets]]
+  description = "Open file on git server via vim"
+  command = "!git brws %"
+  output = ""
+
+[[snippets]]
+  description = "Generate private key (default size: 2048 so far)"
+  command = "openssl genrsa > private-key.pem"
+  output = ""
+
+[[snippets]]
+  description = "Generate public key with given private key"
+  command = "openssl rsa -pubout < private-key.pem > public-key.pem"
+  output = ""
+
+[[snippets]]
+  description = "Generate CSR (Certificate Signing Request) with given server private key"
+  command = "openssl req -new -key server.key > server.csr"
+  output = ""
+
+[[snippets]]
+  description = "Generate CRT (Self-signed certificate) with given server private key and self-signed CSR"
+  command = "openssl x509 -req -signkey server.key < server.csr > server.crt"
+  output = ""
