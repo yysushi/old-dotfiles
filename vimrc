@@ -55,7 +55,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 let g:ale_lint_delay = 1000
 let g:ale_linters_explicit = 1
-"" requisite: pip install flake8 yamllint vint
+"" requisite: pip install flake8 yamllint vint rstcheck
 ""            npm install -g jsonlint
 ""            npm install -g eslint
 ""            npm install -g tsserver tslint
@@ -72,6 +72,7 @@ let g:ale_linters = {
     \ 'javascript': ['eslint'],
     \ 'markdown': ['markdownlint'],
     \ 'python': ['flake8'],
+    \ 'rst': ['rstcheck'],
     \ 'sh': ['shellcheck'],
     \ 'sql': ['sqlint'],
     \ 'typescript': ['tslint'],
