@@ -66,6 +66,7 @@ let g:ale_linters_explicit = 1
 ""            gem install sqlint
 let g:ale_linters = {
     \ 'cpp': ['clang'],
+    \ 'dockerfile': ['hadolint'],
     \ 'go': ['golint', 'govet'],
     \ 'html': ['tidy'],
     \ 'json': ['jsonlint'],

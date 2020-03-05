@@ -1,4 +1,3 @@
-
 $ brew deps --installed
 autoconf:
 bash-completion:
@@ -13,6 +12,7 @@ git: gettext pcre2
 rhysd/git-brws/git-brws:
 gmp:
 gnu-sed:
+hadolint:
 htop: ncurses
 iproute2mac:
 isl: gmp
@@ -53,6 +53,7 @@ ruby-build: autoconf pkg-config readline
 shellcheck:
 sqlite: readline
 swig: pcre
+telnet:
 the_silver_searcher: pcre xz
 tig: readline
 tmux: libevent ncurses openssl@1.1
