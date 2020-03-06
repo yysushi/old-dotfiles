@@ -24,13 +24,13 @@ mkdir -p "$HOME/.tmux/log"
 # venv configuration
 global_venv="$HOME/.global-venv"
 venvs_dir="$HOME/.venvs"
-test -d ${global_venv}
+test -d "${global_venv}"
 installed=$?
 if [ 0 -ne $installed ]; then
         echo "### create global venv at ${global_venv}"
-	python3 -m venv ${global_venv}
+	python3 -m venv "${global_venv}"
 fi
-source ${global_venv}/bin/activate
+source "${global_venv}/bin/activate"
 if [ 0 -ne $installed ]; then
 	echo "### install packages for global venv"
 	python -m pip install --user -r "$HOME/.dotfiles/global-requirements.txt"
@@ -84,7 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # npm
-export PATH=~/.npm-global/bin:$PATH
+export PATH="$HOME/.npm-global/bin":$PATH
 
 # llvm
 export PATH="/usr/local/opt/llvm/bin:$PATH"
@@ -93,7 +93,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME/fzf.bash" ] && source "$HOME/.fzf.bash"
 
 # rbenv
 eval "$(rbenv init -)"
