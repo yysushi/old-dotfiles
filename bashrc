@@ -50,7 +50,7 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 
 # golang
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-gvm use go1.13 > /dev/null
+gvm use go1.14 > /dev/null
 export GOPATH="$HOME/Developments/go"
 export PATH="$PATH":"$GOPATH/bin"
 
