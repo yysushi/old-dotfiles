@@ -93,7 +93,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # fzf
-[ -f "$HOME/fzf.bash" ] && source "$HOME/.fzf.bash"
+[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
 
 # rbenv
 eval "$(rbenv init -)"
