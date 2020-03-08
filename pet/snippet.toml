@@ -27,3 +27,8 @@
   description = "Generate CRT (Self-signed certificate) with given server private key and self-signed CSR"
   command = "openssl x509 -req -signkey server.key < server.csr > server.crt"
   output = ""
+
+[[snippets]]
+  description = "Checkout remote master anyway"
+  command = "git reset --hard origin/master"
+  output = ""
