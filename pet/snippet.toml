@@ -32,3 +32,13 @@
   description = "Checkout remote master anyway"
   command = "git reset --hard origin/master"
   output = ""
+
+[[snippets]]
+  description = "Generate uuid with lower cases"
+  command = "uuidgen | tr \"[:upper:]\" \"[:lower:]\""
+  output = ""
+
+[[snippets]]
+  description = "Generate random hex with 4 bytes"
+  command = "openssl rand -hex 4"
+  output = ""
