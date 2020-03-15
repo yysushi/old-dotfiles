@@ -42,3 +42,8 @@
   description = "Generate random hex with 4 bytes"
   command = "openssl rand -hex 4"
   output = ""
+
+[[snippets]]
+  description = "List open files listen to 8080 port"
+  command = "lsof -n -P -i :8080"
+  output = ""
