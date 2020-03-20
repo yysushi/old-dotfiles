@@ -8,3 +8,4 @@ tox
 pynvim
 vint
 rstcheck
+graphviz

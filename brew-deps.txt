@@ -2,27 +2,38 @@ $ brew deps --installed
 autoconf:
 bash-completion:
 clang-format:
+fontconfig: freetype libpng
 fping:
+freetype: libpng
 fzf:
 gcc: gmp isl libmpc mpfr
+gd: fontconfig freetype jpeg libpng libtiff webp
 gdbm:
 gettext:
 ghq:
 git: gettext pcre2
 rhysd/git-brws/git-brws:
+glib: gdbm gettext libffi openssl@1.1 pcre python readline sqlite xz
 gmp:
 gnu-sed:
+graphviz: fontconfig freetype gd gdbm gettext glib gts jasper jpeg libffi libpng libtiff libtool netpbm openssl@1.1 pcre python readline sqlite webp xz
+gts: gdbm gettext glib jasper jpeg libffi libpng libtiff netpbm openssl@1.1 pcre python readline sqlite xz
 hadolint:
 htop: ncurses
 iproute2mac:
 isl: gmp
+jasper: jpeg
+jpeg:
 jq: oniguruma
 kubernetes-cli:
 libevent: openssl@1.1
 libffi:
 libidn2: gettext libunistring
 libmpc: gmp mpfr
+libpng:
 libtermkey: unibilium
+libtiff: jpeg
+libtool:
 libunistring:
 libuv:
 libvterm:
@@ -35,6 +46,7 @@ minikube: kubernetes-cli
 mpfr: gmp
 msgpack:
 ncurses:
+netpbm: jasper jpeg libpng libtiff
 ngrep:
 nmap: openssl@1.1
 nvm:
@@ -63,5 +75,6 @@ tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
 tree:
 unibilium:
 vim: gdbm gettext libyaml lua openssl@1.1 perl python readline ruby sqlite xz
+webp: jpeg libpng libtiff
 wget: gettext libidn2 libunistring openssl@1.1
 xz:
