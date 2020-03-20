@@ -35,9 +35,11 @@ minikube: kubernetes-cli
 mpfr: gmp
 msgpack:
 ncurses:
+ngrep:
 nmap: openssl@1.1
 nvm:
 oniguruma:
+openjdk:
 openssl@1.1:
 pcre:
 pcre2:
