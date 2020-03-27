@@ -5,8 +5,6 @@ platform=$(uname -s)
 
 # under "$HOME"
 ln -Ffs "$here"/tmux.conf "$HOME"/.tmux.conf
-## For Linux, load the default profile
-[ "$platform" = "Darwin" ] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
 ln -Ffs "$here"/bashrc "$HOME"/.bashrc
 ln -Ffs "$here"/screenrc "$HOME"/.screenrc
 ln -Ffs "$here"/gitconfig "$HOME"/.gitconfig
@@ -15,6 +13,8 @@ ln -Ffs "$here"/agignore "$HOME"/.agignore
 ln -Ffs "$here"/tslint.json "$HOME"/.tslint.json
 ln -Ffs "$here"/eslintrc.json "$HOME"/.eslintrc.json
 ln -Ffs "$here"/vimrc "$HOME"/.vimrc
+## for darwin
+[ "$platform" = "Darwin" ] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
 
 # under "$HOME"/.tmux
 mkdir -p "$HOME"/.tmux/log
