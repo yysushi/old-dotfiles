@@ -19,7 +19,6 @@ export EDITOR=vim
 
 # tmux
 alias tmux='tmux -u'
-mkdir -p "$HOME/.tmux/log"
 
 # venv configuration
 global_venv="$HOME/.global-venv"

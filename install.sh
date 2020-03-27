@@ -4,6 +4,7 @@ here=$(cd "$(dirname "$0")" && pwd -P)
 platform=$(uname -s)
 
 # under "$HOME"
+mkdir -p "$HOME"/.tmux/log
 ln -Ffs "$here"/tmux.conf "$HOME"/.tmux.conf
 ## For Linux, load the default profile
 [ "$platform" = "Darwin" ] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
