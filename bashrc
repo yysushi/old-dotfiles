@@ -6,7 +6,7 @@ USERNAME=koketani
 ## For Linux
 [ -f /etc/bash.bashrc ] && source /etc/bash.bashrc
 ## For Darwin
-[ -f /etc/bash ] && source /etc/bash
+[ -f /etc/bashrc ] && source /etc/bashrc
 
 # vi mode in bash
 set -o vi
