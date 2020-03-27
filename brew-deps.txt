@@ -2,6 +2,7 @@ $ brew deps --installed
 autoconf:
 bash-completion:
 clang-format:
+coreutils:
 fontconfig: freetype libpng
 fping:
 freetype: libpng
