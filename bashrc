@@ -38,10 +38,6 @@ mkdir -p "${venvs_dir}"
 ## create alway project environment for pipenv
 export PIPENV_IGNORE_VIRTUALENVS=1
 
-# dev
-export DEV="$HOME/Developments"
-mkdir -p "$DEV"
-
 # cpp for make command and make built-in plugin in vim
 export CXX="clang++"
 export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
