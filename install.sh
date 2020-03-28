@@ -13,6 +13,7 @@ ln -Ffs "$here"/agignore "$HOME"/.agignore
 ln -Ffs "$here"/tslint.json "$HOME"/.tslint.json
 ln -Ffs "$here"/eslintrc.json "$HOME"/.eslintrc.json
 ln -Ffs "$here"/vimrc "$HOME"/.vimrc
+ln -Ffs "$here"/shellcheckrc "$HOME"/.shellcheckrc
 ## for darwin
 [ "$platform" = "Darwin" ] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
 
