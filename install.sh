@@ -22,7 +22,7 @@ mkdir -p "$HOME"/.tmux/log
 
 # under "$HOME"/.config/pet
 mkdir -p "$HOME"/.config
-ln -Ffs "$here"/pet "$HOME"/.config/pet
+[[ -d "$HOME"/.config/pet ]] || ln -Ffs "$here"/pet "$HOME"/.config/pet
 
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
