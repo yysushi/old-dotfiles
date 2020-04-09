@@ -195,8 +195,6 @@ set number
 set ruler
 " set spell
 set clipboard=unnamed
-set autoindent
-set cindent
 set noswapfile
 
 """ language
