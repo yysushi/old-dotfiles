@@ -230,7 +230,7 @@ if executable('gopls')
         \ 'cmd': {server_info->['gopls']},
         \ 'whitelist': ['go'],
         \ })
-    autocmd BufWritePre *.go LspDocumentFormatSync
+    "" autocmd BufWritePre *.go LspDocumentFormatSync
 endif
 "" requisite: go get -u github.com/sourcegraph/go-langserver
 "" if executable('go-langserver')
