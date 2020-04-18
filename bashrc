@@ -35,8 +35,6 @@ if [ 0 -ne $installed ]; then
 	python -m pip install --user -r "$HOME"/.dotfiles/global-requirements.txt
 fi
 mkdir -p "${venvs_dir}"
-## create alway project environment for pipenv
-export PIPENV_IGNORE_VIRTUALENVS=1
 
 # dev
 DEV="$HOME/Developments"
