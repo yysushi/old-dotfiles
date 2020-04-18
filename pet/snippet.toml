@@ -47,3 +47,8 @@
   description = "List open files listen to 8080 port"
   command = "lsof -n -P -i :8080"
   output = ""
+
+[[snippets]]
+  description = "Replace \"deprecated\" with \"new\" for all files in the current directory"
+  command = "find ./ -type f -exec sed -i -e 's/deprecated/new/g' {} \\;"
+  output = ""
