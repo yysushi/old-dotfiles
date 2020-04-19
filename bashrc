@@ -34,6 +34,7 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 source "$HOME"/.py37/bin/activate
 
 # golang
+mkdir -p "$HOME/.go"
 export GOPATH="$HOME/.go"
 export PATH=$PATH:/usr/local/go/bin:"$GOPATH/bin"
 
