@@ -1,7 +1,0 @@
-docker-compose
-yamllint
-tldr
-tox
-vint
-rstcheck
-graphviz

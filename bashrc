@@ -20,22 +20,6 @@ export EDITOR=vim
 # tmux
 alias tmux='tmux -u'
 
-# venv configuration
-global_venv="$HOME"/.global-venv
-venvs_dir="$HOME"/.venvs
-test -d "${global_venv}"
-installed=$?
-if [ 0 -ne $installed ]; then
-        echo "### create global venv at ${global_venv}"
-	python3 -m venv "${global_venv}"
-fi
-source "${global_venv}"/bin/activate
-if [ 0 -ne $installed ]; then
-	echo "### install packages for global venv"
-	python -m pip install --user -r "$HOME"/.dotfiles/global-requirements.txt
-fi
-mkdir -p "${venvs_dir}"
-
 # dev
 DEV="$HOME/Developments"
 export DEV
@@ -44,6 +28,10 @@ export DEV
 export CXX="clang++"
 export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
+
+# python
+[[ -d "$HOME"/.py37 ]] || virtualenv --python=python3.7 "$HOME"/.py37
+source "$HOME"/.py37/bin/activate
 
 # golang
 [[ -f "$HOME"/.gvm/scripts/gvm ]] && source "$HOME"/.gvm/scripts/gvm
@@ -100,3 +88,11 @@ eval "$(rbenv init -)"
 # google cloud sdk
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+
+# pipx
+# requisite: pip3 install pipx
+mkdir -p "$HOME"/.pipx
+export PIPX_HOME="$HOME"/.pipx/pipx
+export PIPX_SHARED_LIBS="$HOME"/.pipx/shared
+export PIPX_BIN_DIR="$HOME"/.pipx/bin
+export PATH="$PATH":"$PIPX_BIN_DIR"

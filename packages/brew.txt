@@ -1,4 +1,4 @@
-$ brew deps --installed
+koketani:.dotfiles (master *+%=)$ brew deps --installed
 autoconf:
 bash-completion:
 clang-format:

@@ -1,0 +1,26 @@
+pipxkoketani:.dotfiles (master *+%=)$ pipx list
+venvs are in /Users/koketani/.pipx/pipx/venvs
+apps are exposed on your $PATH at /Users/koketani/.pipx/bin
+   package docker-compose 1.25.5, Python 3.7.7
+    - docker-compose
+   package flake8 3.7.9, Python 3.7.7
+    - flake8
+   package pipenv 2018.11.26, Python 3.7.7
+    - pipenv
+    - pipenv-resolver
+   package python-language-server 0.31.10, Python 3.7.7
+    - pyls
+   package rstcheck 3.3.1, Python 3.7.7
+    - rstcheck
+   package tldr 0.5, Python 3.7.7
+    - tldr
+    - tldr.py
+   package tox 3.14.6, Python 3.7.7
+    - tox
+    - tox-quickstart
+   package vint 0.1.5, Python 3.7.7
+    - vint
+   package virtualenv 20.0.18, Python 3.7.7
+    - virtualenv
+   package yamllint 1.23.0, Python 3.7.7
+    - yamllint
