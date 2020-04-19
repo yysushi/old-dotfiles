@@ -86,7 +86,8 @@ let g:ale_fixers = {
     \ 'go': ['gofmt'],
     \ 'html': ['prettier'],
     \ 'javascript': ['eslint'],
-    \ 'json': ['prettier']
+    \ 'json': ['prettier'],
+    \ 'python': ['black']
     \ }
 "    \ 'typescript': ['tslint', 'prettier'],
 let g:ale_fix_on_save = 0
