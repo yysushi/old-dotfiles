@@ -228,14 +228,6 @@ if executable('gopls')
         \ })
     "" autocmd BufWritePre *.go LspDocumentFormatSync
 endif
-"" requisite: go get -u github.com/sourcegraph/go-langserver
-"" if executable('go-langserver')
-""     au User lsp_setup call lsp#register_server({
-""         \ 'name': 'go-langserver',
-""         \ 'cmd': {server_info->['go-langserver', '-gocodecompletion']},
-""         \ 'whitelist': ['go'],
-""         \ })
-"" endif
 "" typescript
 "" set lsp for js and ts
 "" requisite: npm install -g typescript typescript-language-server

@@ -34,10 +34,8 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 source "$HOME"/.py37/bin/activate
 
 # golang
-[[ -f "$HOME"/.gvm/scripts/gvm ]] && source "$HOME"/.gvm/scripts/gvm
-gvm use go1.14 > /dev/null
-export GOPATH="$HOME"/Developments/go
-export PATH=$PATH:"$GOPATH"/bin
+export GOPATH="$HOME/.go"
+export PATH=$PATH:/usr/local/go/bin:"$GOPATH/bin"
 
 # ghq
 export GHQ_ROOT="$HOME"/Developments/git
