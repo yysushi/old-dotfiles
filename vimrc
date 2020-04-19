@@ -97,7 +97,7 @@ let g:ale_completion_enabled = 0
 Plug 'mattn/sonictemplate-vim'
 let g:sonictemplate_vim_template_dir = '$HOME/.dotfiles/template'
 "" golang
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 """ koketani:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
 let g:go_version_warning = 0
 let g:go_code_completion_enabled = 0
