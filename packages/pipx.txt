@@ -1,4 +1,5 @@
 docker-compose
+docutils
 flake8
 python-language-server
 rstcheck
