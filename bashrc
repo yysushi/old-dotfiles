@@ -32,6 +32,7 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # python
 [[ -d "$HOME"/.py37 ]] || virtualenv --python=python3.7 "$HOME"/.py37
 source "$HOME"/.py37/bin/activate
+export PIPENV_IGNORE_VIRTUALENVS=1
 
 # golang
 mkdir -p "$HOME/.go"
