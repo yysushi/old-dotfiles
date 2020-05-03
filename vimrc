@@ -47,7 +47,8 @@ let g:quickrun_config.cpp = {
 let g:quickrun_no_default_key_mappings = 1
 "" html xml
 Plug 'alvan/vim-closetag'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
+let g:user_emmet_mode='n'
 "" git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
