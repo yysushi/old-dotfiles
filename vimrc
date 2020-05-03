@@ -9,13 +9,14 @@ let g:indentLine_char = '|'
 Plug 'chriskempson/base16-vim'
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'junegunn/vim-easy-align'
-" Plug 'jiangmiao/auto-pairs'
-"" for uri open (vim has similar feature, but it is only for url)
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+"" uri open (vim has similar feature, but it is only for url)
 Plug 'tyru/open-browser.vim'
 nmap gx <Plug>(openbrowser-open)
-"" for grammer check
+"" grammer check
 Plug 'rhysd/vim-grammarous'
-
 "" completion
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
@@ -44,6 +45,9 @@ let g:quickrun_config.cpp = {
     \ 'cmdopt' : '-std=c++14 -Wall -Wextra -O2',
     \ }
 let g:quickrun_no_default_key_mappings = 1
+"" html xml
+Plug 'alvan/vim-closetag'
+Plug 'mattn/emmet-vim'
 "" git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
