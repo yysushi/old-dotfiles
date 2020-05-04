@@ -20,6 +20,7 @@
 * nodejs, npm
 * [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
 * [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
+* [pipx](https://pipxproject.github.io/pipx/installation/#install-pipx)
 
 ## Place Configurations
 
