@@ -53,7 +53,7 @@ let g:user_emmet_mode='n'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 "" lint/fix/completion/definition/reference/hover/symbol by ale
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_lint_delay = 1000
 let g:ale_linters_explicit = 1
 "" requisite: pip install flake8 yamllint vint rstcheck
