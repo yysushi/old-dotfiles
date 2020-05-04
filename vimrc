@@ -191,7 +191,10 @@ nnoremap <leader>pe :LspPreviousError<cr>
 " nnoremap <leader>td :LspTypeDefinition<cr>
 
 "" coloring: just make sure and load from background
-colorscheme base16-ocean
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 "" numbering
 set number
 set ruler

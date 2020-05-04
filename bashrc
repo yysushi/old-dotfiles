@@ -30,8 +30,8 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
 
 # python
-[[ -d "$HOME"/.py37 ]] || virtualenv --python=python3.7 "$HOME"/.py37
-source "$HOME"/.py37/bin/activate
+[[ -d "$HOME"/.py36 ]] || virtualenv --python=python3.6 "$HOME"/.py36
+source "$HOME"/.py36/bin/activate
 export PIPENV_IGNORE_VIRTUALENVS=1
 
 # golang
