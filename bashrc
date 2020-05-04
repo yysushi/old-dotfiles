@@ -65,10 +65,8 @@ BASE16_SHELL="$HOME"/.config/base16-shell/
 
 # nvm
 export NVM_DIR="$HOME"/.nvm
-## load nvm
-[[ -f /usr/local/opt/nvm/nvm.sh ]] && source /usr/local/opt/nvm/nvm.sh
-## load nvm bash_completion
-[[ -f /usr/local/opt/nvm/etc/bash_completion.d/nvm ]] && source /usr/local/opt/nvm/etc/bash_completion.d/nvm
+[ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
+[ -s "$NVM_DIR"/bash_completion  ] && \. "$NVM_DIR"/bash_completion  # This loads nvm bash_completion
 
 # npm
 export PATH="$HOME"/.npm-global/bin:"$PATH"
