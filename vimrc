@@ -50,7 +50,9 @@ Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 let g:user_emmet_mode='n'
 "" git
-Plug 'airblade/vim-gitgutter'
+" " unless set, see vim-gitgutter issue https://github.com/airblade/vim-gitgutter/issues/155
+" Plug 'airblade/vim-gitgutter'
+set t_Co=256
 Plug 'tpope/vim-fugitive'
 "" lint/fix/completion/definition/reference/hover/symbol by ale
 Plug 'w0rp/ale'
