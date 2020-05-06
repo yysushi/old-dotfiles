@@ -85,7 +85,7 @@ let g:ale_linters = {
 ""    \ 'typescript': ['tslint', 'tsserver'],
 let g:ale_cpp_clang_executable = 'clang++'
 let g:ale_cpp_clang_options = '-std=c++14 -Wall -Wextra -O2'
-"" requisite: npm install -g prettier eslint tslint prettier
+"" requisite: npm install -g prettier eslint tslint prettier csslint
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
     \ 'css': ['prettier'],
