@@ -67,6 +67,7 @@ let g:ale_linters_explicit = 1
 ""            gem install sqlint
 let g:ale_linters = {
     \ 'cpp': ['clang'],
+    \ 'css': ['csslint'],
     \ 'dockerfile': ['hadolint'],
     \ 'go': ['golint', 'govet'],
     \ 'html': ['tidy'],
@@ -87,6 +88,7 @@ let g:ale_cpp_clang_options = '-std=c++14 -Wall -Wextra -O2'
 "" requisite: npm install -g prettier eslint tslint prettier
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'css': ['prettier'],
     \ 'cpp': ['clang-format'],
     \ 'go': ['gofmt'],
     \ 'html': ['prettier'],
