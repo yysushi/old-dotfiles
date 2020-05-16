@@ -94,3 +94,6 @@ export PIPX_HOME="$HOME"/.pipx/pipx
 export PIPX_SHARED_LIBS="$HOME"/.pipx/shared
 export PIPX_BIN_DIR="$HOME"/.pipx/bin
 export PATH="$PATH":"$PIPX_BIN_DIR"
+
+# rust
+export PATH="$HOME"/.cargo/bin:"$PATH"

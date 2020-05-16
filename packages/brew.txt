@@ -50,7 +50,6 @@ ncurses:
 netpbm: jasper jpeg libpng libtiff
 ngrep:
 nmap: openssl@1.1
-nvm:
 oniguruma:
 openjdk:
 openssl@1.1:

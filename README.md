@@ -21,6 +21,7 @@
 * [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
 * [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
 * [pipx](https://pipxproject.github.io/pipx/installation/#install-pipx)
+* [rustup](https://doc.rust-lang.org/book/ch01-01-installation.html#installing-rustup-on-linux-or-macos)
 
 ## Place Configurations
 

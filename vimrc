@@ -65,6 +65,7 @@ let g:ale_linters_explicit = 1
 ""            apt install tidy
 ""            apt install golint
 ""            gem install sqlint
+""            rustup update && rustup component add rls rust-analysis rust-src
 let g:ale_linters = {
     \ 'cpp': ['clang'],
     \ 'css': ['csslint'],
@@ -76,6 +77,7 @@ let g:ale_linters = {
     \ 'markdown': ['markdownlint'],
     \ 'python': ['flake8'],
     \ 'rst': ['rstcheck'],
+    \ 'rust': ['rls'],
     \ 'sh': ['shellcheck'],
     \ 'sql': ['sqlint'],
     \ 'typescript': ['tslint'],
@@ -94,7 +96,8 @@ let g:ale_fixers = {
     \ 'html': ['prettier'],
     \ 'javascript': ['eslint'],
     \ 'json': ['prettier'],
-    \ 'python': ['black']
+    \ 'python': ['black'],
+    \ 'rust': ['rustfmt']
     \ }
 "    \ 'typescript': ['tslint', 'prettier'],
 let g:ale_fix_on_save = 0
@@ -154,8 +157,8 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 "" toml
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 "" rust
+"" requisite: rustup update && rustup component add rustfmt
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-" https://github.com/rust-lang-nursery/rustfmt#installation
 let g:rustfmt_autosave = 1
 "" typescript
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
@@ -210,7 +213,7 @@ set noswapfile
 "" check `cinoptions-values`
 autocmd Filetype cpp setlocal sw=2 sts=2
 "" setu cpp's lsp
-"" requisuite: clangd
+"" requisite: clangd
 if executable('clangd')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'clangd',
@@ -282,5 +285,16 @@ if executable('java')
         \     fnamemodify("~", ":p") . '/.eclipse.jdt.ls/workspace'
         \ ]},
         \ 'whitelist': ['java'],
+        \ })
+endif
+"" rust
+"" set rust's lsp
+"" requisite: rustup update && rustup component add rls rust-analysis rust-src
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+        \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+        \ 'whitelist': ['rust'],
         \ })
 endif
