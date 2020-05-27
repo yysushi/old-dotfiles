@@ -14,4 +14,7 @@ dist/
 
 working_dir/
 
+# asdf
 .tool-versions
+# direnv
+.envrc

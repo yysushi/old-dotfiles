@@ -23,6 +23,7 @@
 * [pipx](https://pipxproject.github.io/pipx/installation/#install-pipx)
 * [rustup](https://doc.rust-lang.org/book/ch01-01-installation.html#installing-rustup-on-linux-or-macos)
 * [asdf](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm)
+* [direnv](https://github.com/direnv/direnv/blob/master/docs/installation.md#from-binary-builds)
 
 ## Place Configurations
 
