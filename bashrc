@@ -97,3 +97,7 @@ export PATH="$PATH":"$PIPX_BIN_DIR"
 
 # rust
 export PATH="$HOME"/.cargo/bin:"$PATH"
+
+# asdf
+[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
+[[ -f "$HOME"/.asdf/completions/asdf.bash ]] && source "$HOME"/.asdf/completions/asdf.bash
