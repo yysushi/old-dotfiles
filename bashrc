@@ -34,11 +34,6 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 source "$HOME"/.py36/bin/activate
 export PIPENV_IGNORE_VIRTUALENVS=1
 
-# golang
-mkdir -p "$HOME/.go"
-export GOPATH="$HOME/.go"
-export PATH=$PATH:/usr/local/go/bin:"$GOPATH/bin"
-
 # ghq
 export GHQ_ROOT="$HOME"/Developments/git
 

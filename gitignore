@@ -13,3 +13,5 @@ dist/
 *.egg-info/
 
 working_dir/
+
+.tool-versions
