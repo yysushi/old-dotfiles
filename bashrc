@@ -29,9 +29,7 @@ export CXX="clang++"
 export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
 
-# python
-[[ -d "$HOME"/.py36 ]] || virtualenv --python=python3.6 "$HOME"/.py36
-source "$HOME"/.py36/bin/activate
+# pipenv
 export PIPENV_IGNORE_VIRTUALENVS=1
 
 # ghq
