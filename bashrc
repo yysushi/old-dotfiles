@@ -20,6 +20,11 @@ export EDITOR=vim
 # tmux
 alias tmux='tmux -u'
 
+# for mac
+# overwrite posix commands with gnu's ones
+alias sed='gsed'
+alias grep='ggrep'
+
 # dev
 DEV="$HOME/Developments"
 export DEV
