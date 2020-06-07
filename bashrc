@@ -22,8 +22,8 @@ alias tmux='tmux -u'
 
 # for mac
 # overwrite posix commands with gnu's ones
-alias sed='gsed'
-alias grep='ggrep'
+command -v ggsed && alias sed='gsed'
+command -v ggrep && alias grep='ggrep'
 
 # dev
 DEV="$HOME/Developments"
