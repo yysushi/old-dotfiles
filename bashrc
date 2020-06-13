@@ -82,9 +82,6 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
 
-# rust
-export PATH="$HOME"/.cargo/bin:"$PATH"
-
 # asdf
 [[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
 [[ -f "$HOME"/.asdf/completions/asdf.bash ]] && source "$HOME"/.asdf/completions/asdf.bash

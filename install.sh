@@ -29,7 +29,4 @@ mkdir -p "$HOME"/.config
 mkdir -p "$HOME"/Developments
 
 # echo for others
-echo install brew packages
-echo install npm packages
-echo install pip packages
-echo install pipx packages
+echo install packages
