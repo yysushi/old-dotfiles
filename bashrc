@@ -78,9 +78,6 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 # fzf
 [[ -f "$HOME"/.fzf.bash ]] && source "$HOME"/.fzf.bash
 
-# rbenv
-eval "$(rbenv init -)"
-
 # google cloud sdk
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 [[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
