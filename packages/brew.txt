@@ -69,6 +69,7 @@ sqlite: readline
 swig: pcre
 telnet:
 the_silver_searcher: pcre xz
+tidy-html5:
 tig: readline
 tmux: libevent ncurses openssl@1.1
 tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
