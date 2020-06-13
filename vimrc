@@ -173,14 +173,19 @@ let g:slumlord_separate_win = 1
 "" markdown, restructured text, textile, asciidoc
 "" along with tyru/open-browser.vim
 Plug 'previm/previm'
+
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+nnoremap <leader>l :Limelight<cr>
+xnoremap <leader>l :Limelight<cr>
+
 call plug#end()
 
 
 """ basic settings
 
-"" allocate space as leader key
-let mapleader = '\'
-let maplocalleader = ','
 "" key mappings
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>gb :Gblame<cr>
