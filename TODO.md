@@ -2,4 +2,6 @@
 
 ## asdf
 
-- replace language version management with asdf
+- java
+- rust
+- x node (nvm is simple enough)
