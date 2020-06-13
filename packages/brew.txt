@@ -65,7 +65,6 @@ rbenv: autoconf pkg-config readline ruby-build
 readline:
 ruby: libyaml openssl@1.1 readline
 ruby-build: autoconf pkg-config readline
-shellcheck:
 sqlite: readline
 swig: pcre
 telnet:
