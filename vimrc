@@ -27,7 +27,6 @@ Plug 'dense-analysis/ale'
       \ 'markdown': ['markdownlint'],
       \ 'python': ['flake8'],
       \ 'rst': ['rstcheck'],
-      \ 'rust': ['rls'],
       \ 'sh': ['shellcheck'],
       \ 'sql': ['sqlint'],
       \ 'typescript': ['tslint'],
@@ -84,7 +83,6 @@ Plug 'junegunn/fzf.vim'
 
 " requisite: apt install clang llvm build-essentials clang-tools
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
-  let g:go_gocode_propose_builtins = 0
 
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
@@ -93,7 +91,6 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-  let g:rustfmt_autosave = 1
 
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 
@@ -114,10 +111,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
   let g:go_textobj_include_variable = 0
   let g:go_list_autoclose = 0
   let g:go_term_close_on_exit = 0
-  let g:go_gocode_propose_builtins = 0
   let g:go_gopls_enabled = 0
-  let g:go_gopls_deep_completion = 0
-  let g:go_gopls_fuzzy_matching = 0
   let g:go_template_autocreate = 0
   let g:go_echo_command_info = 0
   let g:go_echo_go_info = 0
@@ -147,11 +141,6 @@ Plug 'thinca/vim-quickrun'
       \ }
   let g:quickrun_no_default_key_mappings = 1
 
-"" docker
-"" TDOO: delete this
-Plug 'honza/dockerfile.vim'
-
-"" plantuml
 Plug 'scrooloose/vim-slumlord'
 Plug 'aklt/plantuml-syntax'
   let g:slumlord_separate_win = 1
@@ -159,6 +148,8 @@ Plug 'aklt/plantuml-syntax'
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
   let g:user_emmet_mode='n'
+
+Plug 'previm/previm'
 
 " }}}
 
@@ -200,11 +191,6 @@ Plug 'tyru/open-browser.vim'
 Plug 'tpope/vim-surround'
 
 Plug 'rhysd/vim-grammarous'
-
-
-"" markdown, restructured text, textile, asciidoc
-"" along with tyru/open-browser.vim
-Plug 'previm/previm'
 
 " }}}
 
