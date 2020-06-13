@@ -91,3 +91,6 @@ export PATH="$HOME"/.cargo/bin:"$PATH"
 
 # pipx
 export PATH="$PATH":"$HOME"/.pipx/bin
+
+# direnv
+eval "$(direnv hook bash)"
