@@ -1,4 +1,4 @@
-" vim: set foldmethod=marker foldlevel=0 nomodeline:
+" vim: set foldmethod=marker foldlevel=0:
 
 " plugins {{{
 "
@@ -210,6 +210,7 @@ set number
 set ruler
 set clipboard=unnamed
 set noswapfile
+set modeline
 
 " }}}
 
