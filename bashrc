@@ -86,8 +86,14 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 [[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
 [[ -f "$HOME"/.asdf/completions/asdf.bash ]] && source "$HOME"/.asdf/completions/asdf.bash
 
+# pip
+export PIP_REQUIRE_VIRTUALENV=true
+
 # pipx
 export PATH="$PATH":"$HOME"/.pipx/bin
+
+# venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # direnv
 eval "$(direnv hook bash)"
