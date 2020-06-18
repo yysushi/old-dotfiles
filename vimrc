@@ -328,7 +328,7 @@ endif
 
 " shiftwidth, tabstop and fold option {{{
 
-au Filetype cucumber setlocal shiftwidth=2 foldmethod=indent foldlevel=2
+au Filetype cucumber setlocal shiftwidth=2 foldmethod=indent foldlevel=1
 au Filetype go setlocal shiftwidth=8 tabstop=8 noexpandtab
 au Filetype javascript setlocal shiftwidth=4
 au Filetype json setlocal shiftwidth=2
