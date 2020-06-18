@@ -210,6 +210,7 @@ set number
 set ruler
 set clipboard=unnamed
 set noswapfile
+set expandtab
 
 " }}}
 
