@@ -244,6 +244,8 @@ xnoremap <leader>l :Limelight<cr>
 
 " autocmd {{{
 
+" lsp {{{
+"
 " requisite: clangd, clang-format
 if executable('clangd')
     au User lsp_setup call lsp#register_server({
@@ -321,5 +323,18 @@ if executable('rls')
         \ 'whitelist': ['rust'],
         \ })
 endif
+
+" }}}
+
+" shiftwidth, tabstop and fold option {{{
+
+au Filetype cucumber setlocal shiftwidth=2 foldmethod=indent foldlevel=2
+au Filetype go setlocal shiftwidth=8 tabstop=8 noexpandtab
+au Filetype javascript setlocal shiftwidth=4
+au Filetype json setlocal shiftwidth=2
+au Filetype python setlocal shiftwidth=4
+au Filetype yaml setlocal shiftwidth=2
+
+" }}}
 
 " }}}
