@@ -93,7 +93,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
 """ koketani:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
   let g:go_version_warning = 0
   let g:go_code_completion_enabled = 0
