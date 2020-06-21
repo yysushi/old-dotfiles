@@ -191,6 +191,9 @@ Plug 'tpope/vim-surround'
 
 Plug 'rhysd/vim-grammarous'
 
+Plug 'mattn/webapi-vim'
+Plug 'mattn/vim-gist'
+
 " }}}
 
 call plug#end()
