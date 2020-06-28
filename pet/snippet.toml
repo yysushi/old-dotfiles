@@ -52,3 +52,8 @@
   description = "Replace \"deprecated\" with \"new\" for all files in the current directory"
   command = "find ./ -type f -exec sed -i -e 's/deprecated/new/g' {} \\;"
   output = ""
+
+[[snippets]]
+  description = "Generate public key fingerprint (github is using md5)"
+  command = "ssh-keygen -E md5 -lf ~/.ssh/tamac-io.pub"
+  output = ""
