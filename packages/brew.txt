@@ -1,4 +1,5 @@
-koketani:.dotfiles (master *>)$ brew deps --installed
+koketani:packages (master *=)$ brew deps --installed
+adns:
 autoconf:
 bash-completion:
 clang-format:
@@ -17,6 +18,8 @@ rhysd/git-brws/git-brws:
 glib: gdbm gettext libffi openssl@1.1 pcre python readline sqlite xz
 gmp:
 gnu-sed:
+gnupg: adns gettext gmp gnutls libassuan libevent libffi libgcrypt libgpg-error libidn2 libksba libtasn1 libunistring libusb nettle npth openssl@1.1 p11-kit pinentry unbound
+gnutls: gettext gmp libevent libffi libidn2 libtasn1 libunistring nettle openssl@1.1 p11-kit unbound
 graphviz: fontconfig freetype gd gdbm gettext glib gts jasper jpeg libffi libpng libtiff libtool netpbm openssl@1.1 pcre python readline sqlite webp xz
 grep: pcre
 gts: gdbm gettext glib jasper jpeg libffi libpng libtiff netpbm openssl@1.1 pcre python readline sqlite xz
@@ -28,15 +31,21 @@ jasper: jpeg
 jpeg:
 jq: oniguruma
 kubernetes-cli:
+libassuan: libgpg-error
 libevent: openssl@1.1
 libffi:
+libgcrypt: libgpg-error
+libgpg-error:
 libidn2: gettext libunistring
+libksba: libgpg-error
 libmpc: gmp mpfr
 libpng:
+libtasn1:
 libtermkey: unibilium
 libtiff: jpeg
 libtool:
 libunistring:
+libusb:
 libuv:
 libvterm:
 libyaml:
@@ -49,16 +58,20 @@ mpfr: gmp
 msgpack:
 ncurses:
 netpbm: jasper jpeg libpng libtiff
+nettle: gmp
 ngrep:
 nmap: openssl@1.1
+npth:
 oniguruma:
 openjdk:
 openssl@1.1:
+p11-kit: libffi
 pcre:
 pcre2:
 peco:
 perl:
 knqyf263/pet/pet: fzf
+pinentry: libassuan libgpg-error
 pkg-config:
 python: gdbm openssl@1.1 readline sqlite xz
 rbenv: autoconf pkg-config readline ruby-build
@@ -74,6 +87,7 @@ tig: readline
 tmux: libevent ncurses openssl@1.1
 tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
 tree:
+unbound: libevent openssl@1.1
 unibilium:
 vim: gdbm gettext libyaml lua openssl@1.1 perl python readline ruby sqlite xz
 webp: jpeg libpng libtiff
