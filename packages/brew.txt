@@ -1,4 +1,4 @@
-koketani:packages (master *=)$ brew deps --installed
+koketani:.dotfiles (master=)$ brew deps --installed
 adns:
 autoconf:
 bash-completion:
@@ -84,11 +84,13 @@ telnet:
 the_silver_searcher: pcre xz
 tidy-html5:
 tig: readline
-tmux: libevent ncurses openssl@1.1
+tmux: libevent ncurses openssl@1.1 utf8proc
+tmux-xpanes: libevent ncurses openssl@1.1 tmux utf8proc
 tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
 tree:
 unbound: libevent openssl@1.1
 unibilium:
+utf8proc:
 vim: gdbm gettext libyaml lua openssl@1.1 perl python readline ruby sqlite xz
 webp: jpeg libpng libtiff
 wget: gettext libidn2 libunistring openssl@1.1
