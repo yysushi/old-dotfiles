@@ -1,5 +1,6 @@
 koketani:.dotfiles (master=)$ brew deps --installed
 adns:
+ansifilter:
 autoconf:
 bash-completion:
 clang-format:
