@@ -1,4 +1,4 @@
-koketani:.dotfiles (master=)$ brew deps --installed
+koketani:.dotfiles (master *>)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:

@@ -87,8 +87,9 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 [[ -f "$HOME"/.asdf/completions/asdf.bash ]] && source "$HOME"/.asdf/completions/asdf.bash
 
 # golang
-GOPATHBIN=$(go env GOPATH)/bin
-export PATH="$PATH":"$GOPATHBIN"
+GOPATH=$(go env GOPATH)
+export GOPATH
+export PATH="$PATH":"$GOPATH"/bin
 
 # pip
 export PIP_REQUIRE_VIRTUALENV=true
