@@ -73,6 +73,7 @@ export PATH="$HOME"/.npm-global/bin:"$PATH"
 export PATH=/usr/local/opt/llvm/bin:"$PATH"
 
 # bash completion
+# $(brew --prefix)/etc/bash_completion.d
 [[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && source /usr/local/etc/profile.d/bash_completion.sh
 
 # fzf
@@ -102,3 +103,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # direnv
 eval "$(direnv hook bash)"
+
+# pass
+[[ -r "/usr/local/etc/bash_completion.d/pass"  ]] && source "/usr/local/etc/bash_completion.d/pass"
