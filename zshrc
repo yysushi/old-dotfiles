@@ -1,19 +1,11 @@
 #!/bin/zsh
 
-# # default bashrc
-# ## For Linux
-# [[ -f /etc/bash.bashrc ]] && source /etc/bash.bashrc
-# ## For Darwin
-# [[ -f /etc/bashrc ]] && source /etc/bashrc
-
-# # vi mode in bash
-# set -o vi
-
 # include local bin path
 export PATH="$PATH":/usr/local/bin
 
 # default editor
 export EDITOR=vim
+bindkey -v
 
 # tmux
 alias tmux='tmux -u'
@@ -141,8 +133,3 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # direnv
 eval "$(direnv hook zsh)"
-
-# pass
-# [[ -r "/usr/local/etc/bash_completion.d/pass"  ]] && source "/usr/local/etc/bash_completion.d/pass"
-# https://git.zx2c4.com/password-store/plain/src/completion/pass.zsh-completion
-# source ~/.password-store/pass.zsh-completion
