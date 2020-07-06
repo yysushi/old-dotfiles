@@ -1,15 +1,15 @@
-#!/bin/bash
+#!/bin/zsh
 
 USERNAME=koketani
 
-# default bashrc
-## For Linux
-[[ -f /etc/bash.bashrc ]] && source /etc/bash.bashrc
-## For Darwin
-[[ -f /etc/bashrc ]] && source /etc/bashrc
+# # default bashrc
+# ## For Linux
+# [[ -f /etc/bash.bashrc ]] && source /etc/bash.bashrc
+# ## For Darwin
+# [[ -f /etc/bashrc ]] && source /etc/bashrc
 
-# vi mode in bash
-set -o vi
+# # vi mode in bash
+# set -o vi
 
 # include local bin path
 export PATH="$PATH":/usr/local/bin
@@ -44,14 +44,33 @@ export GHQ_ROOT="$HOME"/Developments/git
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# git completion and git prompt
-[[ -f "$HOME"/.git-completion.bash ]] && source "$HOME"/.git-completion.bash
+# zplug {{{
+
+source ~/.zplug/init.zsh
+# zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+zplug "mafredri/zsh-async"
+# zplug "sindresorhus/pure"
+# zplug "zsh-users/zsh-syntax-highlighting"
+# zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-completions"
+zplug load
+
+# }}}
+
+# # git completion and git prompt
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L16
 [[ -f "$HOME"/.git-prompt.sh ]] && source "$HOME"/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
-export PROMPT_COMMAND='__git_ps1 "\[\033[01;34m\]$USERNAME\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]" "\\\$ "'
+# setopt PROMPT_SUBST ; PS1='[%n %c$(__git_ps1 " (%s)")]\$ '
+setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}%n:%{$reset_color%} %c$(__git_ps1 " (%s)")\$ '
+
+# fpath+=$HOME/.zsh/pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # java
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
@@ -64,7 +83,7 @@ BASE16_SHELL="$HOME"/.config/base16-shell/
 # nvm
 export NVM_DIR="$HOME"/.nvm
 [ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
-[ -s "$NVM_DIR"/bash_completion  ] && \. "$NVM_DIR"/bash_completion  # This loads nvm bash_completion
+[ -s "$NVM_DIR"/zsh_completion  ] && \. "$NVM_DIR"/zsh_completion  # This loads nvm zsh_completion
 
 # npm
 export PATH="$HOME"/.npm-global/bin:"$PATH"
@@ -74,18 +93,18 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 
 # bash completion
 # $(brew --prefix)/etc/bash_completion.d
-[[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && source /usr/local/etc/profile.d/bash_completion.sh
+# [[ -r /usr/local/etc/profile.d/bash_completion.sh ]] && source /usr/local/etc/profile.d/bash_completion.sh
 
 # fzf
-[[ -f "$HOME"/.fzf.bash ]] && source "$HOME"/.fzf.bash
+[[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
 
 # google cloud sdk
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 # asdf
 [[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
-[[ -f "$HOME"/.asdf/completions/asdf.bash ]] && source "$HOME"/.asdf/completions/asdf.bash
+[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
 
 # golang
 GOPATH=$(go env GOPATH)
@@ -102,7 +121,9 @@ export PATH="$PATH":"$HOME"/.pipx/bin
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # direnv
-eval "$(direnv hook bash)"
+eval "$(direnv hook zsh)"
 
 # pass
-[[ -r "/usr/local/etc/bash_completion.d/pass"  ]] && source "/usr/local/etc/bash_completion.d/pass"
+# [[ -r "/usr/local/etc/bash_completion.d/pass"  ]] && source "/usr/local/etc/bash_completion.d/pass"
+# https://git.zx2c4.com/password-store/plain/src/completion/pass.zsh-completion
+# source ~/.password-store/pass.zsh-completion
