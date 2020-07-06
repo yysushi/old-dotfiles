@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-USERNAME=koketani
-
 # # default bashrc
 # ## For Linux
 # [[ -f /etc/bash.bashrc ]] && source /etc/bash.bashrc
@@ -66,7 +64,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 # setopt PROMPT_SUBST ; PS1='[%n %c$(__git_ps1 " (%s)")]\$ '
-setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}%n:%{$reset_color%} %c$(__git_ps1 " (%s)")\$ '
+setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}koketani:%{$reset_color%} %c$(__git_ps1 " (%s)")\$ '
 
 # fpath+=$HOME/.zsh/pure
 # autoload -U promptinit; promptinit
