@@ -7,6 +7,10 @@ export PATH="$PATH":/usr/local/bin
 export EDITOR=vim
 bindkey -v
 
+# enable compinit and colors
+autoload -U compinit; compinit
+autoload -U colors; colors
+
 # tmux
 alias tmux='tmux -u'
 
@@ -34,40 +38,40 @@ export GHQ_ROOT="$HOME"/Developments/git
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# zplug {{{
-
-source ~/.zplug/init.zsh
-
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-# zplug "mafredri/zsh-async"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-autosuggestions"
-# zplug "zsh-users/zsh-completions"
-
-zplug "plugins/asdf",           from:oh-my-zsh
-# zplug "plugins/direnv",         from:oh-my-zsh
-# zplug "plugins/docker",         from:oh-my-zsh
-# zplug "plugins/docker-compose", from:oh-my-zsh
-# zplug "plugins/fzf",            from:oh-my-zsh
-zplug "plugins/git",            from:oh-my-zsh
-# zplug "plugins/golang",         from:oh-my-zsh
-zplug "plugins/kubectl",        from:oh-my-zsh
-# zplug "plugins/minikube",       from:oh-my-zsh
-zplug "plugins/pass",           from:oh-my-zsh
-# zplug "plugins/python",         from:oh-my-zsh
-# zplug "plugins/pip",            from:oh-my-zsh
-# zplug "plugins/npm",            from:oh-my-zsh
-# zplug "plugins/nvm",            from:oh-my-zsh
-# zplug "plugins/sudo",           from:oh-my-zsh
-# zplug "plugins/terraform",      from:oh-my-zsh
-# zplug "plugins/tig",            from:oh-my-zsh
-zplug "plugins/tmux",           from:oh-my-zsh
-zplug "plugins/vagrant",        from:oh-my-zsh
-# zplug "plugins/virtualenv",     from:oh-my-zsh
-
-zplug load
-
-# }}}
+# # zplug {{{
+# 
+# source ~/.zplug/init.zsh
+# 
+# zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+# # zplug "mafredri/zsh-async"
+# zplug "zsh-users/zsh-history-substring-search"
+# zplug "zsh-users/zsh-autosuggestions"
+# # zplug "zsh-users/zsh-completions"
+# 
+# zplug "plugins/asdf",           from:oh-my-zsh
+# # zplug "plugins/direnv",         from:oh-my-zsh
+# # zplug "plugins/docker",         from:oh-my-zsh
+# # zplug "plugins/docker-compose", from:oh-my-zsh
+# # zplug "plugins/fzf",            from:oh-my-zsh
+# zplug "plugins/git",            from:oh-my-zsh
+# # zplug "plugins/golang",         from:oh-my-zsh
+# zplug "plugins/kubectl",        from:oh-my-zsh
+# # zplug "plugins/minikube",       from:oh-my-zsh
+# zplug "plugins/pass",           from:oh-my-zsh
+# # zplug "plugins/python",         from:oh-my-zsh
+# # zplug "plugins/pip",            from:oh-my-zsh
+# # zplug "plugins/npm",            from:oh-my-zsh
+# # zplug "plugins/nvm",            from:oh-my-zsh
+# # zplug "plugins/sudo",           from:oh-my-zsh
+# # zplug "plugins/terraform",      from:oh-my-zsh
+# # zplug "plugins/tig",            from:oh-my-zsh
+# zplug "plugins/tmux",           from:oh-my-zsh
+# zplug "plugins/vagrant",        from:oh-my-zsh
+# # zplug "plugins/virtualenv",     from:oh-my-zsh
+# 
+# zplug load
+# 
+# # }}}
 
 # # git completion and git prompt
 # https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L16
@@ -76,7 +80,6 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
-# setopt PROMPT_SUBST ; PS1='[%n %c$(__git_ps1 " (%s)")]\$ '
 setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}koketani:%{$reset_color%} %c$(__git_ps1 " (%s)")\$ '
 
 # fpath+=$HOME/.zsh/pure
