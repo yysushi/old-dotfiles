@@ -11,6 +11,15 @@ bindkey -v
 autoload -U compinit; compinit
 autoload -U colors; colors
 
+# zinit
+source ~/.zinit/bin/zinit.zsh
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# zsh plugins managed by zinit
+zinit light zsh-users/zsh-autosuggestions
+zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
+
 # tmux
 alias tmux='tmux -u'
 
