@@ -45,26 +45,25 @@ export LC_ALL=en_US.UTF-8
 # zplug {{{
 
 source ~/.zplug/init.zsh
-# zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-zplug "mafredri/zsh-async"
-# zplug "sindresorhus/pure"
-# zplug "zsh-users/zsh-syntax-highlighting"
+
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+# zplug "mafredri/zsh-async"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-completions"
 
 zplug "plugins/asdf",           from:oh-my-zsh
-zplug "plugins/direnv",         from:oh-my-zsh
-zplug "plugins/docker",         from:oh-my-zsh
-zplug "plugins/docker-compose", from:oh-my-zsh
+# zplug "plugins/direnv",         from:oh-my-zsh
+# zplug "plugins/docker",         from:oh-my-zsh
+# zplug "plugins/docker-compose", from:oh-my-zsh
 # zplug "plugins/fzf",            from:oh-my-zsh
 zplug "plugins/git",            from:oh-my-zsh
 # zplug "plugins/golang",         from:oh-my-zsh
 zplug "plugins/kubectl",        from:oh-my-zsh
-zplug "plugins/minikube",       from:oh-my-zsh
+# zplug "plugins/minikube",       from:oh-my-zsh
 zplug "plugins/pass",           from:oh-my-zsh
 # zplug "plugins/python",         from:oh-my-zsh
-zplug "plugins/pip",            from:oh-my-zsh
+# zplug "plugins/pip",            from:oh-my-zsh
 # zplug "plugins/npm",            from:oh-my-zsh
 # zplug "plugins/nvm",            from:oh-my-zsh
 # zplug "plugins/sudo",           from:oh-my-zsh
@@ -72,7 +71,7 @@ zplug "plugins/pip",            from:oh-my-zsh
 # zplug "plugins/tig",            from:oh-my-zsh
 zplug "plugins/tmux",           from:oh-my-zsh
 zplug "plugins/vagrant",        from:oh-my-zsh
-zplug "plugins/virtualenv",     from:oh-my-zsh
+# zplug "plugins/virtualenv",     from:oh-my-zsh
 
 zplug load
 
