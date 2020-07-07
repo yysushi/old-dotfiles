@@ -7,6 +7,9 @@ export PATH="$PATH":/usr/local/bin
 export EDITOR=vim
 bindkey -v
 
+# no beep
+setopt no_beep
+
 # enable compinit and colors
 autoload -U compinit; compinit
 autoload -U colors; colors
