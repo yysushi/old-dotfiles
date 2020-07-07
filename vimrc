@@ -213,6 +213,7 @@ set ruler
 set clipboard=unnamed
 set noswapfile
 set expandtab
+set belloff=all
 
 " }}}
 
