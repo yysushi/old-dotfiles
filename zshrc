@@ -27,14 +27,6 @@ zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-complet
 # zinit ice svn wait"0" silent as"command"
 # zinit snippet OMZP::shrink-path
 
-# time ( zsh -i -c exit  )
-# zinit ice svn wait"0" silent as"command"
-# zinit snippet OMZP::git-prompt
-# PROMPT='%B%m%~%b$(git_super_status) %# '
-
-# zinit snippet OMZP::git
-# zinit for \
-#         light-mode OMZP::git-prompt
 
 # tmux
 alias tmux='tmux -u'
@@ -126,3 +118,23 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# time ( zsh -i -c exit  )
+# zinit ice svn wait"0" silent as"null"
+# zinit snippet OMZP::git-prompt
+
+# zinit light-mode lucid for OMZP::git-prompt
+# zinit light-mode lucid for OMZP::git
+
+# PROMPT='%B%m%~%b$(git_super_status) %# '
+
+# zinit snippet OMZP::git
+# zinit for \
+#         light-mode OMZP::git-prompt
+#
+
+# zinit wait lucid light-mode for \
+#   OMZP::kubectl
+# zinit wait lucid light-mode for \
+#   atinit"zicompinit; zicdreplay"  \
+#     zdharma/fast-syntax-highlighting
