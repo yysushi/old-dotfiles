@@ -23,3 +23,4 @@
 * [asdf](https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm)
 * [direnv](https://github.com/direnv/direnv/blob/master/docs/installation.md#from-binary-builds)
 * [zplug](https://github.com/zplug/zplug#the-best-way)
+* [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#debian)
