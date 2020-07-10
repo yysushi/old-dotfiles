@@ -1,5 +1,14 @@
 " vim: set foldmethod=marker foldlevel=0 nomodeline:
 
+" python path for neovim {{{
+
+if has('nvim')
+  let g:python_host_prog = fnamemodify(expand('~/.asdf/shims/python'), ':p')
+  let g:python3_host_prog = fnamemodify(expand('~/.asdf/shims/python3'), ':p')
+endif
+
+"}}}
+
 " plugins {{{
 "
 " vim-plug https://github.com/junegunn/vim-plug
@@ -154,9 +163,13 @@ Plug 'previm/previm'
 
 " completion {{{
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
   let g:deoplete#enable_at_startup = 1
 
 Plug 'mattn/sonictemplate-vim'

@@ -27,6 +27,9 @@ mkdir -p "$HOME"/.tmux/log
 mkdir -p "$HOME"/.config
 [[ -d "$HOME"/.config/pet ]] || ln -Ffs "$here"/pet "$HOME"/.config/pet
 
+# under "$HOME"/.config/nvim
+ln -Ffs "$here"/vimrc "$HOME"/.config/nvim/init.vim
+
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
 
