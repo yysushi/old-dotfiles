@@ -1,4 +1,4 @@
-koketani: packages (zsh *)$ brew deps --installed
+koketani: ~/.d/packages (zsh)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:
@@ -59,6 +59,7 @@ minikube: kubernetes-cli
 mpfr: gmp
 msgpack:
 ncurses:
+neovim: gettext libtermkey libuv libvterm luajit msgpack unibilium
 netpbm: jasper jpeg libpng libtiff
 nettle: gmp
 ngrep:
@@ -76,7 +77,6 @@ perl:
 knqyf263/pet/pet: fzf
 pinentry: libassuan libgpg-error
 pkg-config:
-python: gdbm openssl@1.1 readline sqlite xz
 python@3.8: gdbm openssl@1.1 readline sqlite xz
 qrencode: libpng
 rbenv: autoconf pkg-config readline ruby-build
