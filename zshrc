@@ -15,11 +15,11 @@ setopt no_beep
 #
 # after updating, measure load time by "time ( zsh -i -c exit )"
 
+autoload -U compinit; compinit
+autoload -U colors; colors
 source ~/.zinit/bin/zinit.zsh
 autoload -Uz _zinit
 (( ${+_comps}  )) && _comps[zinit]=_zinit
-autoload -U compinit; compinit
-autoload -U colors; colors
 
 # completion {{{
 #
