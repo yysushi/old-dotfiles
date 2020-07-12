@@ -1,4 +1,4 @@
-koketani: ~/.d/packages (zsh)$ brew deps --installed
+koketani: ~/.dotfiles (zsh *$)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:
@@ -100,3 +100,4 @@ vim: gdbm gettext libyaml lua openssl@1.1 perl python@3.8 readline ruby sqlite x
 webp: jpeg libpng libtiff
 wget: gettext libidn2 libunistring openssl@1.1
 xz:
+zsh: ncurses pcre
