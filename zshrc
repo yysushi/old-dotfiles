@@ -25,11 +25,13 @@ autoload -U colors; colors
 #
 # output $fpath and find compdef file by "find $fpath -name _pass"
 # please note compdef is overwritten by afterward fpath's definition
-#
+
 # 1. /usr/share/zsh/5.3/functions
 # go, git, npm, tmux
+
 # 2. /usr/local/share/zsh/site-functions
 # brew, ghq, minikube, pass, pet, ag, tig, tmuxiantor
+
 # 3. zsh-users/zsh_completion , ohmyzsh/ohmyzsh
 # jmeter, mvn, node, nvm, openssl,
 # scala, setup.py, tox, vagrant, kubectl
@@ -37,7 +39,7 @@ zinit wait lucid \
   atload"zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions \
     OMZP::kubectl/kubectl.plugin.zsh
-# zinit light zsh-users/zsh-completions
+
 # 4. others (ohmyzsh/ohmyzsh, asdf-vm/asdf)
 # asdf, cargo, docker, docker-compose, rustup, rust
 zinit wait lucid \
@@ -48,6 +50,7 @@ zinit wait lucid \
     OMZP::docker-compose/_docker-compose \
     OMZP::rustup/_rustup \
     OMZP::rust/_rust
+ 
 # }}}
 
 # }}}
