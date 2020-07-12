@@ -7,7 +7,6 @@ platform=$(uname -s)
 ln -Ffs "$here"/tmux.conf "$HOME"/.tmux.conf
 ln -Ffs "$here"/bashrc "$HOME"/.bashrc
 ln -Ffs "$here"/zshrc "$HOME"/.zshrc
-ln -Ffs "$here"/zprofile "$HOME"/.zprofile
 ln -Ffs "$here"/screenrc "$HOME"/.screenrc
 ln -Ffs "$here"/gitconfig "$HOME"/.gitconfig
 ln -Ffs "$here"/gitignore "$HOME"/.gitignore
