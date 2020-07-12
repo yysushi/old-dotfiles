@@ -10,8 +10,6 @@
 * [fzf](https://github.com/junegunn/fzf#installation)
 * [peco](https://github.com/peco/peco/releases)
 * [base16-iterm2](https://github.com/chriskempson/base16-iterm2#installation)
-* [git-prompt.sh](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L8)
-* [git-completion.sh](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash#L18)
 * [nvm](https://github.com/creationix/nvm#install--update-script)
 * clang
 * nodejs, npm

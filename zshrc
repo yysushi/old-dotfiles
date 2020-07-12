@@ -53,7 +53,6 @@ zinit wait lucid \
  
 # }}}
 
-# }}}
 
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe '
@@ -64,13 +63,30 @@ _fishy_collapsed_wd() {
 ')
 }
 
-[[ -f "$HOME"/.git-prompt.sh ]] && source "$HOME"/.git-prompt.sh
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUPSTREAM=auto
-# setopt promptsubst ; PS1='%{$fg[cyan]%}koketani:%{$reset_color%} %c$(__git_ps1 " (%s)")\$ '
-setopt promptsubst ; PS1='%{$fg[cyan]%}koketani:%{$reset_color%} $(_fishy_collapsed_wd)$(__git_ps1 " (%s)")\$ '
+# prompt {{{
+
+# TODO: make faster
+zinit load agkozak/agkozak-zsh-prompt
+setopt promptsubst
+AGKOZAK_CUSTOM_PROMPT=''
+# username
+AGKOZAK_CUSTOM_PROMPT+='%F{cyan}koketani%1v:%f '
+# path
+AGKOZAK_CUSTOM_PROMPT+='$(_fishy_collapsed_wd)'
+# git status
+AGKOZAK_CUSTOM_PROMPT+=$'%(6V. (%16>>%6v%>>%(7V. %7v.)).)'
+# prompt character
+AGKOZAK_CUSTOM_PROMPT+='\$ '
+# no right prompt
+AGKOZAK_CUSTOM_RPROMPT=''
+# Array containing custom Git symbols for the statuses
+# Diverged, Behind, Ahead, New file(s), Deleted, Modified, Renamed, Untracked, Stashed changes
+AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' '$' )
+
+# }}}
+
+# }}}
+
 
 # tmux
 alias tmux='tmux -u'
