@@ -53,6 +53,7 @@ zinit wait lucid \
  
 # }}}
 
+# prompt {{{
 
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe '
@@ -62,8 +63,6 @@ _fishy_collapsed_wd() {
    }; s|^$ENV{HOME}|~|g; s|/([^/.])[^/]*(?=/)|/$1|g; s|/\.([^/])[^/]*(?=/)|/.$1|g
 ')
 }
-
-# prompt {{{
 
 # TODO: make faster
 zinit load agkozak/agkozak-zsh-prompt
@@ -86,7 +85,6 @@ AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' '$' )
 # }}}
 
 # }}}
-
 
 # tmux
 alias tmux='tmux -u'
