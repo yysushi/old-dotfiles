@@ -7,6 +7,7 @@ export PATH="$PATH":/usr/local/bin
 export EDITOR=vim
 bindkey -v
 alias vim='nvim'
+alias view='nvim -R'
 
 # no beep
 setopt no_beep
