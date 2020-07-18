@@ -22,6 +22,12 @@ source ~/.zinit/bin/zinit.zsh
 autoload -Uz _zinit
 (( ${+_comps}  )) && _comps[zinit]=_zinit
 
+# history {{{
+
+zinit light zsh-users/zsh-autosuggestions
+
+# }}}
+
 # completion {{{
 #
 # output $fpath and find compdef file by "find $fpath -name _pass"
