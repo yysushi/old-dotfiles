@@ -1,4 +1,4 @@
-koketani:.dotfiles (master *>)$ brew deps --installed
+koketani: ~/.dotfiles (zsh *$)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:
@@ -59,6 +59,7 @@ minikube: kubernetes-cli
 mpfr: gmp
 msgpack:
 ncurses:
+neovim: gettext libtermkey libuv libvterm luajit msgpack unibilium
 netpbm: jasper jpeg libpng libtiff
 nettle: gmp
 ngrep:
@@ -76,7 +77,7 @@ perl:
 knqyf263/pet/pet: fzf
 pinentry: libassuan libgpg-error
 pkg-config:
-python: gdbm openssl@1.1 readline sqlite xz
+python@3.8: gdbm openssl@1.1 readline sqlite xz
 qrencode: libpng
 rbenv: autoconf pkg-config readline ruby-build
 readline:
@@ -90,12 +91,13 @@ tidy-html5:
 tig: readline
 tmux: libevent ncurses openssl@1.1 utf8proc
 tmux-xpanes: libevent ncurses openssl@1.1 tmux utf8proc
-tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux
+tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux utf8proc
 tree:
 unbound: libevent openssl@1.1
 unibilium:
 utf8proc:
-vim: gdbm gettext libyaml lua openssl@1.1 perl python readline ruby sqlite xz
+vim: gdbm gettext libyaml lua openssl@1.1 perl python@3.8 readline ruby sqlite xz
 webp: jpeg libpng libtiff
 wget: gettext libidn2 libunistring openssl@1.1
 xz:
+zsh: ncurses pcre
