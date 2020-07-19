@@ -232,8 +232,12 @@ set belloff=all
 
 " key {{{
 
-let mapleader      = ' '
-let maplocalleader = ' '
+" default leader key
+" let mapleader = '\'
+" let maplocalleader = '\'
+
+" default terminal-mode exit key
+" tnoremap <Esc>
 
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>gb :Gblame<cr>
