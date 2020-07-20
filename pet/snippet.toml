@@ -1,9 +1,4 @@
 [[snippets]]
-  description = "Replace \"hoge\" with \"fuga\" text files recursively under current directory"
-  command = "find ./ -type f -name *.txt -exec gsed -i -e 's/hoge/fuga/g' {} \\;"
-  output = ""
-
-[[snippets]]
   description = "Open file on git server via vim"
   command = "!git brws %"
   output = ""
@@ -55,7 +50,7 @@
 
 [[snippets]]
   description = "Generate public key fingerprint (github is using md5)"
-  command = "ssh-keygen -E md5 -lf ~/.ssh/tamac-io.pub"
+  command = "ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub"
   output = ""
 
 [[snippets]]
