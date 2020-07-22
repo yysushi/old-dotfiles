@@ -90,9 +90,11 @@ AGKOZAK_CUSTOM_PROMPT+=$'%(6V. (%16>>%6v%>>%(7V. %7v.)).)'
 AGKOZAK_CUSTOM_PROMPT+='\$ '
 # no right prompt
 AGKOZAK_CUSTOM_RPROMPT=''
-# Array containing custom Git symbols for the statuses
+# symbols
+# ref1: agkozak ( '&*' '&' '*' '+' 'x' '!' '>' '?' '$' )
+# ref2: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh#L38-L58
 # Diverged, Behind, Ahead, New file(s), Deleted, Modified, Renamed, Untracked, Stashed changes
-AGKOZAK_CUSTOM_SYMBOLS=( '&*' '&' '*' '+' 'x' '!' '>' '?' '$' )
+AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # }}}
 
