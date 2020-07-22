@@ -24,7 +24,7 @@
   generic = <Ctrl-b> scroll-page-up
 
 [ghq]
-  root = ~/Developments/git
+  root = ~/git
 
 [github]
   user = koketani

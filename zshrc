@@ -1,40 +1,33 @@
 # vim: set foldmethod=marker foldlevel=0 nomodeline:
 
-# include local bin path
-export PATH="$PATH":/usr/local/bin
-
-# default editor
-export EDITOR=vim
-bindkey -v
-alias vim='nvim'
-alias view='nvim -R'
-
-# no beep
-setopt no_beep
-
 # zinit {{{
 #
 # after updating, measure load time by "time ( zsh -i -c exit )"
 
-autoload -U compinit; compinit
-autoload -U colors; colors
 source ~/.zinit/bin/zinit.zsh
 autoload -Uz _zinit
 (( ${+_comps}  )) && _comps[zinit]=_zinit
 
-# history {{{
+# }}}
 
-zinit light zsh-users/zsh-autosuggestions
-bindkey '^n' autosuggest-accept
-# HISTFILE=~/.zsh_history
-# HISTSIZE=1000
-# SAVEHIST=1000
-# setopt appendhistory
+# alias {{{
+
+# nvim
+alias vim='nvim'
+alias view='nvim -R'
+alias vimdiff='nvim -d'
+
+# for mac
+# overwrite posix commands with gnu's ones
+command -v gsed > /dev/null 2>&1 && alias sed='gsed'
+command -v ggrep > /dev/null 2>&1 && alias grep='ggrep'
 
 # }}}
 
 # completion {{{
-#
+
+autoload -U compinit; compinit
+
 # output $fpath and find compdef file by "find $fpath -name _pass"
 # please note compdef is overwritten by afterward fpath's definition
 
@@ -65,7 +58,20 @@ zinit wait lucid \
  
 # }}}
 
+# history {{{
+
+zinit light zsh-users/zsh-autosuggestions
+bindkey '^n' autosuggest-accept
+# HISTFILE=~/.zsh_history
+# HISTSIZE=1000
+# SAVEHIST=1000
+# setopt appendhistory
+
+# }}}
+
 # prompt {{{
+
+autoload -U colors; colors
 
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe '
@@ -98,72 +104,38 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # }}}
 
-# }}}
+# tools {{{
 
-# tmux
-alias tmux='tmux -u'
+# asdf
+[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
+[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
 
-# for mac
-# overwrite posix commands with gnu's ones
-command -v gsed > /dev/null 2>&1 && alias sed='gsed'
-command -v ggrep > /dev/null 2>&1 && alias grep='ggrep'
+# direnv
+eval "$(direnv hook zsh)"
 
-# dev
-DEV="$HOME/Developments"
-export DEV
-
-# cpp for make command and make built-in plugin in vim
-export CXX="clang++"
-export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
-# export LDFLAGS
-
-# pipenv
-export PIPENV_IGNORE_VIRTUALENVS=1
+# fzf
+[[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
 
 # ghq
-export GHQ_ROOT="$HOME"/Developments/git
+export GHQ_ROOT="$HOME"/git
 
-# locale
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+# google cloud sdk
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
-# java
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export PATH="$PATH":/opt/maven/bin
-
-# base16 shell
-BASE16_SHELL="$HOME"/.config/base16-shell/
-[[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && eval "$("$BASE16_SHELL"/profile_helper.sh)"
+# npm
+export PATH="$HOME"/.npm-global/bin:"$PATH"
 
 # nvm
 export NVM_DIR="$HOME"/.nvm
 [ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
 [ -s "$NVM_DIR"/zsh_completion  ] && \. "$NVM_DIR"/zsh_completion  # This loads nvm zsh_completion
 
-# npm
-export PATH="$HOME"/.npm-global/bin:"$PATH"
-
-# llvm
-export PATH=/usr/local/opt/llvm/bin:"$PATH"
-
-# fzf
-[[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
-
-# google cloud sdk
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
-# asdf
-[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
-[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
-
-# golang
-GOPATH=$(go env GOPATH)
-export GOPATH
-export PATH="$PATH":"$GOPATH"/bin
-
 # pip
 export PIP_REQUIRE_VIRTUALENV=true
+
+# pipenv
+export PIPENV_IGNORE_VIRTUALENVS=1
 
 # pipx
 export PATH="$PATH":"$HOME"/.pipx/bin
@@ -171,5 +143,47 @@ export PATH="$PATH":"$HOME"/.pipx/bin
 # venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# direnv
-eval "$(direnv hook zsh)"
+# }}}
+
+# development {{{
+
+# cpp
+export CXX="clang++"
+export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
+# export LDFLAGS
+
+# golang
+GOPATH=$(go env GOPATH)
+export GOPATH
+export PATH="$PATH":"$GOPATH"/bin
+
+# llvm
+export PATH=/usr/local/opt/llvm/bin:"$PATH"
+
+# java
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export PATH="$PATH":/opt/maven/bin
+
+# }}}
+
+# others {{{
+
+# local path
+export PATH="$PATH":/usr/local/bin
+
+# editor
+export EDITOR=vim
+bindkey -v
+
+# no beep
+setopt no_beep
+
+# locale
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# base16 shell
+BASE16_SHELL="$HOME"/.config/base16-shell/
+[[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && eval "$("$BASE16_SHELL"/profile_helper.sh)"
+
+# }}}
