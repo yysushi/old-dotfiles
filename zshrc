@@ -22,6 +22,10 @@ alias vimdiff='nvim -d'
 command -v gsed > /dev/null 2>&1 && alias sed='gsed'
 command -v ggrep > /dev/null 2>&1 && alias grep='ggrep'
 
+# git
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh#L162
+zinit wait lucid for OMZP::git
+
 # }}}
 
 # completion {{{
