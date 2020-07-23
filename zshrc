@@ -4,6 +4,9 @@
 #
 # after updating, measure load time by "time ( zsh -i -c exit )"
 
+autoload -U compinit; compinit
+autoload -U colors; colors
+
 source ~/.zinit/bin/zinit.zsh
 autoload -Uz _zinit
 (( ${+_comps}  )) && _comps[zinit]=_zinit
@@ -31,8 +34,6 @@ zinit wait lucid for \
 # }}}
 
 # completion {{{
-
-autoload -U compinit; compinit
 
 # output $fpath and find compdef file by "find $fpath -name _pass"
 # please note compdef is overwritten by afterward fpath's definition
@@ -77,8 +78,6 @@ HISTSIZE=100
 # }}}
 
 # prompt {{{
-
-autoload -U colors; colors
 
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe '
