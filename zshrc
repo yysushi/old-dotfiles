@@ -68,10 +68,9 @@ zinit wait lucid \
 
 zinit light zsh-users/zsh-autosuggestions
 bindkey '^n' autosuggest-accept
-# HISTFILE=~/.zsh_history
-# HISTSIZE=1000
-# SAVEHIST=1000
-# setopt appendhistory
+HISTFILE=~/.zsh_history
+HISTSIZE=100
+setopt appendhistory
 
 # }}}
 
