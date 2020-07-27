@@ -110,47 +110,6 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # }}}
 
-# tools {{{
-
-# asdf
-[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
-[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# fzf
-[[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
-
-# ghq
-export GHQ_ROOT="$HOME"/git
-
-# google cloud sdk
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-
-# npm
-export PATH="$HOME"/.npm-global/bin:"$PATH"
-
-# nvm
-export NVM_DIR="$HOME"/.nvm
-[ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
-[ -s "$NVM_DIR"/zsh_completion  ] && \. "$NVM_DIR"/zsh_completion  # This loads nvm zsh_completion
-
-# pip
-export PIP_REQUIRE_VIRTUALENV=true
-
-# pipenv
-export PIPENV_IGNORE_VIRTUALENVS=1
-
-# pipx
-export PATH="$PATH":"$HOME"/.pipx/bin
-
-# venv
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# }}}
-
 # development {{{
 
 # cpp
@@ -191,5 +150,46 @@ export LC_ALL=en_US.UTF-8
 # base16 shell
 BASE16_SHELL="$HOME"/.config/base16-shell/
 [[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && eval "$("$BASE16_SHELL"/profile_helper.sh)"
+
+# }}}
+
+# tools {{{
+
+# asdf
+[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
+[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# fzf
+[[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
+
+# ghq
+export GHQ_ROOT="$HOME"/git
+
+# google cloud sdk
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# npm
+export PATH="$HOME"/.npm-global/bin:"$PATH"
+
+# nvm
+export NVM_DIR="$HOME"/.nvm
+[ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
+[ -s "$NVM_DIR"/zsh_completion  ] && \. "$NVM_DIR"/zsh_completion  # This loads nvm zsh_completion
+
+# pip
+export PIP_REQUIRE_VIRTUALENV=true
+
+# pipenv
+export PIPENV_IGNORE_VIRTUALENVS=1
+
+# pipx
+export PATH="$PATH":"$HOME"/.pipx/bin
+
+# venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # }}}
