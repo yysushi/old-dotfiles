@@ -110,27 +110,6 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # }}}
 
-# development {{{
-
-# cpp
-export CXX="clang++"
-export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
-# export LDFLAGS
-
-# golang
-GOPATH=$(go env GOPATH)
-export GOPATH
-export PATH="$PATH":"$GOPATH"/bin
-
-# llvm
-export PATH=/usr/local/opt/llvm/bin:"$PATH"
-
-# java
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-export PATH="$PATH":/opt/maven/bin
-
-# }}}
-
 # others {{{
 
 # local path
@@ -191,5 +170,26 @@ export PATH="$PATH":"$HOME"/.pipx/bin
 
 # venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# }}}
+
+# development {{{
+
+# cpp
+export CXX="clang++"
+export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
+# export LDFLAGS
+
+# golang
+GOPATH=$(go env GOPATH)
+export GOPATH
+export PATH="$PATH":"$GOPATH"/bin
+
+# llvm
+export PATH=/usr/local/opt/llvm/bin:"$PATH"
+
+# java
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export PATH="$PATH":/opt/maven/bin
 
 # }}}
