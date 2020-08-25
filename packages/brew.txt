@@ -1,46 +1,47 @@
-koketani: ~/.dotfiles (zsh *$)$ brew deps --installed
+koketani: ~/.dotfiles (master)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:
 bash-completion:
 clang-format:
 coreutils:
-fontconfig: freetype libpng
+fontconfig: libpng
 fping:
 freetype: libpng
 fzf:
-gcc: gmp isl libmpc mpfr
-gd: fontconfig freetype jpeg libpng libtiff webp
+gcc: gmp libmpc
+gd: fontconfig jpeg libpng libtiff webp
 gdbm:
 gettext:
 ghq:
-git: gettext pcre2
+git:
 rhysd/git-brws/git-brws:
-glib: gdbm gettext libffi openssl@1.1 pcre python readline sqlite xz
+glib: libffi openssl@1.1 pcre readline sqlite xz
 gmp:
 gnu-getopt:
 gnu-sed:
-gnupg: adns gettext gmp gnutls libassuan libevent libffi libgcrypt libgpg-error libidn2 libksba libtasn1 libunistring libusb nettle npth openssl@1.1 p11-kit pinentry unbound
-gnutls: gettext gmp libevent libffi libidn2 libtasn1 libunistring nettle openssl@1.1 p11-kit unbound
-graphviz: fontconfig freetype gd gdbm gettext glib gts jasper jpeg libffi libpng libtiff libtool netpbm openssl@1.1 pcre python readline sqlite webp xz
+gnupg: adns gmp gnutls libassuan libffi libgpg-error libidn2 libksba libtasn1 libunistring libusb nettle npth openssl@1.1 p11-kit pinentry
+gnutls: gmp libffi libidn2 libtasn1 libunistring nettle openssl@1.1 p11-kit
+google-cloud-sdk:
+graphviz: fontconfig gts jpeg libffi libpng libtiff openssl@1.1 pcre readline sqlite webp xz
 grep: pcre
-gts: gdbm gettext glib jasper jpeg libffi libpng libtiff netpbm openssl@1.1 pcre python readline sqlite xz
+gts: jpeg libffi libpng libtiff openssl@1.1 pcre readline sqlite xz
 hadolint:
 htop: ncurses
 iproute2mac:
 isl: gmp
 jasper: jpeg
 jpeg:
-jq: oniguruma
+jq:
 kubernetes-cli:
 libassuan: libgpg-error
 libevent: openssl@1.1
 libffi:
 libgcrypt: libgpg-error
 libgpg-error:
-libidn2: gettext libunistring
+libidn2: libunistring
 libksba: libgpg-error
-libmpc: gmp mpfr
+libmpc: gmp
 libpng:
 libtasn1:
 libtermkey: unibilium
@@ -51,16 +52,16 @@ libusb:
 libuv:
 libvterm:
 libyaml:
-llvm: libffi pcre swig
+llvm: libffi pcre
 lua:
 luajit:
 maven:
-minikube: kubernetes-cli
+minikube:
 mpfr: gmp
 msgpack:
 ncurses:
-neovim: gettext libtermkey libuv libvterm luajit msgpack unibilium
-netpbm: jasper jpeg libpng libtiff
+neovim: libtermkey libuv libvterm luajit msgpack unibilium
+netpbm: jpeg libpng libtiff
 nettle: gmp
 ngrep:
 nmap: openssl@1.1
@@ -69,35 +70,35 @@ oniguruma:
 openjdk:
 openssl@1.1:
 p11-kit: libffi
-pass: adns gettext gmp gnu-getopt gnupg gnutls libassuan libevent libffi libgcrypt libgpg-error libidn2 libksba libpng libtasn1 libunistring libusb nettle npth openssl@1.1 p11-kit pinentry qrencode tree unbound
+pass: adns gmp gnutls libassuan libffi libgpg-error libidn2 libksba libpng libtasn1 libunistring libusb nettle npth openssl@1.1 p11-kit pinentry qrencode tree
 pcre:
 pcre2:
 peco:
 perl:
-knqyf263/pet/pet: fzf
+knqyf263/pet/pet:
 pinentry: libassuan libgpg-error
 pkg-config:
-python@3.8: gdbm openssl@1.1 readline sqlite xz
+python@3.8: openssl@1.1 readline sqlite xz
 qrencode: libpng
-rbenv: autoconf pkg-config readline ruby-build
+rbenv: autoconf readline
 readline:
 ruby: libyaml openssl@1.1 readline
-ruby-build: autoconf pkg-config readline
+ruby-build: autoconf readline
 sqlite: readline
 swig: pcre
 telnet:
 the_silver_searcher: pcre xz
 tidy-html5:
 tig: readline
-tmux: libevent ncurses openssl@1.1 utf8proc
-tmux-xpanes: libevent ncurses openssl@1.1 tmux utf8proc
-tmuxinator: libevent libyaml ncurses openssl@1.1 readline ruby tmux utf8proc
+tmux: ncurses openssl@1.1 utf8proc
+tmux-xpanes: ncurses openssl@1.1 tmux utf8proc
+tmuxinator: libyaml ncurses openssl@1.1 readline ruby tmux utf8proc
 tree:
-unbound: libevent openssl@1.1
+unbound: openssl@1.1
 unibilium:
 utf8proc:
-vim: gdbm gettext libyaml lua openssl@1.1 perl python@3.8 readline ruby sqlite xz
+vim: libyaml lua openssl@1.1 perl readline ruby sqlite xz
 webp: jpeg libpng libtiff
-wget: gettext libidn2 libunistring openssl@1.1
+wget: libidn2 libunistring openssl@1.1
 xz:
 zsh: ncurses pcre
