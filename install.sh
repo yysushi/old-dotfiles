@@ -31,5 +31,9 @@ mkdir -p "$HOME"/.config
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
 
+# under "$HOME/.npm-global"
+mkdir -p "$HOME"/.npm-global
+ln -Ffs "$here"/packages/npm/node_modules/.bin "$HOME"/.npm-global/bin
+
 # echo for others
 echo install packages

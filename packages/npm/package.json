@@ -1,0 +1,26 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "create-react-app": "^3.3.0",
+    "csslint": "^1.0.5",
+    "eslint": "^6.8.0",
+    "jsonlint": "^1.6.3",
+    "markdownlint-cli": "^0.18.0",
+    "prettier": "^1.19.1",
+    "shellcheck": "^0.4.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4",
+    "typescript-language-server": "^0.4.0",
+    "underscore": "^1.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
