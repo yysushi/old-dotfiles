@@ -67,3 +67,8 @@
   description = "Generate random password whose length is 30"
   command = "gpg --gen-random --armor 1 30"
   output = ""
+
+[[snippets]]
+  description = "npx install-peerdeps --dev eslint-config-airbnb"
+  command = "Install eslint-config-airbnb"
+  output = ""
