@@ -360,7 +360,7 @@ endif
 
 au Filetype cucumber setlocal shiftwidth=2 foldmethod=indent foldlevel=1 foldnestmax=3
 au Filetype go setlocal shiftwidth=8 tabstop=8 noexpandtab
-au Filetype javascript setlocal shiftwidth=4
+au Filetype javascript setlocal shiftwidth=2
 au Filetype json setlocal shiftwidth=2
 au Filetype python setlocal shiftwidth=4
 au Filetype yaml setlocal shiftwidth=2
