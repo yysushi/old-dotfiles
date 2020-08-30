@@ -72,3 +72,8 @@
   description = "npx install-peerdeps --dev eslint-config-airbnb"
   command = "Install eslint-config-airbnb"
   output = ""
+
+[[snippets]]
+  description = "git remote add origin https://github.com/koketani/some-repo.git"
+  command = "Register remote url as origin"
+  output = ""
