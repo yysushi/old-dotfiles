@@ -18,6 +18,9 @@
 [merge]
   tool = vimdiff
 
+[pull]
+  ff = only
+
 [mergetool]
   prompt = false
   keepBackup = false
