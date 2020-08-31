@@ -9,7 +9,7 @@ package packages
 //go:generate go get golang.org/x/tools/cmd/goimports
 //go:generate go get golang.org/x/lint/golint
 //go:generate go get golang.org/x/tools/gopls
-//go:generate go get github.com/golangci/golangci-lint/cmd/golangci-lint
+////go:generate go get github.com/golangci/golangci-lint/cmd/golangci-lint
 //go:generate go get github.com/fatih/gomodifytags
 //go:generate go get golang.org/x/tools/cmd/gorename
 //go:generate go get github.com/jstemmer/gotags
