@@ -18,3 +18,6 @@ package packages
 //go:generate go get honnef.co/go/tools/cmd/keyify
 //go:generate go get github.com/fatih/motion
 //go:generate go get github.com/koron/iferr
+
+// kind https://github.com/kubernetes-sigs/kind#installation-and-usage
+//go:generate go get -u sigs.k8s.io/kind
