@@ -77,3 +77,8 @@
   description = "git remote add origin https://github.com/koketani/some-repo.git"
   command = "Register remote url as origin"
   output = ""
+
+[[snippets]]
+  description = "nc -u -z 192.168.100.1 53"
+  command = "Scan nameserver port (53 udp) on given server"
+  output = ""
