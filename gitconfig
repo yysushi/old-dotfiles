@@ -17,6 +17,7 @@
 
 [merge]
   tool = vimdiff
+  conflictstyle = diff3
 
 [pull]
   ff = only
