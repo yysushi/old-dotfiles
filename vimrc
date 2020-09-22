@@ -99,6 +99,7 @@ Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'rhysd/rust-doc.vim', { 'for': 'rust' }
 
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 
