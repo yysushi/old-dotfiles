@@ -26,7 +26,7 @@ command -v gsed > /dev/null 2>&1 && alias sed='gsed'
 command -v ggrep > /dev/null 2>&1 && alias grep='ggrep'
 
 # git
-# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh#L162
+# alias can be printed by `alias -L | grep "='git"`
 zinit wait lucid for \
   OMZL::git.zsh \
   OMZP::git
