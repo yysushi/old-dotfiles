@@ -20,4 +20,13 @@ package packages
 //go:generate go get github.com/koron/iferr
 
 // kind https://github.com/kubernetes-sigs/kind#installation-and-usage
-//go:generate go get -u sigs.k8s.io/kind
+//go:generate go get sigs.k8s.io/kind
+
+// ghq https://github.com/x-motemen/ghq#go-get
+//go:generate go get github.com/x-motemen/ghq
+
+// peco
+//go:generate go get github.com/peco/peco/cmd/peco
+
+//// pet
+////go:generate go get github.com/knqyf263/pet

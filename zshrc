@@ -181,9 +181,8 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
 
 # golang
-GOPATH=$(go env GOPATH)
-export GOPATH
-export PATH="$PATH":"$GOPATH"/bin
+# use GOPATH set by asdf
+export PATH="$PATH":"$(go env GOPATH)"/bin
 
 # llvm
 export PATH=/usr/local/opt/llvm/bin:"$PATH"

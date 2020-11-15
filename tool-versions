@@ -1,5 +1,5 @@
-golang 1.14.7
-direnv 2.21.3
-python 3.8.3
+golang 1.15.5
+direnv 2.23.1
+python 3.9.0
 ruby 2.7.1
-rust 1.44.0
+rust 1.47.0
