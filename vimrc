@@ -224,7 +224,8 @@ endif
 
 set number
 set ruler
-set clipboard=unnamed
+"" see :help clipboard
+set clipboard+=unnamedplus
 set noswapfile
 set expandtab
 set belloff=all
