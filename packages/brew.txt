@@ -75,7 +75,6 @@ pcre:
 pcre2:
 peco:
 perl:
-knqyf263/pet/pet:
 pinentry: libassuan libgpg-error
 pkg-config:
 python@3.8: openssl@1.1 readline sqlite xz
