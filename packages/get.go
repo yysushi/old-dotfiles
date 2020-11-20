@@ -30,3 +30,6 @@ package packages
 
 //// pet
 ////go:generate go get github.com/knqyf263/pet
+
+// godoc
+//go:generate go get golang.org/x/tools/cmd/godoc
