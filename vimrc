@@ -160,6 +160,8 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
 
 Plug 'previm/previm'
 
+Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs', 'for': ['php']}
+
 " }}}
 
 " completion {{{
@@ -355,6 +357,12 @@ if executable('solargraph')
         \ 'whitelist': ['ruby'],
         \ })
 endif
+
+au User lsp_setup call lsp#register_server({
+     \ 'name': 'php-language-server',
+     \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
+     \ 'whitelist': ['php'],
+     \ })
 
 " }}}
 

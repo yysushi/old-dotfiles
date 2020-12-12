@@ -13,3 +13,4 @@
 * [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
 * [asdf](https://asdf-vm.com/#/core-manage-asdf?id=install)
 * [zinit](https://github.com/zdharma/zinit#option-2---manual-installation)
+* [composer](https://github.com/composer/composer#installation--usage)
