@@ -154,6 +154,9 @@ export GHQ_ROOT="$HOME"/git
 # npm
 export PATH="$HOME"/.npm-global/bin:"$PATH"
 
+# # PHP 8 requires the latter bison, but we have still error...
+# export PATH="/usr/local/opt/bison/bin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME"/.nvm
 [ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
