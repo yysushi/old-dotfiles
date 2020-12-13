@@ -162,6 +162,8 @@ Plug 'previm/previm'
 
 Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs', 'for': ['php']}
 
+Plug 'udalov/kotlin-vim'
+
 " }}}
 
 " completion {{{
@@ -363,6 +365,18 @@ au User lsp_setup call lsp#register_server({
      \ 'cmd': {server_info->['php', expand('~/.config/nvim/plugged/php-language-server/bin/php-language-server.php')]},
      \ 'whitelist': ['php'],
      \ })
+
+if executable(expand('~/lsp/kotlin-language-server/server/bin/kotlin-language-server'))
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'kotlin-language-server',
+        \ 'cmd': {server_info->[
+        \     &shell,
+        \     &shellcmdflag,
+        \     expand('~/lsp/kotlin-language-server/server/bin/kotlin-language-server')
+        \ ]},
+        \ 'whitelist': ['kotlin']
+        \ })
+endif
 
 " }}}
 

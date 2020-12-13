@@ -188,7 +188,7 @@ export PATH="$PATH":"$(go env GOPATH)"/bin
 export PATH=/usr/local/opt/llvm/bin:"$PATH"
 
 # java
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+source ~/.asdf/plugins/java/set-java-home.zsh
 export PATH="$PATH":/opt/maven/bin
 
 # }}}
