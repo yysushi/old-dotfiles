@@ -164,6 +164,8 @@ Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer ru
 
 Plug 'udalov/kotlin-vim'
 
+Plug 'tsandall/vim-rego'
+
 " }}}
 
 " completion {{{
