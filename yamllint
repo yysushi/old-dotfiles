@@ -1,0 +1,9 @@
+---
+
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+
+rules:
+  indentation: disable
+  line-length: disable

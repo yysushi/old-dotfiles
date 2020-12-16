@@ -27,6 +27,8 @@ mkdir -p "$HOME"/.config
 [[ -d "$HOME"/.config/pet ]] || ln -Ffs "$here"/pet "$HOME"/.config/pet
 # under "$HOME"/.config/nvim
 [[ -d "$HOME"/.config/nvim ]] || ln -Ffs "$here"/nvim "$HOME"/.config/nvim
+# under "$HOME"/.config/yamllint
+[[ -d "$HOME"/.config/yamllint/config ]] || mkdir -p "$HOME"/.config/yamllint && ln -Ffs "$here"/yamllint "$HOME"/.config/yamllint/config
 
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
