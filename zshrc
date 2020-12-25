@@ -169,7 +169,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PIPENV_IGNORE_VIRTUALENVS=1
 
 # pipx
-export PATH="$PATH":"$HOME"/.pipx/bin
+export PATH="$PATH":"$HOME"/.local/bin
 
 # venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
