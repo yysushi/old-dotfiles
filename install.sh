@@ -23,6 +23,8 @@ ln -Ffs "$here"/tool-versions "$HOME"/.tool-versions
 mkdir -p "$HOME"/.tmux/log
 
 mkdir -p "$HOME"/.config
+# under "$HOME"/.config
+ln -Ffs "$here"/cargo-atcoder.toml "$HOME"/.config/cargo-atcoder.toml
 # under "$HOME"/.config/pet
 [[ -d "$HOME"/.config/pet ]] || ln -Ffs "$here"/pet "$HOME"/.config/pet
 # under "$HOME"/.config/nvim

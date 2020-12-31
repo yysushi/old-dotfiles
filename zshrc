@@ -130,6 +130,9 @@ export LC_ALL=en_US.UTF-8
 BASE16_SHELL="$HOME"/.config/base16-shell/
 [[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && eval "$("$BASE16_SHELL"/profile_helper.sh)"
 
+# atcoder
+export CARGO_ATCODER_TEST_CONFIG_DIR="$HOME"/.config
+
 # }}}
 
 # tools {{{
