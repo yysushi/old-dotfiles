@@ -69,8 +69,8 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
   let g:lsp_async_completion = 1
   let g:lsp_diagnostics_echo_cursor = 1
-  let g:lsp_log_verbose = 1
-  let g:lsp_log_file = expand("~/.vim-lsp.log")
+  " let g:lsp_log_verbose = 1
+  " let g:lsp_log_file = expand("~/.vim-lsp.log")
 
 " }}}
 
