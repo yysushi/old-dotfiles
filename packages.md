@@ -1,4 +1,4 @@
-# How to install language-specific tools
+# How to Install Language-Specific Tools
 
 - Rust (rustup): `<packages/rustup.txt xargs -J % rustup component add %`
 - Rust (cargo): `<packages/cargo.txt xargs -J % cargo install %`
