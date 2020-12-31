@@ -4,15 +4,15 @@
 
 - Rust
 
-`$ <packages/rustup.txt xargs -I {} rustup component add {}`
+`<packages/rustup.txt xargs -J % rustup component add %`
 
-`$ <packages/cargo.txt xargs -I {} cargo install {}`
+`<packages/cargo.txt xargs -J % cargo install %`
 
 - Python
 
-`$ PIP_REQUIRE_VIRTUALENV="" pip install -r packages/pip.txt`
+`PIP_REQUIRE_VIRTUALENV="" pip install -r packages/pip.txt`
 
-`$ <packages/pipx.txt pipx install {}`
+`<packages/pipx.txt xargs -I % pipx install %`
 
 - Golang
 
