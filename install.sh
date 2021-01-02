@@ -16,6 +16,7 @@ ln -Ffs "$here"/eslintrc.json "$HOME"/.eslintrc.json
 ln -Ffs "$here"/vimrc "$HOME"/.vimrc
 ln -Ffs "$here"/shellcheckrc "$HOME"/.shellcheckrc
 ln -Ffs "$here"/tool-versions "$HOME"/.tool-versions
+ln -Ffs "$here"/clippy.toml "$HOME"/.clippy.toml
 ## for darwin
 [[ "$platform" == Darwin  ]] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
 
