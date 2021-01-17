@@ -2,6 +2,7 @@ black
 docker-compose
 docutils
 flake8
+pipenv
 python-language-server
 rstcheck
 tldr
