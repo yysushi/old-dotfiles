@@ -151,8 +151,9 @@ eval "$(direnv hook zsh)"
 export GHQ_ROOT="$HOME"/git
 
 # google cloud sdk
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-[[ -f /usr/local/Caskroom/google-cloud-sdk ]] && source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+[[ -d "$HOME"/.asdf/installs/gcloud ]] && source "$(asdf where gcloud)"/completion.zsh.inc
+[[ -d "$HOME"/.asdf/installs/gcloud ]] && source "$(asdf where gcloud)"/path.zsh.inc
+
 
 # npm
 export PATH="$HOME"/.npm-global/bin:"$PATH"
