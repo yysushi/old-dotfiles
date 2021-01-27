@@ -38,6 +38,7 @@ Plug 'dense-analysis/ale'
       \ 'rst': ['rstcheck'],
       \ 'sh': ['shellcheck'],
       \ 'sql': ['sqlint'],
+      \ 'tf': ['tflint'],
       \ 'typescript': ['tslint'],
       \ 'vim': ['vint'],
       \ 'yaml': ['yamllint']
@@ -54,6 +55,7 @@ Plug 'dense-analysis/ale'
       \ 'json': ['prettier'],
       \ 'python': ['black'],
       \ 'rust': ['rustfmt'],
+      \ 'tf': ['terraform'],
       \ 'typescript': ['tslint'],
       \ }
   let g:ale_fix_on_save = 0
@@ -165,6 +167,8 @@ Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer ru
 Plug 'udalov/kotlin-vim'
 
 Plug 'tsandall/vim-rego'
+
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
 " }}}
 

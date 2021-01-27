@@ -7,3 +7,5 @@ rust 1.48.0
 java adopt-openadopt-openjdk-14.0.2+12_openj9-0.21.0_large-heap
 kotlin 1.4.21
 opa 0.25.2
+tflint 0.23.1
+terraform 0.12.29
