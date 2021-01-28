@@ -119,6 +119,11 @@ export PATH="$PATH":/usr/local/bin
 export EDITOR=vim
 bindkey -v
 
+# docker
+# enable buildkit for docker/compose
+DOCKER_BUILDKIT=1
+COMPOSE_DOCKER_CLI_BUILD=1
+
 # no beep
 setopt no_beep
 
