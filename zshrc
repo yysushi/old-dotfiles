@@ -183,6 +183,10 @@ export PATH="$PATH":"$HOME"/.local/bin
 # venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# vagrant
+export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export VAGRANT_EXPERIMENTAL="cloud_init,disks"
+
 # }}}
 
 # development {{{
