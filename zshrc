@@ -43,6 +43,7 @@ zinit wait lucid for \
 
 # 2. /usr/local/share/zsh/site-functions
 # brew, ghq, minikube, pass, pet, ag, tig, tmuxiantor
+# kind https://github.com/kubernetes-sigs/kind/blob/master/pkg/cmd/kind/completion/completion.go#L52
 
 # 3. zsh-users/zsh_completion , ohmyzsh/ohmyzsh
 # jmeter, mvn, node, nvm, openssl,
