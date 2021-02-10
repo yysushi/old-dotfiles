@@ -9,3 +9,5 @@ kotlin 1.4.21
 opa 0.25.2
 tflint 0.23.1
 terraform 0.12.29
+ghq 1.1.5
+kind 0.10.0

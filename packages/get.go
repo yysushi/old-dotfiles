@@ -19,12 +19,6 @@ package packages
 //go:generate go get -u github.com/fatih/motion
 //go:generate go get -u github.com/koron/iferr
 
-// kind https://github.com/kubernetes-sigs/kind#installation-and-usage
-//go:generate go get -u sigs.k8s.io/kind
-
-// ghq https://github.com/x-motemen/ghq#go-get
-//go:generate go get -u github.com/x-motemen/ghq
-
 // peco
 //go:generate go get -u github.com/peco/peco/cmd/peco
 
