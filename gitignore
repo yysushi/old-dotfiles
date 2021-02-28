@@ -12,7 +12,8 @@ a.exe
 dist
 *.egg-info/
 
-working_dir/
+working_dir
+worktree
 
 # asdf
 .tool-versions
