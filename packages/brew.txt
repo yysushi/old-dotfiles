@@ -1,4 +1,4 @@
-koketani: ~/.dotfiles (main)$ brew deps --installed
+koketani: ~/.dotfiles (main !)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:
@@ -76,7 +76,6 @@ minikube:
 mpfr: gmp
 msgpack:
 ncurses:
-neovim: gettext libtermkey libvterm luajit msgpack unibilium
 netpbm: jpeg libpng
 nettle: gmp
 nghttp2: c-ares jemalloc libev openssl@1.1

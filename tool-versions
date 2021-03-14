@@ -11,3 +11,4 @@ tflint 0.23.1
 terraform 0.12.29
 ghq 1.1.5
 kind 0.10.0
+neovim 0.4.4

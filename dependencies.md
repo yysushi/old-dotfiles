@@ -1,7 +1,6 @@
 # Prerequisite Software Links
 
 * [brew](https://brew.sh)
-* [neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 * [vim plugin](https://github.com/junegunn/vim-plug#neovim)
 * [tmux](https://github.com/tmux/tmux#installation)
 * [tpm](https://github.com/tmux-plugins/tpm#installation)
