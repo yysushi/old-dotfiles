@@ -104,8 +104,10 @@ augroup END
 Plug 'scrooloose/nerdtree'
 
 Plug 'jiangmiao/auto-pairs'
+" :call AutoPairsToggle()
 
 Plug 'easymotion/vim-easymotion'
+" <Leader><Leader>s
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
