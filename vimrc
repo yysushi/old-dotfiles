@@ -281,8 +281,6 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>f :ALEFix<cr>
-" gopls not support..
-" nnoremap <leader>td :LspTypeDefinition<cr>
 
 nmap gx <Plug>(openbrowser-open)
 
