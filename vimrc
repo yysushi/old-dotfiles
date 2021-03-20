@@ -281,13 +281,6 @@ nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>f :ALEFix<cr>
-nnoremap <leader>d :LspDefinition<cr>
-nnoremap <leader>h :LspHover<cr>
-nnoremap <leader>rn :LspRename<cr>
-nnoremap <leader>rf :LspReference<cr>
-nnoremap <leader>ne :LspNextError<cr>
-nnoremap <leader>e :LspNextError<cr>
-nnoremap <leader>pe :LspPreviousError<cr>
 " gopls not support..
 " nnoremap <leader>td :LspTypeDefinition<cr>
 
