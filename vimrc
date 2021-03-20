@@ -277,17 +277,12 @@ set belloff=all
 " tnoremap <Esc>
 
 nnoremap <leader>n :NERDTreeToggle<cr>
-nnoremap <leader>gb :Gblame<cr>
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>f :ALEFix<cr>
 
 nmap gx <Plug>(openbrowser-open)
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
-nnoremap <leader>l :Limelight<cr>
-xnoremap <leader>l :Limelight<cr>
 
 " }}}
 
