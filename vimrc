@@ -177,9 +177,11 @@ Plug 'thinca/vim-quickrun'
       \ }
   let g:quickrun_no_default_key_mappings = 1
 
-Plug 'scrooloose/vim-slumlord'
+Plug 'koketani/vim-slumlord', { 'branch': 'window_option' }
+" SlumlordToggle
 Plug 'aklt/plantuml-syntax'
   let g:slumlord_separate_win = 1
+  let g:slumlord_separate_win_horizontal = 0
 
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
