@@ -281,9 +281,6 @@ nnoremap <leader>f :ALEFix<cr>
 
 nmap gx <Plug>(openbrowser-open)
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 " }}}
 
 " autocmd {{{
@@ -405,6 +402,13 @@ au Filetype javascript setlocal shiftwidth=2
 au Filetype json setlocal shiftwidth=2
 au Filetype python setlocal shiftwidth=4
 au Filetype yaml setlocal shiftwidth=2
+
+" }}}
+
+" {{{ sync limelight with goyo
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " }}}
 
