@@ -266,6 +266,7 @@ set clipboard+=unnamedplus
 set noswapfile
 set expandtab
 set belloff=all
+set splitright
 
 " }}}
 
