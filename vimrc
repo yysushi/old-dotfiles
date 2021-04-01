@@ -221,7 +221,6 @@ Plug 'Yggdroot/indentLine'
   let g:indentLine_char = '|'
 
 Plug 'chriskempson/base16-vim'
-Plug 'fxn/vim-monochrome'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -235,15 +234,9 @@ Plug 'junegunn/limelight.vim'
 
 Plug 'tyru/open-browser.vim'
 
-" Plug 'terryma/vim-multiple-cursors'
-" Plug 'junegunn/vim-easy-align'
-
 Plug 'tpope/vim-surround'
 
 Plug 'rhysd/vim-grammarous'
-
-Plug 'mattn/webapi-vim'
-Plug 'mattn/vim-gist'
 
 " }}}
 
