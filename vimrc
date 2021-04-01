@@ -255,7 +255,7 @@ endif
 set number
 set ruler
 "" see :help clipboard
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 set noswapfile
 set expandtab
 set belloff=all
