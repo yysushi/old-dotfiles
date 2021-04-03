@@ -9,3 +9,7 @@
 ## packages
 
 clean up so that which packages are necessary why?
+
+## vim
+
+- [easy-align](https://github.com/junegunn/vim-easy-align)

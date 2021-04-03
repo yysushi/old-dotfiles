@@ -109,6 +109,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 " <Leader><Leader>s
 
+Plug 'junegunn/vim-easy-align'
+" vipga=
+" gaip=
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -276,6 +280,9 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>f :ALEFix<cr>
 
 nmap gx <Plug>(openbrowser-open)
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " }}}
 
