@@ -124,6 +124,8 @@ bindkey -v
 # enable buildkit for docker/compose
 DOCKER_BUILDKIT=1
 COMPOSE_DOCKER_CLI_BUILD=1
+# disable synk test
+export DOCKER_SCAN_SUGGEST=false
 
 # no beep
 setopt no_beep
