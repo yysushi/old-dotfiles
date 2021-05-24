@@ -8,12 +8,11 @@ id_rsa.pub
 a.out
 a.exe
 
-/build
-dist
+build/
+dist/
 *.egg-info/
 
-working_dir
-worktree
+worktree/
 
 # asdf
 .tool-versions
