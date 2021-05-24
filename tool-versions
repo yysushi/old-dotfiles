@@ -14,3 +14,4 @@ kind 0.10.0
 neovim 0.4.4
 lua 5.4.3
 tmux 3.2
+cmake 3.20.2
