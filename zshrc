@@ -4,7 +4,6 @@
 #
 # after updating, measure load time by "time ( zsh -i -c exit )"
 
-autoload -U compinit; compinit
 autoload -U colors; colors
 
 source ~/.zinit/bin/zinit.zsh
