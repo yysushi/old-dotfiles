@@ -39,7 +39,7 @@ zinit wait lucid for \
 # please note compdef is overwritten by afterward fpath's definition
 
 # 1. /usr/share/zsh/5.3/functions
-# go, git, npm, tmux
+# go, git, npm
 
 # 2. /usr/local/share/zsh/site-functions
 # brew, ghq, minikube, pass, pet, ag, tig, tmuxiantor
@@ -51,7 +51,9 @@ zinit wait lucid for \
 zinit wait lucid \
   atload"zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions \
-    OMZP::kubectl/kubectl.plugin.zsh
+    OMZP::kubectl/kubectl.plugin.zsh \
+    OMZP::tmux/tmux.plugin.zsh
+
 
 # 4. others (ohmyzsh/ohmyzsh, asdf-vm/asdf)
 # asdf, cargo, docker, docker-compose, rustup, rust
@@ -182,6 +184,10 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 
 # pipx
 export PATH="$PATH":"$HOME"/.local/bin
+
+# tmux
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOCONNECT=false
 
 # venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
