@@ -173,8 +173,8 @@ export PATH="$HOME"/.npm-global/bin:"$PATH"
 
 # nvm
 export NVM_DIR="$HOME"/.nvm
-[ -s "$NVM_DIR"/nvm.sh  ] && \. "$NVM_DIR"/nvm.sh  # This loads nvm
-[ -s "$NVM_DIR"/zsh_completion  ] && \. "$NVM_DIR"/zsh_completion  # This loads nvm zsh_completion
+export NVM_LAZY_LOAD=true
+zinit light lukechilds/zsh-nvm
 
 # pip
 export PIP_REQUIRE_VIRTUALENV=true
