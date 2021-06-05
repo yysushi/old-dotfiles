@@ -129,6 +129,9 @@ export DOCKER_SCAN_SUGGEST=false
 # no beep
 setopt no_beep
 
+# auto cd
+setopt auto_cd
+
 # locale
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
