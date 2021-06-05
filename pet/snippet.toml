@@ -34,6 +34,11 @@
   output = ""
 
 [[snippets]]
+  description = "Generate uuid with lower cases but without hyphen"
+  command = "uuidgen | tr \"[:upper:]\" \"[:lower:]\" | tr -d \"-\""
+  output = ""
+
+[[snippets]]
   description = "Generate random hex with 4 bytes"
   command = "openssl rand -hex 4"
   output = ""
@@ -81,4 +86,19 @@
 [[snippets]]
   description = "nc -u -z 192.168.100.1 53"
   command = "Scan nameserver port (53 udp) on given server"
+  output = ""
+
+[[snippets]]
+  description = "Build plantuml files under the current directory"
+  command = "java -DPLANTUML_LIMIT_SIZE=81920 -jar ~/Downloads/plantuml.1.2019.12.jar"
+  output = ""
+
+[[snippets]]
+  description = "configure gcloud cluster credentials for kubectl command"
+  command = "gcloud --project=[project-id] container clusters get-credentials [cluster-name] --region [region-name]"
+  output = ""
+
+[[snippets]]
+  description = "run netshoot for the container network trouble"
+  command = "docker run -it --net container:<container_name> nicolaka/netshoot"
   output = ""
