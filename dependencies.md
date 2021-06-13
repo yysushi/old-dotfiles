@@ -5,9 +5,7 @@
 * [tmux](https://github.com/tmux/tmux#installation)
 * [tpm](https://github.com/tmux-plugins/tpm#installation)
 * [fzf](https://github.com/junegunn/fzf#installation)
-* [base16-iterm2](https://github.com/chriskempson/base16-iterm2#installation)
-* [nvm](https://github.com/creationix/nvm#install--update-script)
-* clang
+* clang (build-essentials)
 * nodejs, npm
 * [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
 * [asdf](https://asdf-vm.com/#/core-manage-asdf?id=install)
