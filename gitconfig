@@ -9,7 +9,7 @@
   ui = true
 
 [core]
-  editor = vi
+  editor = vim
   excludesfile = ~/.gitignore
 
 [diff]
