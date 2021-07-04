@@ -69,23 +69,7 @@ scoop install docker
 
 ```
 
-```
-PS C:\Users\koketani> scoop list
-
-Installed apps:
-
-
-
-  7zip 19.00 [main]
-
-  alacritty 0.8.0 [extras]
-
-  git 2.32.0.windows.1 [main]
-
-  innounp 0.50 [main]
-
-  vcredist2017 14.16.27027.1 [extras]
-```
+<https://qiita.com/nimzo6689/items/1ab33380366e324c0b84>
 
 ## clipboard integration
 

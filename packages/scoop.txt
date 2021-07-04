@@ -6,3 +6,4 @@ Installed apps:
   git 2.32.0.windows.1 [main]
   innounp 0.50 [main]
   vcredist2017 14.16.27027.1 [extras]
+  vcxsrv 1.20.9.0 [extras]
