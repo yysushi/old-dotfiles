@@ -73,7 +73,17 @@ scoop install docker
 
 ## clipboard integration
 
-<https://github.com/Microsoft/WSL/issues/892>
+neovim can integrate with windows clipboard via x11. it works as x client. we need run x server in advance.
+
+- overview: <https://github.com/Microsoft/WSL/issues/892>
+- neovim requires xsel: <https://github.com/neovim/neovim/commit/037ffd54dcd8edba6787d93273e6696b7a366ac6#diff-b8571b36b7a192b0ee51c989a040ab85590ab220f047287a4fc2155e78edf0d1R106-R111>
+- neovim spec can be checked `:help x11-selection` or `:help clipboard`
+
+x server setup is here.
+
+```
+C:\Users\koketani\scoop\apps\vcxsrv\current\xlaunch.exe -run 'C:\Users\koketani\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch'
+```
 
 ## Powershell tips
 

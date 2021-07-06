@@ -115,6 +115,11 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 # local path
 export PATH="$PATH":/usr/local/bin
 
+# display
+[[ -v WSLENV ]] \
+&& LOCAL_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}') \
+&& export DISPLAY=$LOCAL_IP:0
+
 # editor
 export EDITOR=vim
 bindkey -v
