@@ -81,9 +81,13 @@ neovim can integrate with windows clipboard via x11. it works as x client. we ne
 
 x server setup is here.
 
+- command
+
 ```
-C:\Users\koketani\scoop\apps\vcxsrv\current\xlaunch.exe -run 'C:\Users\koketani\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\config.xlaunch'
+C:\Users\koketani\scoop\apps\vcxsrv\current\xlaunch.exe -run config.xlaunch
 ```
+
+- or just place startup script link
 
 ## Powershell tips
 
