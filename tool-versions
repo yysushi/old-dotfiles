@@ -9,7 +9,7 @@ kotlin 1.4.21
 opa 0.25.2
 tflint 0.23.1
 terraform 0.12.29
-ghq 1.1.5
+ghq 1.2.1
 kind 0.10.0
 neovim 0.5.0
 lua 5.4.3
@@ -17,3 +17,4 @@ tmux 3.2
 cmake 3.20.2
 shellcheck 0.7.2
 websocat 1.8.0
+nodejs 16.5.0
