@@ -25,6 +25,7 @@ mkdir -p "$HOME"/.tmux/log
 mkdir -p "$HOME"/.config
 # under "$HOME"/.config
 ln -Ffs "$here"/cargo-atcoder.toml "$HOME"/.config
+ln -Ffs "$here"/gitui "$HOME"/.config
 ln -Ffs "$here"/pet "$HOME"/.config
 ln -Ffs "$here"/yamllint "$HOME"/.config
 [[ -d "$HOME"/.config/nvim ]] || ln -Ffs "$here"/nvim "$HOME"/.config
