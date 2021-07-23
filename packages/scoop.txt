@@ -3,6 +3,8 @@ Installed apps:
 
   7zip 19.00 [main]
   alacritty 0.8.0 [extras]
+  anki 2.1.44 [extras]
+  discord 0.0.310 [extras]
   git 2.32.0.windows.1 [main]
   innounp 0.50 [main]
   vcredist2017 14.16.27027.1 [extras]
