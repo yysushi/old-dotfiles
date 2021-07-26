@@ -1,0 +1,1 @@
+koketani: ~/.d/p/npm (main x!)$ npm install -g csslint eslint eslint-plugin-prettier jsonlint markdownlint-cli prettier tslint typescript typescript-language-server
