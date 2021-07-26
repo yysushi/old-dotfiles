@@ -10,7 +10,7 @@
   },
   "globals": {},
   "rules": {
-    "indent": ["error", 4],
+    "indent": ["error", 2],
     "no-console": "off"
   }
 }
