@@ -170,9 +170,6 @@ export GHQ_ROOT="$HOME"/git
 [[ -d "$HOME"/.asdf/installs/gcloud ]] && source "$(asdf where gcloud)"/path.zsh.inc
 
 
-# npm
-export PATH="$HOME"/.npm-global/bin:"$PATH"
-
 # # PHP 8 requires the latter bison, but we have still error...
 # export PATH="/usr/local/opt/bison/bin:$PATH"
 
