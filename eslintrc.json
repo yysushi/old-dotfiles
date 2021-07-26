@@ -1,14 +1,14 @@
 {
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
-  "plugins": [],
-  "parserOptions": {
-    "ecmaVersion": 2020
-  },
   "env": {
     "browser": true,
     "node": true
   },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "globals": {},
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "plugins": [],
   "rules": {
     "indent": ["error", 2],
     "no-console": "off"
