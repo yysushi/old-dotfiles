@@ -59,7 +59,7 @@ Plug 'dense-analysis/ale'
       \ 'typescript': ['tslint'],
       \ }
   let g:ale_fix_on_save = 0
-  let g:ale_javascript_eslint_options = '--config ~/.eslintrc.json'
+  let g:ale_javascript_eslint_options = '--config ~/.eslintrc.json --resolve-plugins-relative-to=$(npm root -g)'
   let g:ale_cpp_clangformat_options = '-style=google'
   let g:ale_completion_enabled = 0
 
