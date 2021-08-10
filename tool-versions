@@ -27,3 +27,4 @@ tmux 3.2
 websocat 1.8.0
 yq v4.11.0
 sqlite 3.36.0
+bazel 4.1.0
