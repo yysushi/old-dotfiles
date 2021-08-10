@@ -28,3 +28,5 @@ tig 2.5.4
 tmux 3.2
 websocat 1.8.0
 yq v4.11.0
+fd 8.2.1
+ripgrep 13.0.0

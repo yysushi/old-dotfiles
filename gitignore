@@ -18,3 +18,5 @@ worktree/
 .tool-versions
 # direnv
 .envrc
+# python
+venv
