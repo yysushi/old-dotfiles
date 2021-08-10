@@ -1,6 +1,7 @@
 act 0.2.23
 ag 2.2.0
 age 1.0.0-rc.3
+bazel 4.1.0
 cmake 3.20.2
 direnv 2.23.1
 gcloud 323.0.0
@@ -20,11 +21,10 @@ python 3.9.6
 ruby 2.7.1
 rust 1.48.0
 shellcheck 0.7.2
+sqlite 3.36.0
 terraform 0.12.29
 tflint 0.23.1
 tig 2.5.4
 tmux 3.2
 websocat 1.8.0
 yq v4.11.0
-sqlite 3.36.0
-bazel 4.1.0
