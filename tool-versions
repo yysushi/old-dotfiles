@@ -2,6 +2,7 @@ act 0.2.23
 ag 2.2.0
 age 1.0.0-rc.3
 bazel 4.1.0
+bitwarden v1.17.1
 cmake 3.20.2
 direnv 2.23.1
 fd 8.2.1
