@@ -70,7 +70,7 @@
 
 [[snippets]]
   description = "Generate random password whose length is 30"
-  command = "gpg --gen-random --armor 1 30"
+  command = "bw generate -lun --length 30"
   output = ""
 
 [[snippets]]
