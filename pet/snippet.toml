@@ -107,3 +107,13 @@
   description = "echo 'z2S70FS7uOkSH_NCqB7yOJQGlBLk1VAQX1cfNbtXdG4=' | base64 -d"
   command = "Decode base64 string"
   output = ""
+
+[[snippets]]
+  description = "Set default k8s (kubernetes) namespace"
+  command = "kubectl config set-context --current --namespace=<namespace>"
+  output = ""
+
+[[snippets]]
+  description = "Logs k8s (kubernetes) logs with label filtering"
+  command = "kubectl logs -l app=<app-name>"
+  output = ""
