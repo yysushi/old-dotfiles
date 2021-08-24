@@ -277,7 +277,7 @@ set splitright
 " default terminal-mode exit key
 " tnoremap <Esc>
 
-nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>f :ALEFix<cr>
 
 nmap gx <Plug>(openbrowser-open)
