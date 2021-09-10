@@ -9,3 +9,4 @@ Installed apps:
   innounp 0.50 [main]
   vcredist2017 14.16.27027.1 [extras]
   vcxsrv 1.20.9.0 [extras]
+  vlc 3.0.16 [extras]
