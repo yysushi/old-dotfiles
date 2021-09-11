@@ -57,10 +57,8 @@ zinit wait lucid \
 zinit wait lucid \
   atload"zicompinit; zicdreplay" as"completion" blockf for \
     https://github.com/asdf-vm/asdf/blob/master/completions/_asdf \
-    OMZP::cargo/_cargo \
     OMZP::docker/_docker \
     OMZP::docker-compose/_docker-compose \
-    OMZP::rustup/_rustup \
     OMZP::rust/_rust
  
 # }}}
@@ -93,7 +91,7 @@ zinit load agkozak/agkozak-zsh-prompt
 setopt promptsubst
 AGKOZAK_CUSTOM_PROMPT=''
 # username
-AGKOZAK_CUSTOM_PROMPT+='%F{cyan}koketani%1v:%f '
+AGKOZAK_CUSTOM_PROMPT+='%F{cyan}hanaugai%1v:%f '
 # path
 AGKOZAK_CUSTOM_PROMPT+='$(_fishy_collapsed_wd)'
 # git status
