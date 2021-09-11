@@ -1,4 +1,4 @@
-PS C:\Users\koketani> scoop list
+PS C:\Users\hanaugai> scoop list
 Installed apps:
 
   7zip 19.00 [main]

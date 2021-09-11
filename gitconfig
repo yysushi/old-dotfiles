@@ -1,6 +1,6 @@
 [user]
-  name = koketani
-  email = ykoketani@gmail.com
+  name = hanaugai
+  email = yhanaugai@gmail.com
 
 [init]
   defaultBranch = main
@@ -34,4 +34,4 @@
   root = ~/git
 
 [github]
-  user = koketani
+  user = hanaugai
