@@ -61,12 +61,9 @@ windows terminal font is enough for me.
 - install apps
 
 ```
-scoop install alacritty
 scoop install git
 scoop install alacritty
 scoop install vcredist2017
-scoop install docker
-
 ```
 
 <https://qiita.com/nimzo6689/items/1ab33380366e324c0b84>

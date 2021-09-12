@@ -10,6 +10,6 @@ mkdir -p "$APPDATA_PATH"/alacritty
 cp "$here"/alacritty.yml "$APPDATA_PATH"/alacritty/alacritty.yml
 
 VCXSRV_PATH="/mnt/c/Users/hanaugai/scoop/apps/vcxsrv/current"
-cp "$here"/config.xlaunch "$VCXSRV_PATH"/config.xlaunch
-STARTUP_PATH="/mnt/c/Users/hanaugai/AppData/Roaming/Microsoft/Windows/Start\ Menu/Programs/Startup/"
-cp "$here"/xlaunch.lnk "$STARTUP_PATH"/xlaunch.lnk
+cp "$here"/config.xlaunch "$VCXSRV_PATH"
+STARTUP_PATH="/mnt/c/Users/hanaugai/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"
+cp "$here"/xlaunch.bat "$STARTUP_PATH"
