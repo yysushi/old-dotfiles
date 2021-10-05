@@ -10,3 +10,4 @@ tox
 vint
 virtualenv
 yamllint
+yq
