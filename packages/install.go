@@ -19,11 +19,14 @@ package packages
 //go:generate go install github.com/fatih/motion@latest
 //go:generate go install github.com/koron/iferr@latest
 
-//// pet
-////go:generate go install github.com/knqyf263/pet@latest
+// pet
+//go:generate go install github.com/knqyf263/pet@latest
 
 // godoc
 //go:generate go install golang.org/x/tools/cmd/godoc@latest
 
 // go-callvis https://github.com/ofabry/go-callvis#installation
 //go:generate go install github.com/ofabry/go-callvis@latest
+
+// action
+//go:generate go install github.com/nektos/act@latest
