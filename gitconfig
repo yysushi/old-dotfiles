@@ -1,37 +1,37 @@
 [user]
-  name = hanaugai
-  email = ykoketani@gmail.com
+        name = hanaugai
+        email = ykoketani@gmail.com
 
 [init]
-  defaultBranch = main
+        defaultBranch = main
 
 [color]
-  ui = true
+        ui = true
 
 [core]
-  editor = nvim
-  excludesfile = ~/.gitignore
+        editor = nvim
+        excludesfile = ~/.gitignore
 
 [diff]
-  tool = vimdiff
+        tool = vimdiff
 
 [merge]
-  tool = vimdiff
-  conflictstyle = diff3
+        tool = vimdiff
+        conflictstyle = diff3
 
 [pull]
-  ff = only
+        ff = only
 
 [mergetool]
-  prompt = false
-  keepBackup = false
+        prompt = false
+        keepBackup = false
 
 [tig "bind"]
-  generic = <Ctrl-f> scroll-page-down
-  generic = <Ctrl-b> scroll-page-up
+        generic = <Ctrl-f> scroll-page-down
+        generic = <Ctrl-b> scroll-page-up
 
 [ghq]
-  root = ~/git
+        root = ~/git
 
 [github]
-  user = hanaugai
+        user = hanaugai
