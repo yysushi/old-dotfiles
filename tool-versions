@@ -8,7 +8,7 @@ fd 8.2.1
 gauge 1.4.1
 gcloud 323.0.0
 ghq 1.2.1
-github-cli v2.2.0
+github-cli 2.2.0
 gitui 0.16.2
 golang 1.17.1
 java openjdk-16
