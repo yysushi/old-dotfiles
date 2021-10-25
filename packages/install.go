@@ -30,3 +30,6 @@ package packages
 
 // action
 //go:generate go install github.com/nektos/act@latest
+
+// mockery
+//go:generate go install github.com/vektra/mockery/v2/...@v2
