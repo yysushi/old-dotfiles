@@ -17,14 +17,15 @@
 
 [merge]
         tool = vimdiff
-        conflictstyle = diff3
 
 [pull]
         ff = only
 
 [mergetool]
-        prompt = false
         keepBackup = false
+
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [tig "bind"]
         generic = <Ctrl-f> scroll-page-down
