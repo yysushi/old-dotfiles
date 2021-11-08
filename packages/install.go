@@ -33,3 +33,6 @@ package packages
 
 // mockery
 //go:generate go install github.com/vektra/mockery/v2/...@v2
+
+// protolint
+//go:generate go install github.com/yoheimuta/protolint/cmd/protolint@latest
