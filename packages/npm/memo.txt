@@ -1,1 +1,0 @@
-hanaugai: ~/.d/p/npm (main x!)$ npm install -g csslint eslint eslint-config-prettier eslint-plugin-prettier jsonlint markdownlint-cli prettier tslint typescript typescript-language-server
