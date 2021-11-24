@@ -28,7 +28,8 @@ ruby 2.7.1
 rust 1.48.0
 shellcheck 0.7.2
 sqlite 3.36.0
-terraform 0.12.29
+terraform 1.0.11
+terraformer 0.8.18
 tflint 0.23.1
 tig 2.5.4
 tmux 3.2
