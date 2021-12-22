@@ -17,6 +17,7 @@ jq 1.6
 kind 0.10.0
 kubectl 1.20.9
 kubectx 0.9.4
+kustomize 4.4.1
 kotlin 1.4.21
 lua 5.4.3
 neovim 0.5.0
