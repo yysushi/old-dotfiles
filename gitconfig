@@ -11,6 +11,7 @@
 [core]
         editor = nvim
         excludesfile = ~/.gitignore
+        sshCommand = "ssh -i ~/.ssh/gh_hanaugai -F /dev/null"
 
 [diff]
         tool = vimdiff
