@@ -9,7 +9,7 @@ a.out
 a.exe
 
 build/
-dist/
+dist/**/*
 *.egg-info/
 
 worktree/
