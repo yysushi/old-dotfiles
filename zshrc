@@ -113,6 +113,7 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # local path
 export PATH="$PATH":/usr/local/bin
+export PATH="$PATH":/opt/homebrew/bin
 
 # local tools installed by npm
 export PATH="$PATH":"$HOME"/.dotfiles/packages/npm/node_modules/.bin
