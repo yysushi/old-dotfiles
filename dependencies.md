@@ -13,7 +13,7 @@
    * nodejs: [nodejs's requirements](https://github.com/asdf-vm/asdf-nodejs#requirements)
 * [vim plugin](https://github.com/junegunn/vim-plug#neovim)
 * [base16-shell](https://github.com/chriskempson/base16-shell#installation)
-* [zinit](https://github.com/zdharma/zinit#manual-installation)
+* [zinit](https://github.com/zdharma-continuum/zinit#manual-installation)
 * clang: build-essentials
 * nodejs, npm
 * [git-brws](https://github.com/rhysd/git-brws#with-homebrew)
