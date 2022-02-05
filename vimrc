@@ -400,6 +400,17 @@ if executable(expand('~/lsp/kotlin-language-server/server/bin/kotlin-language-se
         \ })
 endif
 
+if executable('bash-language-server')
+  augroup LspBash
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+          \ 'name': 'bash-language-server',
+          \ 'cmd': {server_info->[&shell, &shellcmdflag, 'bash-language-server start']},
+          \ 'allowlist': ['sh'],
+          \ })
+  augroup END
+endif
+
 " }}}
 
 " shiftwidth, tabstop and fold option {{{
