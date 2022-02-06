@@ -5,6 +5,7 @@ bitwarden v1.17.1
 cmake 3.20.2
 direnv 2.30.3
 fd 8.3.1
+fzf 0.29.0
 gauge 1.4.1
 gcloud 369.0.0
 ghq 1.2.1
