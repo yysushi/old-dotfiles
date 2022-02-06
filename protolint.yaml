@@ -1,0 +1,6 @@
+---
+lint:
+  rules:
+    remove:
+      - IMPORTS_SORTED
+      - PROTO3_FIELDS_AVOID_REQUIRED

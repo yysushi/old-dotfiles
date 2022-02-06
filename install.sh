@@ -17,6 +17,7 @@ ln -Ffs "$here"/shellcheckrc "$HOME"/.shellcheckrc
 ln -Ffs "$here"/tool-versions "$HOME"/.tool-versions
 ln -Ffs "$here"/clippy.toml "$HOME"/.clippy.toml
 ln -Ffs "$here"/flake8 "$HOME"/.flake8
+ln -Ffs "$here"/protolint.yaml "$HOME"/.protolint.yaml
 ## for darwin
 [[ "$platform" == Darwin  ]] && ln -Ffs "$here"/bash_profile "$HOME"/.bash_profile
 
