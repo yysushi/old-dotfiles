@@ -139,7 +139,7 @@ Plug 'rhysd/rust-doc.vim', { 'for': 'rust' }
 Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
 
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
-""" hanaugai:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
+""" koketani:doc (master=)$ grep -o \"let g:[^ ]* = 1\" vim-go.txt | sed  's/1/0/g'
   let g:go_version_warning = 0
   let g:go_code_completion_enabled = 0
   let g:go_play_open_browser = 0
@@ -185,7 +185,7 @@ Plug 'thinca/vim-quickrun'
       \ }
   let g:quickrun_no_default_key_mappings = 1
 
-Plug 'hanaugai/vim-slumlord', { 'branch': 'window_option' }
+Plug 'koketani/vim-slumlord', { 'branch': 'window_option' }
 " SlumlordToggle
 Plug 'aklt/plantuml-syntax'
   let g:slumlord_separate_win = 1

@@ -79,7 +79,7 @@
   output = ""
 
 [[snippets]]
-  description = "git remote add origin https://github.com/hanaugai/some-repo.git"
+  description = "git remote add origin https://github.com/koketani/some-repo.git"
   command = "Register remote url as origin"
   output = ""
 
