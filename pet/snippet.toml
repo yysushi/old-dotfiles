@@ -49,11 +49,6 @@
   output = ""
 
 [[snippets]]
-  description = "Replace \"deprecated\" with \"new\" for all files in the current directory"
-  command = "find ./ -type f -exec sed -i -e 's/deprecated/new/g' {} \\;"
-  output = ""
-
-[[snippets]]
   description = "Generate public key fingerprint (github is using md5)"
   command = "ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub"
   output = ""
@@ -116,4 +111,14 @@
 [[snippets]]
   description = "Logs k8s (kubernetes) logs with label filtering"
   command = "kubectl logs -l app=<app-name>"
+  output = ""
+
+[[snippets]]
+  description = "replace 'foo' with 'bar' in-place by bsd sed"
+  command = "rg foo --files-with-matches | xargs sed -i '' 's/foo/bar/g'"
+  output = ""
+
+[[snippets]]
+  description = "replace 'foo' with 'bar' in-place by gnu sed"
+  command = "rg foo --files-with-matches | xargs sed -i 's/foo/bar/g'"
   output = ""
