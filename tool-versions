@@ -29,6 +29,7 @@ ripgrep 13.0.0
 ruby 3.1.0
 rust 1.58.1
 shellcheck 0.8.0
+skaffold 1.36.0
 sqlite 3.37.2
 terraform 1.1.4
 terraformer 0.8.18
