@@ -92,7 +92,7 @@ zinit load agkozak/agkozak-zsh-prompt
 setopt promptsubst
 AGKOZAK_CUSTOM_PROMPT=''
 # username
-AGKOZAK_CUSTOM_PROMPT+='%F{cyan}koketani%1v:%f '
+AGKOZAK_CUSTOM_PROMPT+='%F{cyan}yysushi%1v:%f '
 # path
 AGKOZAK_CUSTOM_PROMPT+='$(_fishy_collapsed_wd)'
 # git status

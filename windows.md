@@ -81,7 +81,7 @@ x server setup is here.
 - command
 
 ```
-C:\Users\koketani\scoop\apps\vcxsrv\current\xlaunch.exe -run config.xlaunch
+C:\Users\yysushi\scoop\apps\vcxsrv\current\xlaunch.exe -run config.xlaunch
 ```
 
 - or just place startup script link

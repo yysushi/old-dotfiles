@@ -1,4 +1,4 @@
-koketani: ~/.dotfiles (main !)$ brew deps --installed
+yysushi: ~/.dotfiles (main !)$ brew deps --installed
 adns:
 ansifilter:
 autoconf:

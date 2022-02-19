@@ -1,5 +1,5 @@
 [user]
-        name = koketani
+        name = yysushi
         email = ykoketani@gmail.com
 
 [init]
@@ -11,7 +11,7 @@
 [core]
         editor = nvim
         excludesfile = ~/.gitignore
-        sshCommand = "ssh -i ~/.ssh/gh_koketani -F /dev/null"
+        sshCommand = "ssh -i ~/.ssh/gh_yysushi -F /dev/null"
 
 [diff]
         tool = vimdiff
