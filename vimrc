@@ -271,6 +271,7 @@ set noswapfile
 set expandtab
 set belloff=all
 set splitright
+set cursorcolumn cursorline
 
 " }}}
 
