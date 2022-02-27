@@ -294,6 +294,14 @@ nmap gx <Plug>(openbrowser-open)
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>c :cclose<cr>
+
+nnoremap ]b :bnext<cr>
+nnoremap [b :bprev<cr>
+nnoremap ]t :tabn<cr>
+nnoremap [t :tabp<cr>
+
 " }}}
 
 " autocmd {{{
