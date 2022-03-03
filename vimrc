@@ -295,7 +295,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>c :cclose<bar>lclose<cr>
+nnoremap <leader>c :cclose<bar>lclose<bar>NERDTreeClose<cr>
 
 nnoremap ]b :bnext<cr>
 nnoremap [b :bprev<cr>
