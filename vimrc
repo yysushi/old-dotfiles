@@ -301,6 +301,10 @@ nnoremap ]b :bnext<cr>
 nnoremap [b :bprev<cr>
 nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
+nnoremap ]q :cnext<cr>
+nnoremap [q :cprev<cr>
+nnoremap ]l :lnext<cr>
+nnoremap [l :lprev<cr>
 
 " }}}
 
