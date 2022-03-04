@@ -163,6 +163,7 @@ export CARGO_ATCODER_TEST_CONFIG_DIR="$HOME"/.config
 eval "$(direnv hook zsh)"
 
 # fzf
+# generate config by $(asdf where fzf)/install
 [[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
 
 # ghq
