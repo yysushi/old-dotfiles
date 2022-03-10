@@ -118,6 +118,7 @@ Plug 'junegunn/vim-easy-align'
 " vipga=
 " gaip=
 
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " }}}
