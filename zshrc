@@ -64,18 +64,6 @@ zinit wait lucid \
  
 # }}}
 
-# history {{{
-
-zinit light zsh-users/zsh-autosuggestions
-bindkey '^n' autosuggest-accept
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
-setopt appendhistory
-HISTFILE=~/.zsh_history
-HISTSIZE=100
-
-# }}}
-
 # prompt {{{
 
 _fishy_collapsed_wd() {
@@ -217,5 +205,17 @@ export PATH=/usr/local/opt/llvm/bin:"$PATH"
 # java
 source ~/.asdf/plugins/java/set-java-home.zsh
 export PATH="$PATH":/opt/maven/bin
+
+# }}}
+
+# history {{{
+
+zinit light zsh-users/zsh-autosuggestions
+bindkey '^N' autosuggest-accept
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+setopt appendhistory
+HISTFILE=~/.zsh_history
+HISTSIZE=100
 
 # }}}
