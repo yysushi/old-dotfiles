@@ -240,8 +240,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'ap/vim-buftabline'
   let g:buftabline_show = 1
   let g:buftabline_numbers = 1
-" hi default link BufTabLineActive          PmenuSel
-hi link BufTabLineActive          TabLine
 
 Plug 'inkarkat/vim-CursorLineCurrentWindow'
 
@@ -278,6 +276,12 @@ set expandtab
 set belloff=all
 set splitright
 set cursorcolumn cursorline
+set hidden
+
+" 'ap/vim-buftabline'
+" https://github.com/ap/vim-buftabline/blob/73b9ef5dcb6cdf6488bc88adb382f20bc3e3262a/plugin/buftabline.vim#L33
+" hi default link BufTabLineActive          PmenuSel
+hi link BufTabLineActive BufTabLineHidden
 
 " }}}
 
