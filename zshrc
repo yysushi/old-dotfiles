@@ -141,6 +141,17 @@ export CARGO_ATCODER_TEST_CONFIG_DIR="$HOME"/.config
 
 # }}}
 
+# history 1 {{{
+
+zinit light zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+setopt appendhistory
+HISTFILE=~/.zsh_history
+HISTSIZE=100
+
+# }}}
+
 # tools {{{
 
 # asdf
@@ -208,14 +219,8 @@ export PATH="$PATH":/opt/maven/bin
 
 # }}}
 
-# history {{{
+# history 2 {{{
 
-zinit light zsh-users/zsh-autosuggestions
 bindkey '^N' autosuggest-accept
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
-setopt appendhistory
-HISTFILE=~/.zsh_history
-HISTSIZE=100
 
 # }}}
