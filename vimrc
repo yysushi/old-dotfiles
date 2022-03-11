@@ -241,7 +241,7 @@ Plug 'ap/vim-buftabline'
   let g:buftabline_show = 1
   let g:buftabline_numbers = 1
 " hi default link BufTabLineActive          PmenuSel
-hi default link BufTabLineActive          TabLine
+hi link BufTabLineActive          TabLine
 
 Plug 'inkarkat/vim-CursorLineCurrentWindow'
 
