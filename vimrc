@@ -314,6 +314,9 @@ nnoremap [q :cprev<cr>
 nnoremap ]l :lnext<cr>
 nnoremap [l :lprev<cr>
 
+nnoremap <Leader>q :q<cr>
+nnoremap <Leader>Q :qa!<cr>
+
 " }}}
 
 " autocmd {{{
