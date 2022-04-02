@@ -206,6 +206,8 @@ Plug 'tsandall/vim-rego'
 
 Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
+Plug 'mhinz/vim-rfc'
+
 " }}}
 
 " completion {{{
