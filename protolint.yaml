@@ -3,4 +3,5 @@ lint:
   rules:
     remove:
       - IMPORTS_SORTED
+      - ENUM_FIELD_NAMES_PREFIX
       - PROTO3_FIELDS_AVOID_REQUIRED
