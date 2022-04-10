@@ -197,6 +197,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 export VAGRANT_EXPERIMENTAL="cloud_init,disks"
 
+# z
+zinit load agkozak/zsh-z
+
 # }}}
 
 # development {{{
