@@ -86,10 +86,20 @@ C:\Users\yysushi\scoop\apps\vcxsrv\current\xlaunch.exe -run config.xlaunch
 
 - or just place startup script link
 
+start up folder can be opened by `shell:startup` in windows+R
+
+## gui
+
+<https://github.com/microsoft/wslg>
+
+## kali-linux
+
+<https://www.kali.org/docs/wsl/win-kex/>
+
 ## Powershell tips
 
 `Set-PSReadLineOption -EditMode Vi`
 
 ## wallpaper
 
-<https://wallpaperscraft.com/catalog/nature/2560x1080>
+<https://wallpaperscraft.com/all/3840x2160>
