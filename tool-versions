@@ -6,7 +6,7 @@ cmake 3.20.2
 direnv 2.30.3
 fd 8.3.1
 fzf 0.29.0
-gauge 1.4.1
+gauge 1.4.3
 gcloud 369.0.0
 ghq 1.2.1
 github-cli 2.5.1
@@ -24,7 +24,7 @@ neovim 0.6.1
 nodejs 17.4.0
 opa 0.25.2
 protoc 3.19.4
-python 3.10.2
+python 3.10.4
 ripgrep 13.0.0
 ruby 3.1.0
 rust 1.58.1
@@ -32,7 +32,7 @@ shellcheck 0.8.0
 skaffold 1.36.0
 sqlite 3.37.2
 terraform 1.1.4
-terraformer 0.8.18
+terraformer 0.8.19
 tflint 0.34.1
 tig 2.5.5
 tmux 3.2a
