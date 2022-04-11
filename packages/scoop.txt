@@ -6,6 +6,7 @@ Installed apps:
   anki 2.1.47 [extras]
   discord 0.0.310 [extras]
   git 2.33.0.windows.2 [main]
+  slack 4.25.0 [extras]
   innounp 0.50 [main]
   lxrunoffline 3.5.0 [extras]
   vcredist2017 14.16.27027.1 [extras]
