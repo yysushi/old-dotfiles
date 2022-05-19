@@ -42,7 +42,7 @@ zinit wait lucid for \
 # go, git, npm, tmux
 
 # 2. /usr/local/share/zsh/site-functions
-# brew, ghq, minikube, pass, pet, ag, tig, tmuxiantor
+# pass, pet, ag, tig, tmuxiantor
 # kind https://github.com/kubernetes-sigs/kind/blob/master/pkg/cmd/kind/completion/completion.go#L52
 
 # 3. zsh-users/zsh_completion , ohmyzsh/ohmyzsh
@@ -61,6 +61,9 @@ zinit wait lucid \
     OMZP::docker/_docker \
     OMZP::docker-compose/_docker-compose \
     OMZP::rust/_rustc
+
+# 5. manual
+# cue, kind
  
 # }}}
 
