@@ -208,6 +208,8 @@ Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 
 Plug 'mhinz/vim-rfc'
 
+Plug 'jjo/vim-cue'
+
 " }}}
 
 " completion {{{
