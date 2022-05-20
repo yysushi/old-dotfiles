@@ -10,6 +10,7 @@ fzf 0.29.0
 gauge 1.4.3
 gcloud 369.0.0
 ghq 1.2.1
+git 2.36.1
 github-cli 2.10.1
 golang 1.17.6
 grpcurl 1.8.5
