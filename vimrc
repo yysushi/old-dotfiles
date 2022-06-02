@@ -444,6 +444,14 @@ if executable('bash-language-server')
   augroup END
 endif
 
+if executable('terraform-lsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'terraform-lsp',
+        \ 'cmd': {server_info->['terraform-lsp']},
+        \ 'whitelist': ['terraform'],
+        \ })
+endif
+
 " }}}
 
 " shiftwidth, tabstop and fold option {{{
