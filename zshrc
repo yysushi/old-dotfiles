@@ -60,7 +60,8 @@ zinit wait lucid \
     https://github.com/asdf-vm/asdf/blob/master/completions/_asdf \
     OMZP::docker/_docker \
     OMZP::docker-compose/_docker-compose \
-    OMZP::rust/_rustc
+    OMZP::rust/_rustc \
+    OMZP::terraform/_terraform
 
 # 5. manual
 # cue, kind
