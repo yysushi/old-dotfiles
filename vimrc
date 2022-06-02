@@ -57,7 +57,7 @@ Plug 'dense-analysis/ale'
       \ 'proto': ['ale#fixers#protolint#Fix'],
       \ 'python': ['black'],
       \ 'rust': ['rustfmt'],
-      \ 'tf': ['terraform'],
+      \ 'terraform': ['terraform'],
       \ 'typescript': ['tslint'],
       \ }
   let g:ale_fix_on_save = 0

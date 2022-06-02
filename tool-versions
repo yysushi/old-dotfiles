@@ -33,7 +33,7 @@ rust 1.58.1
 shellcheck 0.8.0
 skaffold 1.36.0
 sqlite 3.37.2
-terraform 1.1.4
+terraform 1.2.2
 terraformer 0.8.19
 tflint 0.34.1
 tig 2.5.5
