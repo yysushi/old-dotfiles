@@ -36,6 +36,3 @@ package packages
 
 // protolint
 //go:generate go install github.com/yoheimuta/protolint/cmd/protolint@latest
-
-// terraform-lsp
-//go:generate go install https://github.com/juliosueiras/terraform-lsp@latest
