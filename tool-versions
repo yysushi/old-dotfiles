@@ -26,7 +26,7 @@ neovim 0.6.1
 nodejs 17.4.0
 opa 0.25.2
 protoc 3.19.4
-python 3.10.2
+python 3.9.7
 ripgrep 13.0.0
 ruby 3.1.0
 rust 1.58.1
