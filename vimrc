@@ -294,6 +294,8 @@ hi link BufTabLineActive BufTabLineHidden
 " default leader key
 " let mapleader = '\'
 " let maplocalleader = '\'
+let mapleader = '¥'
+let maplocalleader = '¥'
 
 " default terminal-mode exit key
 " tnoremap <Esc>
