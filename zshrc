@@ -20,6 +20,9 @@ alias vim='nvim'
 alias view='nvim -R'
 alias vimdiff='nvim -d'
 
+# docker
+alias docker='lima nerdctl'
+
 # for mac
 # overwrite posix commands with gnu's ones
 command -v gsed > /dev/null 2>&1 && alias sed='gsed'
