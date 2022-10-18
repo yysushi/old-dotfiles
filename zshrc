@@ -175,9 +175,6 @@ export NVM_DIR="$HOME"/.nvm
 export NVM_LAZY_LOAD=true
 zinit light lukechilds/zsh-nvm
 
-# pip
-export PIP_REQUIRE_VIRTUALENV=true
-
 # pipenv
 export PIPENV_IGNORE_VIRTUALENVS=1
 

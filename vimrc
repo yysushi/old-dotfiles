@@ -3,8 +3,8 @@
 " python path for neovim {{{
 
 if has('nvim')
-  let g:python_host_prog = fnamemodify(expand('~/.asdf/shims/python'), ':p')
-  let g:python3_host_prog = fnamemodify(expand('~/.asdf/shims/python3'), ':p')
+  let g:python_host_prog = fnamemodify(expand('~/.nix-profile/bin/python'), ':p')
+  let g:python3_host_prog = fnamemodify(expand('~/.nix-profile/bin/python3'), ':p')
 endif
 
 "}}}
