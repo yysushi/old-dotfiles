@@ -30,6 +30,7 @@ ln -Ffs "$here"/cargo-atcoder.toml "$HOME"/.config
 ln -Ffs "$here"/pet "$HOME"/.config
 ln -Ffs "$here"/yamllint "$HOME"/.config
 [[ -d "$HOME"/.config/nvim ]] || ln -Ffs "$here"/nvim "$HOME"/.config
+[[ -d "$HOME"/.config/nixpkgs ]] || ln -Ffs "$here"/nixpkgs "$HOME"/.config
 
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
