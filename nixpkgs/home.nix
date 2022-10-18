@@ -73,5 +73,6 @@
     tmux
     websocat
     yarn
+    yq-go
   ];
 }
