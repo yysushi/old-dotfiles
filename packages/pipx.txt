@@ -1,10 +1,9 @@
 azure-cli
 black
-docker-compose
 docutils
 flake8
 pipenv
-python-language-server
+python-lsp-server
 rstcheck
 tldr
 tox
