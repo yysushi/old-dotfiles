@@ -46,7 +46,7 @@ zinit wait lucid for \
 # kind https://github.com/kubernetes-sigs/kind/blob/master/pkg/cmd/kind/completion/completion.go#L52
 
 # 3. zsh-users/zsh_completion , ohmyzsh/ohmyzsh
-# jmeter, mvn, node, nvm, openssl,
+# jmeter, mvn, node, openssl,
 # scala, setup.py, tox, vagrant, kubectl
 zinit wait lucid \
   atload"zicompinit; zicdreplay" blockf for \
@@ -169,11 +169,6 @@ export GHQ_ROOT="$HOME"/git
 
 # # PHP 8 requires the latter bison, but we have still error...
 # export PATH="/usr/local/opt/bison/bin:$PATH"
-
-# nvm
-export NVM_DIR="$HOME"/.nvm
-export NVM_LAZY_LOAD=true
-zinit light lukechilds/zsh-nvm
 
 # pipenv
 export PIPENV_IGNORE_VIRTUALENVS=1
