@@ -19,7 +19,51 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  home.packages = [
-    pkgs.nixpkgs-fmt
+  home.packages = with pkgs; [
+    act
+    age
+    bazel
+    bitwarden-cli
+    cue
+    cmake
+    direnv
+    fd
+    fzf
+    gauge
+    gh
+    ghq
+    git
+    go
+    google-cloud-sdk
+    grpcurl
+    jdk
+    jq
+    kind
+    kubectl
+    kubectx
+    kustomize
+    kotlin
+    lua
+    nixpkgs-fmt
+    neovim
+    nodejs
+    opa
+    protobuf
+    python3
+    ripgrep
+    ruby
+    rustc
+    shellcheck
+    skaffold
+    sqlite
+    terraform
+    terraform-ls
+    terraformer
+    tflint
+    tig
+    tmux
+    websocat
+    yarn
+    yq
   ];
 }

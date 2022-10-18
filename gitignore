@@ -14,8 +14,6 @@ dist/**/*
 
 worktree/
 
-# asdf
-.tool-versions
 # direnv
 .envrc
 # python

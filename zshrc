@@ -53,11 +53,10 @@ zinit wait lucid \
     zsh-users/zsh-completions \
     OMZP::kubectl/kubectl.plugin.zsh
 
-# 4. others (ohmyzsh/ohmyzsh, asdf-vm/asdf)
-# asdf, cargo, docker, docker-compose, rustup, rust
+# 4. others (ohmyzsh/ohmyzsh
+# cargo, docker, docker-compose, rustup, rust
 zinit wait lucid \
   atload"zicompinit; zicdreplay" as"completion" blockf for \
-    https://github.com/asdf-vm/asdf/blob/master/completions/_asdf \
     OMZP::docker/_docker \
     OMZP::docker-compose/_docker-compose \
     OMZP::rust/_rustc \
@@ -138,7 +137,7 @@ export LC_ALL=en_US.UTF-8
 
 # base16 shell
 BASE16_SHELL="$HOME"/.config/base16-shell/
-[[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && eval "$("$BASE16_SHELL"/profile_helper.sh)"
+[[ -n "$PS1" ]] && [[ -f "$BASE16_SHELL"/profile_helper.sh ]] && source "$BASE16_SHELL/profile_helper.sh"
 
 # atcoder
 export CARGO_ATCODER_TEST_CONFIG_DIR="$HOME"/.config
@@ -158,23 +157,14 @@ HISTSIZE=100
 
 # tools {{{
 
-# asdf
-[[ -f "$HOME"/.asdf/asdf.sh ]] && source "$HOME"/.asdf/asdf.sh
-[[ -f "$HOME"/.asdf/completions/asdf.zsh ]] && source "$HOME"/.asdf/completions/asdf.zsh
-
 # direnv
 eval "$(direnv hook zsh)"
 
 # fzf
-# generate config by $(asdf where fzf)/install
 [[ -f "$HOME"/.fzf.zsh ]] && source "$HOME"/.fzf.zsh
 
 # ghq
 export GHQ_ROOT="$HOME"/git
-
-# google cloud sdk
-[[ -d "$HOME"/.asdf/installs/gcloud ]] && source "$(asdf where gcloud)"/completion.zsh.inc
-[[ -d "$HOME"/.asdf/installs/gcloud ]] && source "$(asdf where gcloud)"/path.zsh.inc
 
 
 # # PHP 8 requires the latter bison, but we have still error...
@@ -217,14 +207,13 @@ export CXXFLAGS="-std=c++14 -Wall -Wextra -O2"
 # export LDFLAGS
 
 # golang
-# use GOPATH set by asdf
+# use GOPATH set
 export PATH="$PATH":"$(go env GOPATH)"/bin
 
 # llvm
 export PATH=/usr/local/opt/llvm/bin:"$PATH"
 
 # java
-source ~/.asdf/plugins/java/set-java-home.zsh
 export PATH="$PATH":/opt/maven/bin
 
 # }}}
