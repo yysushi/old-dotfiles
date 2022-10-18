@@ -203,5 +203,4 @@ xz:
 z3:
 zeromq: libsodium
 zimg:
-zsh: ncurses pcre
 zstd: lz4 xz

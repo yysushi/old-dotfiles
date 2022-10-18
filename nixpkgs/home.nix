@@ -74,5 +74,6 @@
     websocat
     yarn
     yq-go
+    zsh
   ];
 }
