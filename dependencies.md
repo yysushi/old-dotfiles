@@ -1,6 +1,5 @@
 # Prerequisite Software Links
 
-* [alarcritty](https://github.com/alacritty/alacritty#installation)
 * [brew](https://brew.sh)
 * [tpm](https://github.com/tmux-plugins/tpm#installation)
 * zsh: chsh -s $(which zsh)
