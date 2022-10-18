@@ -34,6 +34,7 @@ Plug 'dense-analysis/ale'
       \ 'json': ['jsonlint'],
       \ 'javascript': ['eslint'],
       \ 'markdown': ['markdownlint'],
+      \ 'nix': ['nix'],
       \ 'proto': ['protolint'],
       \ 'python': ['flake8'],
       \ 'rst': ['rstcheck'],
@@ -54,6 +55,7 @@ Plug 'dense-analysis/ale'
       \ 'html': ['prettier'],
       \ 'javascript': ['eslint'],
       \ 'json': ['prettier'],
+      \ 'nix': ['nixpkgs-fmt'],
       \ 'proto': ['ale#fixers#protolint#Fix'],
       \ 'python': ['black'],
       \ 'rust': ['rustfmt'],
@@ -209,6 +211,8 @@ Plug 'hashivim/vim-terraform', { 'for': 'tf' }
 Plug 'mhinz/vim-rfc'
 
 Plug 'jjo/vim-cue'
+
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
 
 " }}}
 
