@@ -114,7 +114,6 @@ libxml2: icu4c readline
 libxmlsec1: bdw-gc ca-certificates gettext gmp gnutls guile icu4c libevent libgcrypt libgpg-error libidn2 libnghttp2 libtasn1 libtool libunistring libxml2 m4 nettle openssl@1.1 p11-kit pkg-config readline unbound
 libxrender: libpthread-stubs libx11 libxau libxcb libxdmcp pkg-config xorgproto
 libyaml:
-lima: bdw-gc ca-certificates capstone gettext glib gmp gnutls guile jpeg-turbo libevent libidn2 libnghttp2 libpng libslirp libssh libtasn1 libtool libunistring libusb lz4 lzo m4 ncurses nettle openssl@1.1 p11-kit pcre2 pixman pkg-config qemu readline snappy unbound vde xz zstd
 little-cms2: jpeg-turbo libtiff
 llvm: ca-certificates gdbm lz4 mpdecimal openssl@1.1 python@3.10 readline six sqlite xz z3 zstd
 lua:

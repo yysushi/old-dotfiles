@@ -44,6 +44,7 @@
     kubectx
     kustomize
     kotlin
+    lima
     lua
     nixpkgs-fmt
     neovim
