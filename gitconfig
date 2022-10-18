@@ -12,6 +12,7 @@
         editor = nvim
         excludesfile = ~/.gitignore
         sshCommand = "ssh -i ~/.ssh/gh_yysushi -F /dev/null"
+        hooksPath = .husky
 
 [diff]
         tool = vimdiff
