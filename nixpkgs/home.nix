@@ -20,9 +20,9 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    alacritty
     act
     age
+    alacritty
     bazel
     bitwarden-cli
     cue
