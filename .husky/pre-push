@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-[[ $(git branch --show-current) != "workspace" ]]
+# "workspace" is a special local branch,
+# which shouldn't be pushed to public repository
+[ "$(gi branch --show-current)" != "workspace" ]
