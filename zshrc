@@ -102,6 +102,10 @@ AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' 'S' )
 
 # others {{{
 
+# skip using tmux-256color in mac osx since the package ncurse is too old..
+# ref: https://github.com/tmux/tmux/issues/2262
+export TERM=screen-256color
+
 # local path
 export PATH="$PATH":/usr/local/bin
 export PATH="$PATH":/opt/homebrew/bin
