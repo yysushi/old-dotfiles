@@ -209,9 +209,6 @@ export PATH="$PATH":"$(go env GOPATH)"/bin
 # llvm
 export PATH=/usr/local/opt/llvm/bin:"$PATH"
 
-# java
-export PATH="$PATH":/opt/maven/bin
-
 # }}}
 
 # history 2 {{{
