@@ -39,5 +39,9 @@ mkdir -p "$HOME"/Developments
 mkdir -p "$HOME"/.npm-global
 ln -Ffs "$here"/packages/npm/node_modules/.bin "$HOME"/.npm-global/bin
 
+# under "$HOME"/.lima/default, which means 'default' Lima instance's directory
+mkdir -p "$HOME"/.lima/default
+ln -Ffs "$here"/lima.yaml "$HOME"/.lima/default/lima.yaml
+
 # echo for others
 echo install packages
