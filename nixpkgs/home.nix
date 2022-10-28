@@ -54,16 +54,10 @@
     nodejs
     opa
     protobuf
-    (
-      let
-        my-python-packages = python-packages: with python-packages; [
-          pipx
-          pynvim
-        ];
-        python-with-my-packages = python3.withPackages my-python-packages;
-      in
-      python-with-my-packages
-    )
+    (python3.withPackages (python-packages: with python-packages; [
+      pipx
+      pynvim
+    ]))
     ripgrep
     ruby
     rustc
