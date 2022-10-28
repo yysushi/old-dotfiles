@@ -183,9 +183,6 @@ the_silver_searcher: pcre xz
 theora: libogg libvorbis
 tidy-html5:
 tig: ncurses readline
-tmux: ca-certificates libevent ncurses openssl@1.1 utf8proc
-tmux-xpanes: libevent ncurses openssl@1.1 tmux utf8proc
-tmuxinator: ca-certificates libevent libyaml ncurses openssl@1.1 readline ruby tmux utf8proc
 tree:
 unbound: ca-certificates libevent libnghttp2 openssl@1.1
 unibilium:
