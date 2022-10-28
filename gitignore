@@ -15,6 +15,9 @@ dist/**/*
 worktree/
 
 # direnv
+.direnv
 .envrc
+# nix
+shell.nix
 # python
 venv

@@ -19,6 +19,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+  # programs.direnv.nix-direnv.enableFlakes = true;
+
   home.packages = with pkgs; [
     act
     age
@@ -28,7 +32,6 @@
     bitwarden-cli
     cue
     cmake
-    direnv
     fd
     fzf
     gauge
