@@ -2,6 +2,8 @@ azure-cli
 black
 docutils
 flake8
+isort
+mypy
 pipenv
 python-lsp-server
 rstcheck
