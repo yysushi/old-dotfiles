@@ -344,10 +344,10 @@ endif
 " set cpp's indent size according to clang-format (cinoptions-values)
 autocmd Filetype cpp setlocal sw=2 sts=2
 
-if executable('pyls')
+if executable('pylsp')
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
+        \ 'name': 'pylsp',
+        \ 'cmd': {server_info->['pylsp']},
         \ 'whitelist': ['python'],
         \ })
 endif
