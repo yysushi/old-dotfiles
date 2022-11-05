@@ -73,6 +73,7 @@
     tflint
     tig
     tmux
+    tree
     websocat
     yarn
     yq-go
