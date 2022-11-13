@@ -57,7 +57,7 @@
     nodejs
     opa
     protobuf
-    (python3.withPackages (python-packages: with python-packages; [
+    (python310.withPackages (python-packages: with python-packages; [
       pipx
       pynvim
     ]))
