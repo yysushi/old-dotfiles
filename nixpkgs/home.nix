@@ -32,6 +32,7 @@
     bitwarden-cli
     cue
     cmake
+    deno
     fd
     fzf
     gauge

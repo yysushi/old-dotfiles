@@ -61,7 +61,7 @@ Plug 'dense-analysis/ale'
       \ 'python': ['black', 'isort'],
       \ 'rust': ['rustfmt'],
       \ 'terraform': ['terraform'],
-      \ 'typescript': ['tslint'],
+      \ 'typescript': ['deno'],
       \ }
   let g:ale_fix_on_save = 0
   let g:ale_javascript_eslint_options = '--config ~/.eslintrc.json --resolve-plugins-relative-to=$(npm root -g)'
