@@ -6,6 +6,7 @@ isort
 mypy
 pipenv
 python-lsp-server
+pre-commit
 rstcheck
 tldr
 tox
