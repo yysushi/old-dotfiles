@@ -28,6 +28,7 @@
     age
     alacritty
     auth0-cli
+    bat
     bazel
     bitwarden-cli
     cue
