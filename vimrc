@@ -124,6 +124,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'tpope/vim-commentary'
+
 " }}}
 
 " language specific {{{
