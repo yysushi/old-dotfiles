@@ -29,7 +29,7 @@ Plug 'dense-analysis/ale'
       \ 'cpp': ['clang'],
       \ 'css': ['csslint'],
       \ 'dockerfile': ['hadolint'],
-      \ 'go': ['golint', 'govet'],
+      \ 'go': ['golangci_lint', 'govet'],
       \ 'html': ['tidy'],
       \ 'json': ['jsonlint'],
       \ 'javascript': ['eslint'],
