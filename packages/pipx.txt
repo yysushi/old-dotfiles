@@ -6,7 +6,6 @@ isort
 mypy
 pipenv
 pylint
-python-lsp-server
 pre-commit
 rstcheck
 tldr

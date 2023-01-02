@@ -1,24 +1,31 @@
-{ lib, pkgs, config, modulesPath, ... }:
+{ pkgs, config, modulesPath, lib, ... }:
 
-with lib;
 let
-  nixos-wsl = import ./nixos-wsl;
+  nixos-wsl = import /etc/nixos/nixos-wsl;
+  home-path = "/home/nixos";
+  username = "nixos";
 in
 {
   imports = [
-    "${modulesPath}/profiles/minimal.nix"
-
     nixos-wsl.nixosModules.wsl
+
+    (import "${home-path}/.dotfiles/nixos/customize.nix" {
+      pkgs = pkgs;
+      config = config;
+      lib = lib;
+      home-path = home-path;
+      username = username;
+    })
   ];
 
   wsl = {
     enable = true;
-    automountPath = "/mnt";
-    defaultUser = "nixos";
+    wslConf.automount.root = "/mnt";
+    defaultUser = username;
     startMenuLaunchers = true;
 
     # Enable native Docker support
-    # docker-native.enable = true;
+    docker-native.enable = true;
 
     # Enable integration with Docker Desktop (needs to be installed)
     # docker-desktop.enable = true;
@@ -31,5 +38,5 @@ in
     experimental-features = nix-command flakes
   '';
 
-  system.stateVersion = "22.05";
+  system.stateVersion = "22.11";
 }

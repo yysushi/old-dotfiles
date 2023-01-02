@@ -4,7 +4,6 @@ here=$(cd "$(dirname "$0")" && pwd -P)
 platform=$(uname -s)
 
 # under "$HOME"
-ln -Ffs "$here"/tmux.conf "$HOME"/.tmux.conf
 ln -Ffs "$here"/bashrc "$HOME"/.bashrc
 ln -Ffs "$here"/zshrc "$HOME"/.zshrc
 ln -Ffs "$here"/screenrc "$HOME"/.screenrc
@@ -31,9 +30,10 @@ ln -Ffs "$here"/cargo-atcoder.toml "$HOME"/.config
 ln -Ffs "$here"/mypy.ini "$HOME"/.config/mypy.ini
 ln -Ffs "$here"/pet "$HOME"/.config
 ln -Ffs "$here"/yamllint "$HOME"/.config
-[[ -d "$HOME"/.config/nvim ]] || ln -Ffs "$here"/nvim "$HOME"/.config
-[[ -d "$HOME"/.config/nixpkgs ]] || ln -Ffs "$here"/nixpkgs "$HOME"/.config
+# [[ -d "$HOME"/.config/nvim ]] || ln -Ffs "$here"/nvim "$HOME"/.config
 [[ -d "$HOME"/.config/bat ]] || ln -Ffs "$here"/bat "$HOME"/.config
+mkdir -p ~/.local/share/sheldon
+ln -Ffs "$here"/sheldon "$HOME"/.config
 
 # under "$HOME"/Developments
 mkdir -p "$HOME"/Developments
@@ -45,6 +45,17 @@ ln -Ffs "$here"/packages/npm/node_modules/.bin "$HOME"/.npm-global/bin
 # under "$HOME"/.lima/default, which means 'default' Lima instance's directory
 mkdir -p "$HOME"/.lima/default
 ln -Ffs "$here"/lima.yaml "$HOME"/.lima/default/lima.yaml
+
+# nix os in wsl
+IN_WSL_NIX=0
+wslpath -w /etc/nixos >/dev/null 2>&1 && IN_WSL_NIX=1
+
+if [[ $IN_WSL_NIX -eq 1 ]]
+then
+  sudo ln -Ffs "$here"/nixos/configuration.nix /etc/nixos/configuration.nix
+else
+  [[ -d "$HOME"/.config/nixpkgs ]] || ln -Ffs "$here"/nixpkgs "$HOME"/.config
+fi
 
 # echo for others
 echo install packages

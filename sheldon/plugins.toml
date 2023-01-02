@@ -1,0 +1,106 @@
+# ~/.config/sheldon/plugins.toml
+
+shell = "zsh"
+
+# # Default apply defer
+# apply = ["defer"]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[templates]
+defer = { value = 'zsh-defer source "{{ file }}"', each = true }
+source = { value = 'source "{{ file }}"', each = true }
+PATH = 'export PATH="{{ dir }}:$PATH"'
+path = 'path=( "{{ dir }}" $path )'
+fpath = 'fpath=( "{{ dir }}" $fpath )'
+
+[plugins.agkozak-zsh-prompt]
+github = "agkozak/agkozak-zsh-prompt"
+use = ["{{ name }}.plugin.zsh"]
+
+[plugins.base16-shell]
+github = "tinted-theming/base16-shell"
+
+[plugins.fzf]
+github = "junegunn/fzf"
+dir = "shell"
+use = ["*.zsh"]
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+apply = ["fpath"]
+dir = "src"
+use = ["_clang-format", "_direnv", "_openssl", "_protoc"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.OMZL]
+github = "ohmyzsh/ohmyzsh"
+apply = ["defer"]
+dir = "lib"
+use = ["git.zsh"]
+
+# [plugins.oh-my-zsh]
+# github = "ohmyzsh/ohmyzsh"
+# apply = ["defer"]
+# use = ["{{ name }}.sh"]
+[plugins.ohmyzsh-completions-docker]
+github = "ohmyzsh/ohmyzsh"
+apply = ["fpath"]
+dir = "plugins/docker"
+use = ["_docker"]
+
+[plugins.ohmyzsh-completions-fd]
+github = "ohmyzsh/ohmyzsh"
+apply = ["fpath"]
+dir = "plugins/fd"
+use = ["_fd"]
+
+[plugins.ohmyzsh-plugins-git]
+github = "ohmyzsh/ohmyzsh"
+apply = ["defer"]
+dir = "plugins/git"
+use = ["git.plugin.zsh"]
+
+[plugins.ohmyzsh-completions-pass]
+github = "ohmyzsh/ohmyzsh"
+apply = ["fpath"]
+dir = "plugins/pass"
+use = ["_pass"]
+
+[plugins.ohmyzsh-completions-rustc]
+github = "ohmyzsh/ohmyzsh"
+apply = ["fpath"]
+dir = "plugins/rust"
+use = ["_rustc"]
+
+[plugins.ohmyzsh-completions-vagrant]
+github = "ohmyzsh/ohmyzsh"
+apply = ["fpath"]
+dir = "plugins/vagrant"
+use = ["_vagrant"]
+
+[plugins.zchee-zsh-completions]
+github = "zchee/zsh-completions"
+apply = ["defer"]
+use = ["zsh-completions.plugin.zsh"]
+
+### init
+
+[plugins.compinit]
+inline = 'autoload -Uz compinit && zsh-defer compinit'
+
+[plugins.colors]
+inline = 'autoload -Uz colors && zsh-defer colors'
+
+[plugins.promptinit]
+inline = 'autoload -Uz promptinit && zsh-defer promptinit'
