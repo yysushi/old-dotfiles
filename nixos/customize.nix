@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  home = builtins.getEnv "HOME";
 in
 {
   imports = [
@@ -10,6 +9,5 @@ in
 
   users.defaultUserShell = pkgs.zsh;
   users.users.nixos.extraGroups = [ "docker" ];
-
-  home-manager.users.nixos = (import "${home}/.dotfiles/nixpkgs/home-manager.nix");
+  home-manager.users.nixos = (import /home/nixos/.dotfiles/nixpkgs/home-manager.nix);
 }

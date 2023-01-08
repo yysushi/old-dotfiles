@@ -1,16 +1,11 @@
-{ config, pkgs, ... }:
-let
-  home = builtins.getEnv "HOME";
-  username = config.settings.username;
-in
+{ pkgs, config, lib, ... }:
 {
   imports = [
     <home-manager/nix-darwin>
-    "${home}/.config/nixpkgs/options.nix"
   ];
 
   environment = {
-    darwinConfig = "${home}/.config/nixpkgs/darwin/configuration.nix";
+    darwinConfig = /Users/y-tsuji/.config/nixpkgs/darwin/configuration.nix;
     shells = [ pkgs.zsh ];
   };
   services.nix-daemon.enable = true;
@@ -19,9 +14,9 @@ in
     experimental-features = nix-command flakes
   '';
 
-  users.users."${username}" = {
-    name = username;
-    home = home;
+  users.users."y-tsuji" = {
+    name = "y-tsuji";
+    home = "/Users/y-tsuji";
   };
-  home-manager.users."${username}" = (import "${home}/.dotfiles/nixpkgs/home-manager.nix");
+  home-manager.users."y-tsuji" = (import /Users/y-tsuji/.dotfiles/nixpkgs/home-manager.nix);
 }

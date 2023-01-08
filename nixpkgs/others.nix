@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 let
   pkgsUnstable = import <nixpkgs-unstable> { };
   extraPackages =

@@ -1,6 +1,6 @@
 { ... }:
 let
-  home = builtins.getEnv "HOME";
+  homePath = builtins.toString ../..;
 in
 {
   programs.zsh = {
@@ -18,7 +18,7 @@ in
     # };
 
     initExtra = ''
-      . ${home}/.dotfiles/zshrc
+      . ${homePath}/.dotfiles/zshrc
     '';
   };
   programs.zoxide = {

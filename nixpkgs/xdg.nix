@@ -1,6 +1,6 @@
 { ... }:
 let
-  homePath = builtins.getEnv "HOME";
+  homePath = builtins.toString ../..;
 in
 {
   xdg.configFile = {

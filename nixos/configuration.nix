@@ -2,12 +2,11 @@
 
 let
   nixos-wsl = import /etc/nixos/nixos-wsl;
-  home = builtins.getEnv "HOME";
 in
 {
   imports = [
     nixos-wsl.nixosModules.wsl
-    "${home}/.dotfiles/nixos/customize.nix"
+    /home/nixos/.dotfiles/nixos/customize.nix
   ];
 
   wsl = {
