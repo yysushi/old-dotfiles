@@ -26,13 +26,9 @@ dism.exe /onine /enable-feature /featurename:VirtualMachinePlatform /all /norest
 wsl --set-default-version 2
 ```
 
-6. select linux distribution
+6. [import wsl image manually](https://github.com/nix-community/NixOS-WSL#quick-start)
 
-## docker
 
-<https://docs.docker.com/docker-for-windows/wsl/>
-
-<https://docs.microsoft.com/ja-jp/windows/wsl/tutorials/wsl-containers>
 
 ## font for other terminals
 
