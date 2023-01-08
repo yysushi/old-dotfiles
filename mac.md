@@ -34,3 +34,10 @@ check
 Keyboard -> Keyboard -> Key Repeat
 Keyboard -> Keyboard -> Delay Until Repeat
 ```
+## nix
+
+- nix
+- [nix-darwin](https://github.com/LnL7/nix-darwin#install)
+- [nix-darwin](https://nix-community.github.io/home-manager/index.html#sec-install-nix-darwin-module)
+
+/run/current-system/sw/bin/darwin-rebuild switch -I darwin-config="$HOME"/.config/nixpkgs/darwin/configuration.nix

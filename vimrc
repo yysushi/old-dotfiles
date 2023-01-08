@@ -36,7 +36,7 @@ Plug 'dense-analysis/ale'
       \ 'markdown': ['markdownlint'],
       \ 'nix': ['nix'],
       \ 'proto': ['protolint'],
-      \ 'python': ['flake8', 'mypy'],
+      \ 'python': ['flake8', 'mypy', 'pylint'],
       \ 'rst': ['rstcheck'],
       \ 'sh': ['shellcheck'],
       \ 'sql': ['sqlint'],
@@ -61,6 +61,7 @@ Plug 'dense-analysis/ale'
       \ 'python': ['black', 'isort'],
       \ 'rust': ['rustfmt'],
       \ 'terraform': ['terraform'],
+      \ 'toml': ['dprint'],
       \ 'typescript': ['deno'],
       \ }
   let g:ale_fix_on_save = 0
@@ -73,8 +74,8 @@ Plug 'dense-analysis/ale'
 " lsp {{{
 
 Plug 'prabirshrestha/vim-lsp'
-" let g:lsp_log_verbose = 1
-" let g:lsp_log_file = expand('~/vim-lsp.log')
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
