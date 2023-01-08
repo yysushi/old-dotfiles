@@ -2,37 +2,24 @@
 
 let
   nixos-wsl = import /etc/nixos/nixos-wsl;
-  home-path = "/home/nixos";
-  username = "nixos";
+  home = builtins.getEnv "HOME";
 in
 {
   imports = [
     nixos-wsl.nixosModules.wsl
-
-    (import "${home-path}/.dotfiles/nixos/customize.nix" {
-      pkgs = pkgs;
-      config = config;
-      lib = lib;
-      home-path = home-path;
-      username = username;
-    })
+    "${home}/.dotfiles/nixos/customize.nix"
   ];
 
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
-    defaultUser = username;
+    defaultUser = "nixos";
     startMenuLaunchers = true;
 
-    # Enable native Docker support
     docker-native.enable = true;
-
-    # Enable integration with Docker Desktop (needs to be installed)
     # docker-desktop.enable = true;
-
   };
 
-  # Enable nix flakes
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = ''
     experimental-features = nix-command flakes

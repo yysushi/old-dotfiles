@@ -1,110 +1,67 @@
 { config, pkgs, lib, ... }:
-
 let
-  home-path = config.environment.variables.HOME;
-  username = config.environment.variables.USERNAME;
+  homePath = builtins.getEnv "HOME";
 in
 {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-  home.homeDirectory = home-path;
-  home.username = username;
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "22.11";
-
   imports = [
-    ./direnv.nix
-    ./home-manager.nix
-    (import ./neovim.nix {
-      lib = lib;
-      home-path = home-path;
-    })
-    ./tmux.nix
+    ./others.nix
   ];
 
+  home = {
+    stateVersion = "22.11";
+    homeDirectory = homePath;
 
-  # programs.zsh = {
-  #   enable = true;
-  #   #   size = 10000;
-  #   #   path = "${config.xdg.dataHome}/zsh/history";
-  #   # };
-  # };
+    sessionVariables = {
+      # general
+      EDITOR = "vim";
 
-  home.packages = with pkgs; [
-    act
-    age
-    alacritty
-    auth0-cli
-    bat
-    bash
-    bazel
-    bitwarden-cli
-    cargo
-    cue
-    cmake
-    deno
-    fd
-    fzf
-    gauge
-    gh
-    ghq
-    git
-    gnumake
-    go
-    (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
-      gke-gcloud-auth-plugin
-    ]))
-    grpcurl
-    jdk
-    jq
-    kind
-    kubectl
-    kubectx
-    kustomize
-    kotlin
-    lima
-    lua
-    ngrep
-    nixpkgs-fmt
-    nodejs
-    opa
-    openssl
-    pass
-    protobuf
-    (python310.withPackages (python-packages: with python-packages; [
-      pipx
-      pynvim
-      python-lsp-server
-    ]))
-    ripgrep
-    ruby
-    rustc
-    screen
-    sheldon
-    shellcheck
-    skaffold
-    sqlite
-    tcpdump
-    terraform
-    terraform-ls
-    terraformer
-    tflint
-    tig
-    tree
-    websocat
-    wireshark
-    xorg.xeyes
-    x11docker
-    yarn
-    yq-go
-    zsh
-  ];
+      # ghq
+      GHQ_ROOT = "${homePath}/git";
+
+      # docker
+      DOCKER_BUILDKIT = 1;
+      COMPOSE_DOCKER_CLI_BUILD = 1;
+      DOCKER_SCAN_SUGGEST = "false";
+
+      # locae
+      LANG = "en_US.UTF-8";
+      LC_ALL = "en_US.UTF-8";
+
+      # atcoder
+      CARGO_ATCODER_TEST_CONFIG_DIR = "${homePath}/.config";
+
+      # python
+      PIPENV_IGNORE_VIRTUALENVS = 1;
+      VIRTUAL_ENV_DISABLE_PROMPT = 1;
+
+      # vagrant
+      VAGRANT_DEFAULT_PROVIDER = "virtualbox";
+      VAGRANT_EXPERIMENTAL = "cloud_init,disks";
+
+      # clang
+      CXX = "clang++";
+      CXXFLAGS = "-std=c++14 -Wall -Wextra -O2";
+    };
+
+    file = {
+      ".bashrc".source = "${homePath}/.dotfiles/bashrc";
+      ".screenrc".source = "${homePath}/.dotfiles/screenrc";
+      ".gitignore".source = "${homePath}/.dotfiles/gitignore";
+      ".tslint.json".source = "${homePath}/.dotfiles/tslint.json";
+      ".eslintrc.json".source = "${homePath}/.dotfiles/eslintrc.json";
+      ".dprint.json".source = "${homePath}/.dotfiles/dprint.json";
+      ".vimrc".source = "${homePath}/.dotfiles/vimrc";
+      ".shellcheckrc".source = "${homePath}/.dotfiles/shellcheckrc";
+      ".clippy.toml".source = "${homePath}/.dotfiles/clippy.toml";
+      ".flake8".source = "${homePath}/.dotfiles/flake8";
+      ".protolint.yaml".source = "${homePath}/.dotfiles/protolint.yaml";
+      ".inputrc".source = "${homePath}/.dotfiles/inputrc";
+      ".tigrc".source = "${homePath}/.dotfiles/tigrc";
+      ".config/cargo-atcoder.toml".source = "${homePath}/.dotfiles/cargo-atcoder.toml";
+      ".config/pet/config.toml".source = "${homePath}/.dotfiles/pet/config.toml";
+      ".config/pet/snippet.toml".source = "${homePath}/.dotfiles/pet/snippet.toml";
+      ".lima/default/lima.yaml".source = "${homePath}/.dotfiles/lima.yaml";
+      ".npm-global/bin".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/packages/npm/node_modules/.bin";
+    };
+  };
 }

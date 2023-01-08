@@ -39,9 +39,9 @@ apply = ["fpath"]
 dir = "src"
 use = ["_clang-format", "_direnv", "_openssl", "_protoc"]
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
-apply = ["defer"]
+# [plugins.zsh-syntax-highlighting]
+# github = "zsh-users/zsh-syntax-highlighting"
+# apply = ["defer"]
 
 [plugins.OMZL]
 github = "ohmyzsh/ohmyzsh"
@@ -104,3 +104,6 @@ inline = 'autoload -Uz colors && zsh-defer colors'
 
 [plugins.promptinit]
 inline = 'autoload -Uz promptinit && zsh-defer promptinit'
+
+[plugins.direnv]
+inline = 'eval "$(direnv hook zsh)"'

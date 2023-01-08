@@ -1,13 +1,14 @@
 {
   "dependencies": {
-    "bash-language-server": "^2.0.0",
+    "bash-language-server": "^3.1.0",
     "csslint": "^1.0.5",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "firebase": "^9.5.0",
-    "firebase-tools": "^10.1.4",
+    "firebase-tools": "^11.16.0",
     "husky": "^8.0.3",
+    "husky": "^8.0.1",
     "jsonlint": "^1.6.3",
     "markdownlint-cli": "^0.31.0",
     "prettier": "^2.4.1",
