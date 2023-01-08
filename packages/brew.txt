@@ -27,7 +27,6 @@ freetype: libpng
 frei0r:
 fribidi:
 fzf:
-gcc: gmp isl libmpc lz4 mpfr xz zstd
 gd: aom brotli fontconfig freetype giflib highway imath jpeg-turbo jpeg-xl libavif libpng libtiff libvmaf openexr webp
 gdbm:
 gdk-pixbuf: gettext glib jpeg-turbo libpng libtiff pcre2

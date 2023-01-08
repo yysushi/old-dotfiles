@@ -1,12 +1,12 @@
-{ lib, home-path, ... }:
+{ lib, ... }:
+let
+  home = builtins.getEnv "HOME";
+in
 {
   programs.neovim = {
     enable = true;
-    # plugins = with pkgs; [
-    #   vimPlugins.vim-plug
-    # ];
     viAlias = true;
     vimAlias = true;
-    extraConfig = lib.fileContents "${home-path}/.dotfiles/nvim/init.vim";
+    extraConfig = lib.fileContents "${home}/.dotfiles/nvim/init.vim";
   };
 }
