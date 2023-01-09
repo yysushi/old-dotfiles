@@ -3,4 +3,4 @@
 
 # "workspace" is a special local branch,
 # which shouldn't be pushed to public repository
-[ "$(gi branch --show-current)" != "workspace" ]
+[ "$(git branch --show-current)" != "workspace" ]
