@@ -39,9 +39,9 @@ apply = ["fpath"]
 dir = "src"
 use = ["_clang-format", "_direnv", "_openssl", "_protoc"]
 
-# [plugins.zsh-syntax-highlighting]
-# github = "zsh-users/zsh-syntax-highlighting"
-# apply = ["defer"]
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
 
 [plugins.OMZL]
 github = "ohmyzsh/ohmyzsh"
