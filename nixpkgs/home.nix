@@ -1,6 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, config, ... }:
 let
-  homePath = builtins.getEnv "HOME";
+  homePath = builtins.toString ../..;
 in
 {
   imports = [

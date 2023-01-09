@@ -1,12 +1,12 @@
 { lib, ... }:
 let
-  home = builtins.getEnv "HOME";
+  homePath = builtins.toString ../..;
 in
 {
   programs.neovim = {
     enable = true;
     viAlias = true;
     vimAlias = true;
-    extraConfig = lib.fileContents "${home}/.dotfiles/nvim/init.vim";
+    extraConfig = lib.fileContents "${homePath}/.dotfiles/nvim/init.vim";
   };
 }
