@@ -13,7 +13,7 @@ in
     package = pkgs.gitAndTools.gitFull;
     enable = true;
     userName = "yysushi";
-    userEmail = "yoshihiro.tsuji2@gmail";
+    userEmail = "yoshihiro.tsuji2@gmail.com";
     extraConfig = {
       init.defaultBranch = "main";
       color.ui = true;
