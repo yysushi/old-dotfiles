@@ -6,6 +6,7 @@
 
   environment = {
     darwinConfig = /Users/y-tsuji/.config/nixpkgs/darwin/configuration.nix;
+    systemPackages = [ pkgs.zsh ];
     shells = [ pkgs.zsh ];
   };
   services.nix-daemon.enable = true;
