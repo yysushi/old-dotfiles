@@ -17,7 +17,7 @@ fpath = 'fpath=( "{{ dir }}" $fpath )'
 
 [plugins.agkozak-zsh-prompt]
 github = "agkozak/agkozak-zsh-prompt"
-use = ["{{ name }}.plugin.zsh"]
+use = ["*.zsh"]
 
 [plugins.base16-shell]
 github = "tinted-theming/base16-shell"
