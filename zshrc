@@ -11,7 +11,9 @@
 
 # darwin {{{
 
-export PATH="$PATH":/opt/homebrew/bin
+[[ ! -v WSLENV ]] \
+&& export PATH="$PATH":/opt/homebrew/bin \
+&& export DOCKER_HOST=unix://"$HOME"/.lima/default/sock/docker.sock
 
 # }}}
 
