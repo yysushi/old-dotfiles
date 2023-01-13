@@ -28,9 +28,6 @@ package packages
 // go-callvis https://github.com/ofabry/go-callvis#installation
 //go:generate go install github.com/ofabry/go-callvis@latest
 
-// action
-//go:generate go install github.com/nektos/act@latest
-
 // mockery
 //go:generate go install github.com/vektra/mockery/v2/...@v2
 
