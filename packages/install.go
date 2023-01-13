@@ -33,3 +33,6 @@ package packages
 
 // protolint
 //go:generate go install github.com/yoheimuta/protolint/cmd/protolint@latest
+
+// aqua
+//go:generate go install github.com/aquaproj/aqua/cmd/aqua@latest
