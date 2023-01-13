@@ -8,6 +8,8 @@ let
       x11docker
     ] else with pkgsUnstable;[
       # darwin
+      # what's diff with docker-client?
+      docker
       gnugrep
       gnused
     ];

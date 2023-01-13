@@ -60,7 +60,7 @@ in
       ".config/cargo-atcoder.toml".source = "${homePath}/.dotfiles/cargo-atcoder.toml";
       ".config/pet/config.toml".source = "${homePath}/.dotfiles/pet/config.toml";
       ".config/pet/snippet.toml".source = "${homePath}/.dotfiles/pet/snippet.toml";
-      ".lima/default/lima.yaml".source = "${homePath}/.dotfiles/lima.yaml";
+      ".lima/docker/lima.yaml".source = "${homePath}/.dotfiles/lima.yaml";
       ".npm-global/bin".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/packages/npm/node_modules/.bin";
     };
   };
