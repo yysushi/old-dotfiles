@@ -2,9 +2,6 @@
 
 shell = "zsh"
 
-# # Default apply defer
-# apply = ["defer"]
-
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
@@ -18,9 +15,12 @@ fpath = 'fpath=( "{{ dir }}" $fpath )'
 [plugins.agkozak-zsh-prompt]
 github = "agkozak/agkozak-zsh-prompt"
 use = ["*.zsh"]
+apply = ["source"]
 
 [plugins.base16-shell]
-github = "tinted-theming/base16-shell"
+github = "chriskempson/base16-shell"
+use = ["{{ name }}.plugin.zsh", "profile_helper.sh", "base16-ocean.sh"]
+apply = ["defer"]
 
 [plugins.fzf]
 github = "junegunn/fzf"
@@ -93,17 +93,3 @@ use = ["_vagrant"]
 github = "zchee/zsh-completions"
 apply = ["defer"]
 use = ["zsh-completions.plugin.zsh"]
-
-### init
-
-[plugins.compinit]
-inline = 'autoload -Uz compinit && zsh-defer compinit'
-
-[plugins.colors]
-inline = 'autoload -Uz colors && zsh-defer colors'
-
-[plugins.promptinit]
-inline = 'autoload -Uz promptinit && zsh-defer promptinit'
-
-[plugins.direnv]
-inline = 'eval "$(direnv hook zsh)"'

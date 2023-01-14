@@ -19,7 +19,6 @@
 
 # prompt {{{
 
-AGKOZAK_FORCE_ASYNC_METHOD=zsh-defer
 _fishy_collapsed_wd() {
   echo $(pwd | perl -pe '
    BEGIN {

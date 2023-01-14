@@ -41,6 +41,9 @@ in
       # clang
       CXX = "clang++";
       CXXFLAGS = "-std=c++14 -Wall -Wextra -O2";
+
+      # sheldon
+      SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
     };
 
     file = {
