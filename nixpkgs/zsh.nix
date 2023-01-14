@@ -1,28 +1,25 @@
-{ ... }:
+{ config, ... }:
 let
   homePath = builtins.toString ../..;
 in
 {
   programs.zsh = {
     enable = true;
-    shellAliases = {
-      vim = "nvim";
-      view = "nvim -R";
-      vimdiff = "nvim -d";
-      cat = "bat";
+    autocd = true;
+    sessionVariables = {
+      SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
     };
-
-    # history = {
-    #   size = 10000;
-    #   path = "${config.xdg.dataHome}/zsh/history";
-    # };
-
+    profileExtra = ''
+      bindkey -v
+      setopt no_beep
+      bindkey '^N' autosuggest-accept
+      . "${homePath}/.dotfiles/agkozak_prompt.zsh"
+    '';
     initExtra = ''
-      . ${homePath}/.dotfiles/zshrc
+      eval "$(sheldon source)"
+      # eval "$(direnv hook zsh)"
+      # eval "$(zoxide init zsh)"
     '';
   };
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs.zoxide.enable = true;
 }

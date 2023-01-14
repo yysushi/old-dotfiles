@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 let
   homePath = builtins.toString ../..;
 in
@@ -10,39 +10,45 @@ in
   home = {
     stateVersion = "22.11";
     homeDirectory = homePath;
-
-    sessionVariables = {
+    sessionPath = [
+      # homebrew
+      "/opt/homebrew/bin"
+      # npm
+      "${homePath}/.dotfiles/packages/npm/node_modules/.bin"
+      # pipx
+      "${homePath}/.local/bin"
+      # cargo
+      "${homePath}/.cargo/bin"
+      # go
+      "${pkgs.go}/bin"
+    ];
+    sessionVariables = lib.mkMerge [{
+      # pager
+      PAGER = "more -R";
       # ghq
       GHQ_ROOT = "${homePath}/git";
-
+      # locale
+      LANG = "en_US.UTF-8";
+      LC_ALL = "en_US.UTF-8";
+      # python
+      PIPENV_IGNORE_VIRTUALENVS = 1;
+      VIRTUAL_ENV_DISABLE_PROMPT = 1;
+      # vagrant
+      VAGRANT_DEFAULT_PROVIDER = "virtualbox";
+      VAGRANT_EXPERIMENTAL = "cloud_init,disks";
       # docker
       DOCKER_BUILDKIT = 1;
       COMPOSE_DOCKER_CLI_BUILD = 1;
       DOCKER_SCAN_SUGGEST = "false";
-
-      # locae
-      LANG = "en_US.UTF-8";
-      LC_ALL = "en_US.UTF-8";
-
-      # atcoder
-      CARGO_ATCODER_TEST_CONFIG_DIR = "${homePath}/.config";
-
-      # python
-      PIPENV_IGNORE_VIRTUALENVS = 1;
-      VIRTUAL_ENV_DISABLE_PROMPT = 1;
-
-      # vagrant
-      VAGRANT_DEFAULT_PROVIDER = "virtualbox";
-      VAGRANT_EXPERIMENTAL = "cloud_init,disks";
-
       # clang
       CXX = "clang++";
       CXXFLAGS = "-std=c++14 -Wall -Wextra -O2";
-
-      # sheldon
-      SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
-    };
-
+    }
+      (if pkgs.stdenv.isLinux then {
+        DISPLAY = "${lib.lists.last config.networking.nameservers}:0";
+      } else {
+        DOCKER_HOST = "unix://${homePath}/.lima/default/sock/docker.sock";
+      })];
     file = {
       ".bashrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/bashrc";
       ".screenrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/screenrc";
