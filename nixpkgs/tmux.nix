@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 let
-  homePath = builtins.toString ../..;
+  logPath = "${config.xdg.dataHome}/tmux/log";
 in
 {
   programs.tmux = {
@@ -22,13 +22,9 @@ in
     ];
 
     extraConfig = ''
-      set-option -g mouse on
-      set-option -g status-keys vi
-      set-window-option -g mode-keys vi
-      TMUX_LOGGING_PATH="${homePath}/.tmux/log"
-      set-option -g @logging-path $TMUX_LOGGING_PATH
-      set-option -g @screen-capture-path $TMUX_LOGGING_PATH
-      set-option -g @save-complete-history-path $TMUX_LOGGING_PATH
+      set-option -g @logging-path ${logPath}
+      set-option -g @screen-capture-path ${logPath}
+      set-option -g @save-complete-history-path ${logPath}
     '';
   };
 }

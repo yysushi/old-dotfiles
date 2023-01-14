@@ -3,6 +3,9 @@
 font:
   size: 11
 
+env:
+  EDITOR: vim
+
 shell:
   program:  zsh
   args:

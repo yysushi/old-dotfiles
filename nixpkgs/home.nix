@@ -12,9 +12,6 @@ in
     homeDirectory = homePath;
 
     sessionVariables = {
-      # general
-      EDITOR = "vim";
-
       # ghq
       GHQ_ROOT = "${homePath}/git";
 
