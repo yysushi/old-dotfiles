@@ -18,7 +18,6 @@ in
   home.packages = with pkgsUnstable;[
     act
     age
-    alacritty
     auth0-cli
     bat
     bash

@@ -7,6 +7,7 @@
     ./xdg.nix
 
     # programs
+    ./alacritty.nix
     ./direnv.nix
     ./git.nix
     ./neovim.nix
