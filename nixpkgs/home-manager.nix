@@ -7,7 +7,6 @@
     ./xdg.nix
 
     # programs
-    ./alacritty.nix
     ./bat.nix
     ./direnv.nix
     ./git.nix
