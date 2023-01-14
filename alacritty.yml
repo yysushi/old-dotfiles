@@ -3,6 +3,13 @@
 font:
   size: 11
 
+shell:
+  program: zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 # https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-ocean.yml
 colors:
   # Default colors
