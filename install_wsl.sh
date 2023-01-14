@@ -7,8 +7,7 @@ APPDATA_PATH="/mnt/c/Users/yysushi/AppData/Roaming"
 
 mkdir -p "$APPDATA_PATH"/alacritty
 # ln -Ffs "$here"/alacritty.yml "$APPDATA_PATH"/alacritty/alacritty.yml
-cp "$here"/alacritty.yml "$APPDATA_PATH"/alacritty/alacritty.yml
-printf "shell:\n  program: wsl\n" >> "$APPDATA_PATH"/alacritty/alacritty.yml
+yq '.shell.program = "wsl" | .shell.args = ["--", "tmux attach", "||", "tmux"]' alacritty.yml > "$APPDATA_PATH"/alacritty/alacritty.yml
 
 VCXSRV_PATH="/mnt/c/Users/yysushi/scoop/apps/vcxsrv/current"
 cp "$here"/config.xlaunch "$VCXSRV_PATH"
