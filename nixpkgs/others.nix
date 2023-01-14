@@ -19,7 +19,6 @@ in
     act
     age
     auth0-cli
-    bat
     bash
     bazel
     bitwarden-cli

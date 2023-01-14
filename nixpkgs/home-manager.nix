@@ -8,6 +8,7 @@
 
     # programs
     ./alacritty.nix
+    ./bat.nix
     ./direnv.nix
     ./git.nix
     ./neovim.nix
