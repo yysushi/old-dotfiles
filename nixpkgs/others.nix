@@ -12,7 +12,6 @@ let
       docker
       gnugrep
       gnused
-      reattach-to-user-namespace
     ];
 in
 {
