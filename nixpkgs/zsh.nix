@@ -10,6 +10,7 @@ in
       SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
     };
     profileExtra = ''
+      DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
       bindkey -v
       setopt no_beep
       bindkey '^N' autosuggest-accept

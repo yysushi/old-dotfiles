@@ -47,7 +47,8 @@ in
       CXXFLAGS = "-std=c++14 -Wall -Wextra -O2";
     }
       (if pkgs.stdenv.isLinux then {
-        DISPLAY = "${lib.lists.last config.networking.nameservers}:0";
+        # NOTE: not work..
+        # DISPLAY = "${lib.lists.last config.networking.nameservers}:0";
       } else {
         DOCKER_HOST = "unix://${homePath}/.lima/default/sock/docker.sock";
       })];
