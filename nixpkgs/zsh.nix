@@ -17,8 +17,6 @@ in
     '';
     initExtra = ''
       eval "$(sheldon source)"
-      # eval "$(direnv hook zsh)"
-      # eval "$(zoxide init zsh)"
     '';
   };
   programs.zoxide.enable = true;
