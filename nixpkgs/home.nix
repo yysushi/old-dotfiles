@@ -23,6 +23,8 @@ in
       "${pkgs.go}/bin"
     ];
     sessionVariables = lib.mkMerge [{
+      # editor
+      EDITOR = "vim";
       # pager
       PAGER = "more -R";
       # ghq
