@@ -9,6 +9,7 @@ in
     aggressiveResize = true;
     escapeTime = 0;
     secureSocket = true;
+    keyMode = "vi";
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -23,8 +24,6 @@ in
 
     extraConfig = ''
       set-option -g mouse on
-      set-option -g status-keys vi
-      set-option -g mode-keys vi
       set-option -g @logging-path ${logPath}
       set-option -g @screen-capture-path ${logPath}
       set-option -g @save-complete-history-path ${logPath}
