@@ -11,7 +11,7 @@ shell:
   args:
     - -l
     - -c
-    - "PATH=$PATH:/Users/y-tsuji/.nix-profile/bin && (tmux attach || tmux)"
+    - "PATH=$PATH:/Users/y-tsuji/.nix-profile/bin && tmux attach"
 
 # https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-ocean.yml
 colors:

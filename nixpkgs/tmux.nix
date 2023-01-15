@@ -10,6 +10,7 @@ in
     escapeTime = 0;
     secureSocket = true;
     keyMode = "vi";
+    newSession = true;
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
