@@ -7,10 +7,8 @@ in
     enable = true;
     shortcut = "g";
     aggressiveResize = true;
-    baseIndex = 1;
-    newSession = true;
     escapeTime = 0;
-    secureSocket = false;
+    secureSocket = true;
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -19,9 +17,14 @@ in
       tmuxPlugins.logging
       tmuxPlugins.yank
       tmuxPlugins.pain-control
+      tmuxPlugins.better-mouse-mode
+      tmuxPlugins.open
     ];
 
     extraConfig = ''
+      set-option -g mouse on
+      set-option -g status-keys vi
+      set-option -g mode-keys vi
       set-option -g @logging-path ${logPath}
       set-option -g @screen-capture-path ${logPath}
       set-option -g @save-complete-history-path ${logPath}
