@@ -11,6 +11,7 @@ source = { value = 'source "{{ file }}"', each = true }
 PATH = 'export PATH="{{ dir }}:$PATH"'
 path = 'path=( "{{ dir }}" $path )'
 fpath = 'fpath=( "{{ dir }}" $fpath )'
+nop = 'true'
 
 [plugins.agkozak-zsh-prompt]
 github = "agkozak/agkozak-zsh-prompt"
@@ -88,3 +89,9 @@ use = ["_vagrant"]
 github = "zchee/zsh-completions"
 apply = ["defer"]
 use = ["zsh-completions.plugin.zsh"]
+
+# just want to host for tmux
+[plugins.tmux-paste]
+github = "brennanfee/tmux-paste"
+use = ["readme.md"]
+apply = ["nop"]

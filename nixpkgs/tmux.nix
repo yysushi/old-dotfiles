@@ -28,6 +28,9 @@ in
       set-option -g @logging-path ${logPath}
       set-option -g @screen-capture-path ${logPath}
       set-option -g @save-complete-history-path ${logPath}
+
+      # migrate to tpm entry when supported
+      run-shell ${config.xdg.dataHome}/sheldon/repos/github.com/brennanfee/tmux-paste/paste.tmux
     '';
   };
 }
