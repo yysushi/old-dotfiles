@@ -1,7 +1,11 @@
 # ref: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 font:
-  size: 13
+  # size: 13
+  size: 11
+
+window:
+  startup_mode: Maximized
 
 shell:
   program:  zsh
