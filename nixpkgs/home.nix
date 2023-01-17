@@ -20,7 +20,7 @@ in
       # cargo
       "${homePath}/.cargo/bin"
       # go
-      "${pkgs.go}/bin"
+      "${homePath}/go/bin"
     ];
     sessionVariables = lib.mkMerge [{
       # editor
