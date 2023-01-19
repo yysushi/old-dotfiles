@@ -65,6 +65,7 @@ in
     ripgrep
     ruby
     rustc
+    sd
     sequoia
     screen
     shellcheck
