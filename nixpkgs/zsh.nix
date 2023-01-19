@@ -5,6 +5,9 @@ in
 {
   programs.zsh = {
     enable = true;
+    shellAliases = {
+      cat = "bat";
+    };
     autocd = true;
     sessionVariables = {
       SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
