@@ -49,6 +49,7 @@ in
     lima
     lua
     ngrep
+    nil
     nixpkgs-fmt
     nodejs
     opa
