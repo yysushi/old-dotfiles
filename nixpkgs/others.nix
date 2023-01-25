@@ -25,6 +25,7 @@ in
     cargo
     ccls
     cue
+    cuelsp
     cmake
     dasel
     deno

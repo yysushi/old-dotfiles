@@ -463,6 +463,15 @@ if executable('nil')
     \ })
 endif
 
+if executable('cuelsp')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'cuelsp',
+        \ 'cmd': {server_info->['cuelsp']},
+        \ 'allowlist': ['cue'],
+        \
+    })
+endif
+
 " }}}
 
 " shiftwidth, tabstop and fold option {{{
