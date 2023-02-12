@@ -1,4 +1,3 @@
-
 # Example to use Docker (rootful) instead of containerd & nerdctl
 # $ limactl start ./docker-rootful.yaml
 # $ limactl shell docker-roootful docker run -it -v $HOME:$HOME --rm alpine
@@ -25,6 +24,7 @@ images:
 
 mounts:
 - location: "~"
+  writable: true
 - location: "/tmp/lima"
   writable: true
 # containerd is managed by Docker, not by Lima, so the values are set to false here.
