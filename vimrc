@@ -23,6 +23,7 @@ call plug#begin()
 " others (completion, definition, reference, hover and symbol) are disabled
 
 Plug 'dense-analysis/ale'
+  let g:ale_echo_msg_format = '%linter% says %code%: %s'
   let g:ale_lint_delay = 1000
   let g:ale_linters_explicit = 1
   let g:ale_linters = {
