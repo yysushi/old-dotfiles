@@ -46,7 +46,7 @@ Plug 'dense-analysis/ale'
       \ 'vim': ['vint'],
       \ 'yaml': ['yamllint']
       \ }
-  let g:ale_python_mypy_options = '--config-file ~/.config/mypy.ini'
+  let g:ale_python_mypy_options = '--config-file ~/.config/mypy/config'
   let g:ale_cpp_clang_executable = 'clang++'
   let g:ale_cpp_clang_options = '-std=c++14 -Wall -Wextra -O2'
   let g:ale_fixers = {
