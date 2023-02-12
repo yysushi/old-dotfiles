@@ -49,18 +49,8 @@
   output = ""
 
 [[snippets]]
-  description = "Generate public key fingerprint (github is using md5)"
-  command = "ssh-keygen -E md5 -lf ~/.ssh/id_rsa.pub"
-  output = ""
-
-[[snippets]]
-  description = "Generate ssh key (algorithm:ecdsa, length:521)"
-  command = "ssh-keygen -t ecdsa -b 521 -f ~/.ssh/id_rsa"
-  output = ""
-
-[[snippets]]
   description = "Generate ssh key (algorithm:ed25519, length:256)"
-  command = "ssh-keygen -t ed25519 -f ~/.ssh/id_rsa"
+  command = "ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519"
   output = ""
 
 [[snippets]]
