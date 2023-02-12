@@ -466,11 +466,10 @@ endif
 
 if executable('cuelsp')
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'cuelsp',
-        \ 'cmd': {server_info->['cuelsp']},
-        \ 'allowlist': ['cue'],
-        \
-    })
+      \ 'name': 'cuelsp',
+      \ 'cmd': {server_info->['cuelsp']},
+      \ 'allowlist': ['cue'],
+      \ })
 endif
 
 " }}}
