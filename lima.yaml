@@ -1,10 +1,10 @@
 
-# Example to use Docker instead of containerd & nerdctl
-# $ limactl start ./docker.yaml
-# $ limactl shell docker docker run -it -v $HOME:$HOME --rm alpine
+# Example to use Docker (rootful) instead of containerd & nerdctl
+# $ limactl start ./docker-rootful.yaml
+# $ limactl shell docker-roootful docker run -it -v $HOME:$HOME --rm alpine
 
 # To run `docker` on the host (assumes docker-cli is installed):
-# $ export DOCKER_HOST=$(limactl list docker --format 'unix://{{.Dir}}/sock/docker.sock')
+# $ export DOCKER_HOST=$(limactl list docker-rootful --format 'unix://{{.Dir}}/sock/docker.sock')
 # $ docker ...
 
 # This example requires Lima v0.8.0 or later
@@ -45,18 +45,16 @@ provision:
     #!/bin/bash
     set -eux -o pipefail
     command -v docker >/dev/null 2>&1 && exit 0
+    if [ ! -e /etc/systemd/system/docker.socket.d/override.conf ]; then
+      mkdir -p /etc/systemd/system/docker.socket.d
+      # Alternatively we could just add the user to the "docker" group, but that requires restarting the user session
+      cat <<-EOF >/etc/systemd/system/docker.socket.d/override.conf
+      [Socket]
+      SocketUser=${LIMA_CIDATA_USER}
+    EOF
+    fi
     export DEBIAN_FRONTEND=noninteractive
     curl -fsSL https://get.docker.com | sh
-    # NOTE: you may remove the lines below, if you prefer to use rootful docker, not rootless
-    systemctl disable --now docker
-    apt-get install -y uidmap dbus-user-session
-- mode: user
-  script: |
-    #!/bin/bash
-    set -eux -o pipefail
-    systemctl --user start dbus
-    dockerd-rootless-setuptool.sh install
-    docker context use rootless
 probes:
 - script: |
     #!/bin/bash
@@ -65,8 +63,8 @@ probes:
       echo >&2 "docker is not installed yet"
       exit 1
     fi
-    if ! timeout 30s bash -c "until pgrep rootlesskit; do sleep 3; done"; then
-      echo >&2 "rootlesskit (used by rootless docker) is not running"
+    if ! timeout 30s bash -c "until pgrep dockerd; do sleep 3; done"; then
+      echo >&2 "dockerd is not running"
       exit 1
     fi
   hint: See "/var/log/cloud-init-output.log". in the guest
@@ -76,5 +74,5 @@ hostResolver:
   hosts:
     host.docker.internal: host.lima.internal
 portForwards:
-- guestSocket: "/run/user/{{.UID}}/docker.sock"
+- guestSocket: "/var/run/docker.sock"
   hostSocket: "{{.Dir}}/sock/docker.sock"
