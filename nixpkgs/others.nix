@@ -56,6 +56,7 @@ in
     opa
     openssl
     pass
+    parallel
     plantuml
     pstree
     protobuf
