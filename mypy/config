@@ -7,3 +7,5 @@ exclude = (?x)(
     | ^three\.   # or files starting with "three."
     | ^.*/step_impl\.py$    # files named "one.py"
   )
+
+enable_recursive_aliases = True
