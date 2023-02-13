@@ -7,8 +7,8 @@
   environment = {
     darwinConfig = /Users/y-tsuji/.config/nixpkgs/darwin/configuration.nix;
     systemPackages = [
-      pkgs.zsh
       pkgs.alacritty
+      pkgs.zsh
     ];
     shells = [ pkgs.zsh ];
   };

@@ -1,12 +1,12 @@
 { pkgs, ... }:
 let
-  pkgsUnstable = import <nixpkgs-unstable> { };
   extraPackages =
-    if pkgs.stdenv.isLinux then with pkgsUnstable;[
+    if pkgs.stdenv.isLinux then with pkgs;[
       # nixos-wsl
       sheldon
       x11docker
-    ] else with pkgsUnstable;[
+      # ] else with pkgsUnstable;[
+    ] else with pkgs;[
       # darwin
       # what's diff with docker-client?
       docker
@@ -15,7 +15,7 @@ let
     ];
 in
 {
-  home.packages = with pkgsUnstable;[
+  home.packages = with pkgs;[
     act
     age
     auth0-cli
@@ -60,7 +60,7 @@ in
     plantuml
     pstree
     protobuf
-    (python310.withPackages (python-packages: with python-packages; [
+    (python311.withPackages (python-packages: with python-packages; [
       pipx
       pynvim
       python-lsp-server
@@ -81,7 +81,6 @@ in
     tflint
     tree
     websocat
-    wireshark
     yarn
     yq-go
   ] ++ extraPackages;
