@@ -24,7 +24,7 @@ call plug#begin()
 
 Plug 'dense-analysis/ale'
   let g:ale_echo_msg_format = '%linter% says %code%: %s'
-  let g:ale_lint_delay = 1000
+  let g:ale_lint_delay = 10
   let g:ale_linters_explicit = 1
   let g:ale_linters = {
       \ 'cpp': ['clang'],
