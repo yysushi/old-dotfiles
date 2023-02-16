@@ -18,10 +18,11 @@ in
       bindkey -v
       setopt no_beep
       bindkey '^N' autosuggest-accept
-      . "${homePath}/.dotfiles/agkozak_prompt.zsh"
     '';
     initExtra = ''
       eval "$(sheldon source)"
+
+      . "${homePath}/.dotfiles/agkozak_prompt.zsh"
     '';
   };
   programs.zoxide.enable = true;
