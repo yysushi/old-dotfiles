@@ -3,15 +3,25 @@ let
   extraPackages =
     if pkgs.stdenv.isLinux then with pkgs;[
       # nixos-wsl
+      (python310.withPackages (python-packages: with python-packages; [
+        pipx
+        pynvim
+        python-lsp-server
+      ]))
       sheldon
+      usbutils
       x11docker
-      # ] else with pkgsUnstable;[
     ] else with pkgs;[
       # darwin
       # what's diff with docker-client?
       docker
       gnugrep
       gnused
+      (python311.withPackages (python-packages: with python-packages; [
+        pipx
+        pynvim
+        python-lsp-server
+      ]))
     ];
 in
 {
@@ -60,11 +70,6 @@ in
     plantuml
     pstree
     protobuf
-    (python311.withPackages (python-packages: with python-packages; [
-      pipx
-      pynvim
-      python-lsp-server
-    ]))
     ripgrep
     ruby
     rustc
@@ -82,6 +87,7 @@ in
     tree
     websocat
     yarn
+    yubikey-manager
     yq-go
   ] ++ extraPackages;
 }
