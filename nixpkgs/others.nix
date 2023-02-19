@@ -79,6 +79,7 @@ in
     shellcheck
     skaffold
     sqlite
+    tailscale
     tcpdump
     terraform
     terraform-ls
