@@ -8,6 +8,6 @@ in
   ];
 
   users.defaultUserShell = pkgs.zsh;
-  users.users.nixos.extraGroups = [ "docker" ];
+  # users.users.nixos.extraGroups = [ "docker" ];
   home-manager.users.nixos = (import /home/nixos/.dotfiles/nixpkgs/home-manager.nix);
 }

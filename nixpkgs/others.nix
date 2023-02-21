@@ -10,7 +10,7 @@ let
       ]))
       sheldon
       usbutils
-      x11docker
+      # x11docker
     ] else with pkgs;[
       # darwin
       # what's diff with docker-client?

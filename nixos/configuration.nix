@@ -15,7 +15,7 @@ in
     defaultUser = "nixos";
     startMenuLaunchers = true;
 
-    docker-native.enable = true;
+    docker-native.enable = false;
     # docker-desktop.enable = true;
   };
 
