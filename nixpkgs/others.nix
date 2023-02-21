@@ -11,6 +11,7 @@ let
       sheldon
       usbutils
       # x11docker
+      linuxKernel.packages.linux_5_15.usbip
     ] else with pkgs;[
       # darwin
       # what's diff with docker-client?
