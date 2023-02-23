@@ -45,6 +45,7 @@ in
     fzf
     gauge
     gcc
+    gitRepo
     gnumake
     go
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
