@@ -3,7 +3,6 @@
 * [brew](https://brew.sh)
 * zsh: chsh -s $(which zsh)
 * nvim: [xsel for clipboard integration](windows.md)
-* [vim plugin](https://github.com/junegunn/vim-plug#neovim)
 * [zinit](https://github.com/zdharma-continuum/zinit#manual-installation)
 * clang: build-essentials
 * nodejs, npm

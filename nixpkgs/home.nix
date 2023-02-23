@@ -72,6 +72,10 @@ in
       ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/snippet.toml";
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
       # fetch configs/scripts remotely
+      "${config.xdg.dataHome}/nvim/site/autoload/plug.vim".source = pkgs.fetchurl {
+        url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim";
+        hash = "sha256-uXwLrsgan6PYYfxuddiYE+wrBAdZ3WFo/mUnjyxDne0=";
+      };
       "${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
         owner = "brennanfee";
         repo = "tmux-paste";
