@@ -30,7 +30,7 @@ in
       set-option -g @save-complete-history-path ${logPath}
 
       # migrate to tpm entry when supported
-      run-shell ${config.xdg.dataHome}/sheldon/repos/github.com/brennanfee/tmux-paste/paste.tmux
+      run-shell ${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste/paste.tmux
     '';
   };
 }

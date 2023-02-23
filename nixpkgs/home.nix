@@ -53,6 +53,7 @@ in
         DOCKER_HOST = "unix://${homePath}/.lima/default/sock/docker.sock";
       })];
     file = {
+      # symlink configurations
       ".bashrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/bashrc";
       ".screenrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/screenrc";
       ".gitignore".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/gitignore";
@@ -70,6 +71,14 @@ in
       ".config/pet/config.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/config.toml";
       ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/snippet.toml";
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
+      # fetch configs/scripts remotely
+      "${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
+        owner = "brennanfee";
+        repo = "tmux-paste";
+        rev = "v2.0.0";
+        hash = "sha256-rNoUOyoBJsRxKRB4XDfa3vtAkDACy2mXYMy4whtbn88=";
+      };
+      # symlink bin directories
       ".npm-global/bin".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/packages/npm/node_modules/.bin";
     };
   };
