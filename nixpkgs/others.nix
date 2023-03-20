@@ -35,12 +35,14 @@ in
     bitwarden-cli
     cargo
     ccls
+    csvkit
     cue
     cuelsp
     cmake
     dasel
     deno
     dprint
+    expect
     fd
     fzf
     gauge
@@ -81,6 +83,7 @@ in
     shellcheck
     skaffold
     sqlite
+    sqlint
     tailscale
     tcpdump
     terraform
