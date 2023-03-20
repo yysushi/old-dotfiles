@@ -35,6 +35,7 @@ Plug 'dense-analysis/ale'
       \ 'html': ['tidy'],
       \ 'json': ['jsonlint'],
       \ 'javascript': ['eslint'],
+      \ 'make': ['checkmake'],
       \ 'markdown': ['markdownlint'],
       \ 'nix': ['nix'],
       \ 'proto': ['protolint'],

@@ -36,3 +36,6 @@ package packages
 
 // aqua
 //go:generate go install github.com/aquaproj/aqua/cmd/aqua@latest
+
+// checkmake
+//go:generate go install github.com/mrtazz/checkmake/cmd/checkmake@latest
