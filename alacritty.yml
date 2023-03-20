@@ -1,9 +1,7 @@
 # ref: https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 font:
-  # size: 13
-  # size: 22
-  size: 11
+  size: 14
 
 window:
   startup_mode: Maximized
