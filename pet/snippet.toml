@@ -117,3 +117,8 @@
   description = "replace 'foo' with 'bar' in-place by gnu sed"
   command = "rg foo --files-with-matches | xargs sed -i 's/foo/bar/g'"
   output = ""
+
+[[snippets]]
+  description = "print fingerprint of ssh key"
+  command = "ssh-keygen -lf ~/.ssh/id_ed25519.pub"
+  output = ""
