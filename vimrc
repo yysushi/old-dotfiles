@@ -26,11 +26,12 @@ Plug 'dense-analysis/ale'
   let g:ale_echo_msg_format = '%linter% says %code%: %s'
   let g:ale_lint_delay = 10
   let g:ale_linters_explicit = 1
+  let g:ale_go_golangci_lint_package = 1
   let g:ale_linters = {
       \ 'cpp': ['clang'],
       \ 'css': ['csslint'],
       \ 'dockerfile': ['hadolint'],
-      \ 'go': ['golangci_lint', 'govet'],
+      \ 'go': ['golangci-lint'],
       \ 'html': ['tidy'],
       \ 'json': ['jsonlint'],
       \ 'javascript': ['eslint'],
