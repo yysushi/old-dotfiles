@@ -14,9 +14,12 @@
   };
   services.nix-daemon.enable = true;
 
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    settings.auto-optimise-store = true;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
 
   users.users."y-tsuji" = {
     name = "y-tsuji";

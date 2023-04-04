@@ -67,7 +67,6 @@ in
     nil
     nixpkgs-fmt
     nodejs
-    opa
     openssh
     openssl
     pass
