@@ -8,50 +8,61 @@ bash-completion:
 bdw-gc:
 berkeley-db: ca-certificates openssl@1.1
 bison:
+y-tsuji: ~/.d/packages (workspace !)$ brew deps --installed
+adns:
+ansifilter:
+aom: brotli giflib jpeg-turbo jpeg-xl libtiff libvmaf openexr webp
+autoconf: m4
+automake: autoconf m4
+bash-completion:
+bdw-gc:
+berkeley-db: ca-certificates openssl@1.1
+bison:
 brotli:
 c-ares:
 ca-certificates:
-cairo: fontconfig freetype gdbm gettext glib libpng libpthread-stubs libx11 libxau libxcb libxdmcp libxext libxrender lzo mpdecimal openssl@1.1 pcre pixman pkg-config python@3.9 readline sqlite xorgproto xz
+cairo: freetype gdbm gettext libpthread-stubs libxcb lzo mpdecimal openssl@1.1 pcre pkg-config xorgproto xz
 capstone:
-ccls: ca-certificates gdbm llvm lz4 mpdecimal openssl@1.1 python@3.10 readline six sqlite xz z3 zstd
+ccls: ca-certificates gdbm lz4 mpdecimal openssl@1.1 xz zstd
 cjson:
 clang-format:
 cmocka:
 coreutils:
+curl: brotli ca-certificates gettext libidn2 libnghttp2 libssh2 libunistring lz4 openldap openssl@1.1 rtmpdump xz zstd
 dav1d:
-ffmpeg: aom bdw-gc brotli ca-certificates cairo cjson cmocka dav1d flac fontconfig freetype frei0r fribidi gettext giflib glib gmp gnutls graphite2 guile harfbuzz highway icu4c imath jpeg-turbo jpeg-xl lame leptonica libarchive libass libb2 libbluray libevent libidn2 libnghttp2 libogg libpng libpthread-stubs librist libsamplerate libsndfile libsodium libsoxr libtasn1 libtiff libtool libunistring libvidstab libvmaf libvorbis libvpx libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lz4 lzo m4 mbedtls nettle opencore-amr openexr openjpeg openssl@1.1 opus p11-kit pcre2 pixman pkg-config rav1e readline rubberband sdl2 snappy speex srt tesseract theora unbound webp x264 x265 xorgproto xvid xz zeromq zimg zstd
+ffmpeg: aom bdw-gc brotli ca-certificates cairo cjson cmocka dav1d freetype frei0r fribidi gettext giflib gmp gnutls graphite2 icu4c jpeg-turbo jpeg-xl lame leptonica libb2 libevent libidn2 libnghttp2 libogg libpthread-stubs libsamplerate libsodium libsoxr libtasn1 libtiff libtool libunistring libvidstab libvmaf libvorbis libvpx libxcb lz4 lzo m4 nettle opencore-amr openexr openjpeg openssl@1.1 opus p11-kit pkg-config snappy speex srt theora webp x264 x265 xorgproto xvid xz zeromq zimg zstd
 flac: libogg
-fontconfig: freetype libpng
+fontconfig: freetype
 fping:
-freetype: libpng
+freetype:
 frei0r:
 fribidi:
 fzf:
-gd: aom brotli fontconfig freetype giflib highway imath jpeg-turbo jpeg-xl libavif libpng libtiff libvmaf openexr webp
+gd: aom brotli freetype giflib jpeg-turbo jpeg-xl libtiff libvmaf openexr webp
 gdbm:
-gdk-pixbuf: gettext glib jpeg-turbo libpng libtiff pcre2
+gdk-pixbuf: gettext jpeg-turbo libtiff
 gettext:
 ghq:
 giflib:
-git: gettext pcre2
+git: gettext
 rhysd/git-brws/git-brws:
-glib: gettext pcre2
+glib: gettext
 gmp:
 gnu-getopt:
 gnu-sed:
-gnupg: bdw-gc ca-certificates gettext gmp gnutls guile libassuan libevent libgcrypt libgpg-error libidn2 libksba libnghttp2 libtasn1 libtool libunistring libusb m4 nettle npth openssl@1.1 p11-kit pinentry pkg-config readline unbound
-gnutls: bdw-gc ca-certificates gettext gmp guile libevent libidn2 libnghttp2 libtasn1 libtool libunistring m4 nettle openssl@1.1 p11-kit pkg-config readline unbound
-gobject-introspection: ca-certificates cairo fontconfig freetype gdbm gettext glib libpng libpthread-stubs libx11 libxau libxcb libxdmcp libxext libxrender lzo mpdecimal openssl@1.1 pcre2 pixman pkg-config python@3.10 readline sqlite xorgproto xz
-google-cloud-sdk: ca-certificates gdbm mpdecimal openssl@1.1 python readline sqlite xz
+gnupg: bdw-gc ca-certificates gettext gmp gnutls libassuan libevent libgcrypt libidn2 libnghttp2 libtasn1 libtool libunistring libusb m4 nettle npth openssl@1.1 p11-kit pinentry pkg-config
+gnutls: bdw-gc ca-certificates gettext gmp libevent libidn2 libnghttp2 libtasn1 libtool libunistring m4 nettle openssl@1.1 p11-kit pkg-config
+gobject-introspection: ca-certificates cairo freetype gdbm gettext libpthread-stubs libxcb lzo mpdecimal openssl@1.1 pkg-config xorgproto xz
+google-cloud-sdk: ca-certificates gdbm mpdecimal openssl@1.1 xz
 graphite2:
-graphviz: aom brotli cairo fontconfig freetype fribidi gd gdk-pixbuf gettext giflib glib graphite2 gts harfbuzz highway icu4c imath jasper jpeg-turbo jpeg-xl libavif libpng libpthread-stubs librsvg libtiff libtool libvmaf libx11 libxau libxcb libxdmcp libxext libxrender lzo m4 netpbm openexr pango pcre2 pixman pkg-config webp xorgproto
+graphviz: aom brotli cairo freetype fribidi gettext giflib graphite2 gts icu4c jpeg-turbo jpeg-xl libpthread-stubs libtiff libtool libvmaf libxcb lzo m4 openexr pkg-config webp xorgproto
 grep: pcre
-gts: gdbm gettext glib jasper libpng libtiff netpbm openssl@1.1 pcre python readline sqlite xz
-guile: bdw-gc gmp libtool libunistring m4 pkg-config readline
+gts: gdbm gettext libtiff openssl@1.1 pcre xz
+guile: bdw-gc gmp libtool libunistring m4 pkg-config
 hadolint:
-harfbuzz: cairo fontconfig freetype gettext glib graphite2 icu4c libpng libpthread-stubs libx11 libxau libxcb libxdmcp libxext libxrender lzo pcre2 pixman pkg-config xorgproto
+harfbuzz: cairo freetype gettext graphite2 icu4c libpthread-stubs libxcb lzo pkg-config xorgproto
 highway:
-htop: ncurses
+htop:
 icu4c:
 imath:
 iproute2mac:
@@ -60,38 +71,39 @@ jasper: jpeg-turbo
 jemalloc:
 jpeg:
 jpeg-turbo:
-jpeg-xl: brotli giflib highway imath jpeg-turbo libpng libtiff openexr webp
+jpeg-xl: brotli giflib jpeg-turbo libtiff openexr webp
 jq:
 krb5: ca-certificates openssl@1.1
 kubernetes-cli:
 lame:
-leptonica: giflib jpeg-turbo libpng libtiff little-cms2 openjpeg webp
+leptonica: giflib jpeg-turbo libtiff openjpeg webp
 libarchive: libb2 lz4 xz zstd
-libass: cairo fontconfig freetype fribidi gettext glib graphite2 harfbuzz icu4c libpng libpthread-stubs libx11 libxau libxcb libxdmcp libxext libxrender lzo pcre2 pixman pkg-config xorgproto
-libassuan: libgpg-error
-libavif: aom brotli giflib highway imath jpeg-turbo jpeg-xl libpng libtiff libvmaf openexr webp
+libass: cairo freetype fribidi gettext graphite2 icu4c libpthread-stubs libxcb lzo pkg-config xorgproto
+libassuan:
+libavif: aom brotli giflib jpeg-turbo jpeg-xl libtiff libvmaf openexr webp
 libb2:
-libbluray: fontconfig freetype libpng
+libbluray: freetype
 libev:
 libevent: openssl@1.1
 libffi:
-libgcrypt: libgpg-error
+libgcrypt:
 libgpg-error:
 libidn2: gettext libunistring
-libksba: libgpg-error
-libmpc: gmp mpfr
+libksba:
+libmpc: gmp
 libnghttp2:
 libogg:
 libpng:
 libpthread-stubs: pkg-config
-librist: cjson cmocka mbedtls
-librsvg: cairo fontconfig freetype fribidi gdk-pixbuf gettext glib graphite2 harfbuzz icu4c jpeg-turbo libpng libpthread-stubs libtiff libx11 libxau libxcb libxdmcp libxext libxrender lzo pango pcre2 pixman pkg-config xorgproto
-libsamplerate: flac libogg libsndfile libvorbis opus
-libslirp: gettext glib pcre2
-libsndfile: flac libogg libvorbis opus
+librist: cjson cmocka
+librsvg: cairo freetype fribidi gettext graphite2 icu4c jpeg-turbo libpthread-stubs libtiff libxcb lzo pkg-config xorgproto
+libsamplerate: libogg libvorbis opus
+libslirp: gettext
+libsndfile: libogg libvorbis opus
 libsodium:
 libsoxr:
 libssh: ca-certificates openssl@1.1
+libssh2: ca-certificates openssl@1.1
 libtasn1:
 libtermkey:
 libtiff: jpeg-turbo
@@ -104,17 +116,17 @@ libvmaf:
 libvorbis: libogg
 libvpx:
 libvterm:
-libx11: libpthread-stubs libxau libxcb libxdmcp pkg-config xorgproto
+libx11: libpthread-stubs libxcb pkg-config xorgproto
 libxau: xorgproto
-libxcb: libpthread-stubs libxau libxdmcp pkg-config xorgproto
+libxcb: libpthread-stubs pkg-config xorgproto
 libxdmcp: xorgproto
-libxext: libpthread-stubs libx11 libxau libxcb libxdmcp pkg-config xorgproto
-libxml2: icu4c readline
-libxmlsec1: bdw-gc ca-certificates gettext gmp gnutls guile icu4c libevent libgcrypt libgpg-error libidn2 libnghttp2 libtasn1 libtool libunistring libxml2 m4 nettle openssl@1.1 p11-kit pkg-config readline unbound
-libxrender: libpthread-stubs libx11 libxau libxcb libxdmcp pkg-config xorgproto
+libxext: libpthread-stubs libxcb pkg-config xorgproto
+libxml2: icu4c
+libxmlsec1: bdw-gc ca-certificates gettext gmp gnutls icu4c libevent libgcrypt libidn2 libnghttp2 libtasn1 libtool libunistring m4 nettle openssl@1.1 p11-kit pkg-config
+libxrender: libpthread-stubs libxcb pkg-config xorgproto
 libyaml:
 little-cms2: jpeg-turbo libtiff
-llvm: ca-certificates gdbm lz4 mpdecimal openssl@1.1 python@3.10 readline six sqlite xz z3 zstd
+llvm: ca-certificates gdbm lz4 mpdecimal openssl@1.1 xz zstd
 lua:
 luajit:
 lz4:
@@ -127,68 +139,69 @@ mpdecimal:
 mpfr: gmp
 msgpack:
 ncurses:
-netpbm: jasper jpeg-turbo libpng libtiff
+netpbm: jpeg-turbo libtiff
 nettle: gmp
 nghttp2: libev openssl@1.1
 ngrep:
 nmap: openssl@1.1
 npth:
-oath-toolkit: bdw-gc gettext gmp gnutls guile libev libevent libgcrypt libgpg-error libidn2 libtasn1 libtool libunistring libxml2 libxmlsec1 m4 nettle openssl@1.1 p11-kit pkg-config readline unbound
+oath-toolkit: bdw-gc gettext gmp gnutls libev libevent libgcrypt libidn2 libtasn1 libtool libunistring m4 nettle openssl@1.1 p11-kit pkg-config
 oniguruma:
 opencore-amr:
-openexr: imath
+openexr:
 openjdk:
-openjpeg: jpeg-turbo libpng libtiff little-cms2
+openjpeg: jpeg-turbo libtiff
+openldap: ca-certificates openssl@1.1
 openssl@1.1: ca-certificates
 opus:
 p11-kit: ca-certificates libtasn1
-pango: cairo fontconfig freetype fribidi gettext glib graphite2 harfbuzz icu4c libpng libpthread-stubs libx11 libxau libxcb libxdmcp libxext libxrender lzo pcre2 pixman pkg-config xorgproto
-pass: bdw-gc ca-certificates gettext gmp gnu-getopt gnupg gnutls guile libassuan libevent libgcrypt libgpg-error libidn2 libksba libnghttp2 libpng libtasn1 libtool libunistring libusb m4 nettle npth openssl@1.1 p11-kit pinentry pkg-config qrencode readline tree unbound
-pass-otp: adns bdw-gc gdbm gettext gmp gnu-getopt gnupg gnutls guile libassuan libev libevent libgcrypt libgpg-error libidn2 libksba libpng libtasn1 libtool libunistring libusb libxml2 libxmlsec1 nettle npth oath-toolkit openssl@1.1 p11-kit pass pinentry pkg-config python@3.9 qrencode readline sqlite tree unbound xz
+pango: cairo freetype fribidi gettext graphite2 icu4c libpthread-stubs libxcb lzo pkg-config xorgproto
+pass: bdw-gc ca-certificates gettext gmp gnu-getopt gnutls libassuan libevent libgcrypt libidn2 libnghttp2 libtasn1 libtool libunistring libusb m4 nettle npth openssl@1.1 p11-kit pinentry pkg-config qrencode
+pass-otp: adns bdw-gc gdbm gettext gmp gnu-getopt gnutls libassuan libev libevent libgcrypt libidn2 libtasn1 libtool libunistring libusb nettle npth oath-toolkit openssl@1.1 p11-kit pass pinentry pkg-config qrencode xz
 pcre:
 pcre2:
 peco:
 perl: berkeley-db ca-certificates gdbm openssl@1.1
 knqyf263/pet/pet:
-pinentry: libassuan libgpg-error
+pinentry: libassuan
 pixman:
 pkg-config:
-postgresql@14: ca-certificates icu4c krb5 lz4 openssl@1.1 readline
-python@3.10: ca-certificates gdbm mpdecimal openssl@1.1 readline sqlite xz
-python@3.8: ca-certificates gdbm mpdecimal openssl@1.1 readline sqlite tcl-tk xz
-python@3.9: ca-certificates gdbm mpdecimal openssl@1.1 readline sqlite xz
-qemu: bdw-gc ca-certificates capstone gettext glib gmp gnutls guile jpeg-turbo libevent libidn2 libnghttp2 libpng libslirp libssh libtasn1 libtool libunistring libusb lz4 lzo m4 ncurses nettle openssl@1.1 p11-kit pcre2 pixman pkg-config readline snappy unbound vde xz zstd
-qrencode: libpng
+postgresql@14: ca-certificates icu4c lz4 openssl@1.1
+python@3.10: ca-certificates gdbm mpdecimal openssl@1.1 xz
+python@3.8: ca-certificates gdbm mpdecimal openssl@1.1 xz
+python@3.9: ca-certificates gdbm mpdecimal openssl@1.1 xz
+qemu: bdw-gc ca-certificates capstone gettext gmp gnutls jpeg-turbo libevent libidn2 libnghttp2 libslirp libssh libtasn1 libtool libunistring libusb lz4 lzo m4 nettle openssl@1.1 p11-kit pkg-config snappy xz zstd
+qrencode:
 rav1e:
-rbenv: autoconf m4 pkg-config readline ruby-build
+rbenv: autoconf m4 pkg-config
 re2c:
 readline:
 reattach-to-user-namespace:
 rtmpdump: openssl@1.1
-rubberband: flac libogg libsamplerate libsndfile libvorbis opus
-ruby: ca-certificates libyaml openssl@1.1 readline
-ruby-build: autoconf m4 pkg-config readline
+rubberband: libogg libsamplerate libvorbis opus
+ruby: ca-certificates libyaml openssl@1.1
+ruby-build: autoconf m4 pkg-config
 sdl2:
 six:
 snappy:
 speex: libogg
-sqlite: readline
+sqlite:
 srt: ca-certificates openssl@1.1
 swig: pcre
 tcl-tk: ca-certificates openssl@1.1
 telnet:
-tesseract: giflib jpeg-turbo leptonica libarchive libb2 libpng libtiff little-cms2 lz4 openjpeg webp xz zstd
+tesseract: giflib jpeg-turbo leptonica libb2 libtiff lz4 openjpeg webp xz zstd
 the_silver_searcher: pcre xz
 theora: libogg libvorbis
 tidy-html5:
-tig: ncurses readline
+tig:
 tree:
 unbound: ca-certificates libevent libnghttp2 openssl@1.1
 unibilium:
 utf8proc:
 vde:
-vim: berkeley-db ca-certificates gdbm gettext libyaml lua mpdecimal ncurses openssl@1.1 perl python@3.10 readline ruby sqlite xz
-webp: giflib jpeg-turbo libpng libtiff
+vim: berkeley-db ca-certificates gdbm gettext libyaml lua mpdecimal openssl@1.1 perl xz
+webp: giflib jpeg-turbo libtiff
 wget: ca-certificates gettext libidn2 libunistring openssl@1.1
 x264:
 x265:
