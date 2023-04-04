@@ -39,3 +39,6 @@ package packages
 
 // checkmake
 //go:generate go install github.com/mrtazz/checkmake/cmd/checkmake@latest
+
+// mockgen
+//go:generate go install github.com/golang/mock/mockgen@latest
