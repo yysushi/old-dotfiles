@@ -4,6 +4,7 @@
     <home-manager/nix-darwin>
 
     ./keyboard.nix
+    ./homebrew.nix
   ];
 
   environment = {

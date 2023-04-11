@@ -11,8 +11,6 @@ in
     stateVersion = "22.11";
     homeDirectory = homePath;
     sessionPath = [
-      # homebrew
-      "/opt/homebrew/bin"
       # npm
       "${homePath}/.dotfiles/packages/npm/node_modules/.bin"
       # pipx
