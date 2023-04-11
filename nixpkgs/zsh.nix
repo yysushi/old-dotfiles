@@ -17,8 +17,8 @@ in
       DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
       bindkey -v
       setopt no_beep
-      TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-      command -v limactl > /dev/null && TESTCONTAINERS_HOST_OVERRIDE=$(limactl shell default ip a show lima0 | grep 'inet '| awk '{print $2}' | cut -f1 -d"/")
+      # TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+      # command -v limactl > /dev/null && TESTCONTAINERS_HOST_OVERRIDE=$(limactl shell default ip a show lima0 | grep 'inet '| awk '{print $2}' | cut -f1 -d"/")
     '';
     initExtra = ''
       eval "$(sheldon source)"

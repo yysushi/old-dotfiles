@@ -88,4 +88,5 @@ networks:
 # Interface "lima0": shared mode  (IP is assigned by macOS's bootpd)
 # - lima: shared
 # Interface "lima1": bridged mode (IP is assigned by a DHCP server on the physical network)
+# - lima: bridged
 - lima: bridged
