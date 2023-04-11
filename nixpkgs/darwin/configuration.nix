@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, ... }:
 {
   imports = [
     <home-manager/nix-darwin>
@@ -13,6 +13,20 @@
     shells = [ pkgs.zsh ];
   };
   services.nix-daemon.enable = true;
+
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToControl = true;
+    userKeyMapping = [
+      # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+      {
+        # Keyboard Delete Forward 0x70000004C
+        HIDKeyboardModifierMappingSrc = 30064771148;
+        # Keyboard Right Shift 0x7000000E5
+        HIDKeyboardModifierMappingDst = 30064771301;
+      }
+    ];
+  };
 
   nix = {
     settings.auto-optimise-store = true;
