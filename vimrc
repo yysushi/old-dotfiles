@@ -72,6 +72,8 @@ Plug 'dense-analysis/ale'
   let g:ale_javascript_eslint_options = '--config ~/.eslintrc.json --resolve-plugins-relative-to=$(npm root -g)'
   let g:ale_cpp_clangformat_options = '-style=google'
   let g:ale_completion_enabled = 0
+  let g:ale_detail_to_floating_preview = 1
+  let g:ale_floating_window_border = ['│', '─', '┌', '┐', '┘', '└', '│', '─']
 
 " }}}
 
