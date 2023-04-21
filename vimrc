@@ -27,6 +27,7 @@ Plug 'dense-analysis/ale'
   let g:ale_lint_delay = 10
   let g:ale_linters_explicit = 1
   let g:ale_go_golangci_lint_package = 1
+  let g:ale_go_golangci_lint_options = '--enable-all'
   let g:ale_linters = {
       \ 'cpp': ['clang'],
       \ 'css': ['csslint'],
