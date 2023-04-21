@@ -24,6 +24,8 @@ call plug#begin()
 
 Plug 'dense-analysis/ale'
   let g:ale_echo_msg_format = '%linter% says %code%: %s'
+  let g:ale_virtualtext_cursor = 0
+  " let g:ale_cursor_detail = 1
   let g:ale_lint_delay = 10
   let g:ale_linters_explicit = 1
   let g:ale_go_golangci_lint_package = 1
@@ -309,6 +311,7 @@ hi link BufTabLineActive BufTabLineHidden
 
 nnoremap <leader>n :NERDTreeFind<cr>
 nnoremap <leader>f :ALEFix<cr>
+nnoremap <Leader>d :ALEDetail<cr>
 
 nmap gx <Plug>(openbrowser-open)
 
