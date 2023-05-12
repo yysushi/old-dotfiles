@@ -58,7 +58,6 @@ in
       ".tslint.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/tslint.json";
       ".eslintrc.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/eslintrc.json";
       ".dprint.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/dprint.json";
-      ".vimrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/vimrc";
       ".shellcheckrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/shellcheckrc";
       ".clippy.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/clippy.toml";
       ".flake8".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/flake8";

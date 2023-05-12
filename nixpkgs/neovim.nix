@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 let
   homePath = builtins.toString ../..;
 in
@@ -7,6 +7,5 @@ in
     enable = true;
     viAlias = true;
     vimAlias = true;
-    extraConfig = lib.fileContents "${homePath}/.dotfiles/vimrc";
   };
 }
