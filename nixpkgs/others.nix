@@ -94,6 +94,7 @@ in
     terraform-ls
     terraformer
     tflint
+    tshark
     tree
     websocat
     yarn
