@@ -1,0 +1,62 @@
+
+todo
+- point to python
+- plugin manager
+  - vim ale
+  - vim lsp
+  - file viewer
+
+features
+- packer
+- new plugin
+- lua
+
+plugins
+
+```
+y-tsuji: ~/.dotfiles (main ?)$ rg ^Plug vimrc -N
+Plug 'dense-analysis/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'rhysd/rust-doc.vim', { 'for': 'rust' }
+Plug 'leafgarland/typescript-vim', { 'type': 'typescript' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': 'go' }
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'thinca/vim-quickrun'
+Plug 'yysushi/vim-slumlord', { 'branch': 'window_option' }
+Plug 'aklt/plantuml-syntax'
+Plug 'alvan/vim-closetag'
+Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
+Plug 'previm/previm'
+Plug 'felixfbecker/php-language-server', {'do': 'composer install && composer run-script parse-stubs', 'for': ['php']}
+Plug 'udalov/kotlin-vim'
+Plug 'tsandall/vim-rego'
+Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+Plug 'mhinz/vim-rfc'
+Plug 'jjo/vim-cue'
+Plug 'LnL7/vim-nix', { 'for': 'nix' }
+Plug 'google/vim-jsonnet', { 'for': 'jsonnet' }
+Plug 'mattn/sonictemplate-vim'
+Plug 'Yggdroot/indentLine'
+Plug 'chriskempson/base16-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'ap/vim-buftabline'
+Plug 'inkarkat/vim-CursorLineCurrentWindow'
+Plug 'tyru/open-browser.vim'
+Plug 'tpope/vim-surround'
+Plug 'rhysd/vim-grammarous'
+```
