@@ -37,6 +37,7 @@ Plug 'dense-analysis/ale'
       \ 'go': ['golangci-lint'],
       \ 'html': ['tidy'],
       \ 'json': ['jsonlint'],
+      \ 'jsonnet': ['jsonnet-lint'],
       \ 'javascript': ['eslint'],
       \ 'make': ['checkmake'],
       \ 'markdown': ['markdownlint'],
@@ -62,6 +63,7 @@ Plug 'dense-analysis/ale'
       \ 'html': ['prettier'],
       \ 'javascript': ['eslint'],
       \ 'json': ['prettier'],
+      \ 'jsonnet': ['jsonnetfmt'],
       \ 'nix': ['nixpkgs-fmt'],
       \ 'proto': ['ale#fixers#protolint#Fix'],
       \ 'python': ['black', 'isort'],
@@ -225,6 +227,8 @@ Plug 'mhinz/vim-rfc'
 Plug 'jjo/vim-cue'
 
 Plug 'LnL7/vim-nix', { 'for': 'nix' }
+
+Plug 'google/vim-jsonnet', { 'for': 'jsonnet' }
 
 " }}}
 
@@ -478,6 +482,20 @@ if executable('cuelsp')
       \ 'cmd': {server_info->['cuelsp']},
       \ 'allowlist': ['cue'],
       \ })
+endif
+
+if executable('jsonnet-language-server')
+  augroup vim_lsp_settings_jsonnet_language_server
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'jsonnet-language-server',
+        \ 'cmd': {server_info->['jsonnet-language-server', '-t']},
+        \ 'allowlist': ['jsonnet'],
+        \ 'blocklist': [],
+        \ 'workspace_config': { 'jsonnet': {'lint': {'validProperties': []}} },
+        \ 'semantic_highlight': {},
+        \ })
+  augroup END
 endif
 
 " }}}

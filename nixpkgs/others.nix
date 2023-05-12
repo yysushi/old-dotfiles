@@ -50,12 +50,15 @@ in
     gitRepo
     gnumake
     go
+    go-jsonnet
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
       gke-gcloud-auth-plugin
     ]))
     grpcurl
     jdk
     jq
+    jsonnet-bundler
+    jsonnet-language-server
     kind
     kubectl
     kubectx
