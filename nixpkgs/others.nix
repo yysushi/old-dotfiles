@@ -55,6 +55,7 @@ in
       gke-gcloud-auth-plugin
     ]))
     grpcurl
+    hadolint
     jdk
     jq
     jsonnet-bundler
