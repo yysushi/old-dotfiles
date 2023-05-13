@@ -11,6 +11,9 @@ features
 - new plugin
 - lua
 
+notes
+- https://github.com/nvim-telescope/telescope.nvim
+
 plugins
 
 ```
