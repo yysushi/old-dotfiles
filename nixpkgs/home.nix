@@ -70,7 +70,7 @@ in
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
       ".config/nvim/init.lua".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/init.lua";
       # fetch configs/scripts remotely
-      "${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
+      "${config.xdg.dataHome}/tpm/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
         owner = "brennanfee";
         repo = "tmux-paste";
         rev = "v2.0.0";
