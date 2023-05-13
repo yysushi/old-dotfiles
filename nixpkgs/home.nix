@@ -69,6 +69,7 @@ in
       ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/snippet.toml";
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
       ".config/nvim/init.lua".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/init.lua";
+      ".config/nvim/lazy-lock.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lazy-lock.json";
       # fetch configs/scripts remotely
       "${config.xdg.dataHome}/tpm/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
         owner = "brennanfee";
