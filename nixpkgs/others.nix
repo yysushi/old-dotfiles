@@ -49,6 +49,7 @@ in
     gcc
     gitRepo
     gnumake
+    gnupg
     go
     go-jsonnet
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
