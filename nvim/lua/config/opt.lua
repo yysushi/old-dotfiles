@@ -10,4 +10,3 @@ vim.opt.cursorcolumn = true
 vim.opt.cursorline = true
 -- set hidden
 
-vim.opt.shiftwidth = 2
