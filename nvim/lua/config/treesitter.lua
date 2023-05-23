@@ -11,6 +11,7 @@ treesitter.setup({
     "html",
     "java",
     "javascript",
+    "jsonnet",
     "lua",
     "markdown",
     "markdown_inline",
@@ -24,7 +25,6 @@ treesitter.setup({
     "vim",
     "vimdoc",
     "vue",
-    "yaml",
   },
   highlight = {
     enable = true,
@@ -35,14 +35,4 @@ treesitter.setup({
   indent = {
     enable = true,
   },
-  -- -- For nvim-ts-context-commentstring plugin.
-  -- context_commentstring = {
-  --   enable = true,
-  --   enable_autocmd = false,
-  -- },
-
-  -- -- For nvim-treesitter-endwise plugin.
-  -- endwise = {
-  --   enable = true,
-  -- },
 })
