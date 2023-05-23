@@ -33,6 +33,8 @@ in
     bash
     bazel
     bitwarden-cli
+    buf
+    buf-language-server
     cargo
     ccls
     csvkit

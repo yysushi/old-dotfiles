@@ -4,6 +4,7 @@ end
 
 local lspconfig = require('lspconfig')
 lspconfig.bashls.setup({})
+lspconfig.bufls.setup({})
 lspconfig.ccls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.dagger.setup({})
