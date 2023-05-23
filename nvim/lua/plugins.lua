@@ -37,6 +37,13 @@ require('lazy').setup({
       require("config.telescope")
     end,
   },
+  {
+    'iamcco/markdown-preview.nvim',
+    ft = "markdown",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
   -- treesitter
   {
     "nvim-treesitter/nvim-treesitter",
