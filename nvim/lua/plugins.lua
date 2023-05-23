@@ -22,15 +22,17 @@ require('lazy').setup({
       vim.cmd([[colorscheme nord]])
     end,
   },
-  -- ff
+  -- fuzzy finder
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-file-browser.nvim',
     },
-    -- cmd = 'Telescope',
-    keys = { "<Space>" },
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<cr>" },
+      { "<leader>fg", "<cmd>Telescope live_grep<cr>" },
+      { "<leader>fb", "<cmd>Telescope buffers<cr>" },
+    },
     config = function()
       require("config.telescope")
     end,
