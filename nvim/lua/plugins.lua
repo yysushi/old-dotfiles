@@ -12,14 +12,14 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 require('lazy').setup({
-  -- colorscheme
   {
-    -- https://github.com/folke/lazy.nvim/tree/main#-colorschemes
-    "RRethy/nvim-base16",
+    -- colorscheme
+    'nordtheme/vim',
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme base16-ocean]])
+      vim.g.nord_uniform_diff_background = 1
+      vim.cmd([[colorscheme nord]])
     end,
   },
   -- ff
