@@ -57,6 +57,7 @@ in
     ]))
     grpcurl
     hadolint
+    htop
     jdk
     jq
     jsonnet-bundler
