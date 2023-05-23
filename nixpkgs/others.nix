@@ -56,6 +56,7 @@ in
     go-jsonnet
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
       gke-gcloud-auth-plugin
+      pubsub-emulator
     ]))
     grpcurl
     hadolint
