@@ -83,6 +83,8 @@ in
     plantuml
     pstree
     protobuf
+    protoc-gen-go
+    protoc-gen-go-grpc
     ripgrep
     ruby
     rustc
