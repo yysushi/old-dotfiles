@@ -30,7 +30,7 @@ in
       set-option -g @save-complete-history-path ${logPath}
 
       # migrate to tpm entry when supported
-      run-shell ${config.xdg.dataHome}/tpm/repos/github.com/brennanfee/tmux-paste/paste.tmux
+      run-shell ${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste/paste.tmux
 
       # https://github.com/srid/nixos-config/blob/eb3c7a7354f4f170073c9ff91c949799c9ad4320/home/tmux.nix#L19-L23
       set -g default-terminal "xterm-256color"

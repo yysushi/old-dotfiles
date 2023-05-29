@@ -1,0 +1,8 @@
+font:
+  size: 11
+
+window:
+  startup_mode: Maximized
+
+shell:
+  program: zsh

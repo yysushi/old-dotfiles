@@ -70,7 +70,13 @@ in
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
       ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/nvim";
       # fetch configs/scripts remotely
-      "${config.xdg.dataHome}/tpm/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
+      "${config.xdg.dataHome}/repos/github.com/alacritty/alacritty-theme".source = pkgs.fetchFromGitHub {
+        owner = "alacritty";
+        repo = "alacritty-theme";
+        rev = "e4464d5ed853d510db5d93b5199d4569d34669d8";
+        hash = "sha256-C0q4eBtxpER2ellG0Os/BTL3MDaq4rao3Yh+ytnR1X4=";
+      };
+      "${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
         owner = "brennanfee";
         repo = "tmux-paste";
         rev = "v2.0.0";

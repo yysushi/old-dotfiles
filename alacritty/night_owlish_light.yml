@@ -1,0 +1,3 @@
+import:
+ - ~/.local/share/repos/github.com/alacritty/alacritty-theme/themes/night_owlish_light.yaml
+ - customize.yml
