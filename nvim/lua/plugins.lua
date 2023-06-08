@@ -60,7 +60,7 @@ require('lazy').setup({
   {
     "nvim-neo-tree/neo-tree.nvim",
     keys = {
-      { "<leader>ft", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+      { "<leader>ft", "<cmd>Neotree reveal_force_cwd<cr>", desc = "NeoTree" },
     },
     config = function()
       require("config.neo-tree")
