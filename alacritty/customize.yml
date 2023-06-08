@@ -1,5 +1,33 @@
 font:
   size: 11
+  normal:
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux) monospace
+    #   - (Windows) Consolas
+    # family: monospace
+    # family: InconsolataGo Nerf Font Mono
+    family: Source Code Pro
+    # family: Monaco
+    style: Regular
+  bold:
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    # family: monospace
+    family: Source Code Pro
+    # family: Monaco
+    # style: Bold
+    style: Regular
+  italic:
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    # family: monospace
+    family: Source Code Pro
+    # family: Monaco
+
+    # The `style` can be specified to pick a specific face.
+    style: Regular
+    # style: Italic
 
 window:
   startup_mode: Maximized

@@ -24,6 +24,15 @@
     '';
   };
 
+  fonts = {
+    fontDir.enable = true;
+    # enableGhostscriptFonts = true;
+    fonts = with pkgs; [
+      source-code-pro
+      # emojione
+    ];
+  };
+
   users.users."y-tsuji" = {
     name = "y-tsuji";
     home = "/Users/y-tsuji";
