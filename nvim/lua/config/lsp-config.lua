@@ -6,7 +6,9 @@ local lspconfig = require('lspconfig')
 lspconfig.bashls.setup({})
 lspconfig.bufls.setup({})
 lspconfig.ccls.setup({})
-lspconfig.clangd.setup({})
+lspconfig.clangd.setup({
+  filetypes = { 'c', 'cpp' }
+})
 lspconfig.dagger.setup({})
 lspconfig.denols.setup({})
 -- lspconfig.docker_compose_language_service.setup({})
