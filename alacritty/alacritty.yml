@@ -1,4 +1,5 @@
 import:
  # - ${XDG_DATA_HOME}/repos/github.com/alacritty/alacritty-theme/themes/nord.yaml
  - ~/.local/share/repos/github.com/alacritty/alacritty-theme/themes/nord.yaml
- - customize.yml
+ # - ${XDG_CONFIG_HOME}/alacritty/customize.yml
+ - ~/.dotfiles/alacritty/customize.yml
