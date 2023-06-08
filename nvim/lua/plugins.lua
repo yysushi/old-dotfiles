@@ -14,7 +14,7 @@ vim.opt.runtimepath:prepend(lazypath)
 require('lazy').setup({
   {
     -- colorscheme
-    'nordtheme/vim',
+    'shaunsingh/nord.nvim',
     lazy = false,
     priority = 1000,
     config = function()
