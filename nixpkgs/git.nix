@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let
-  homePath = builtins.toString ../..;
-in
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     ghq
@@ -19,7 +16,7 @@ in
       color.ui = true;
       core = {
         editor = "nvim";
-        excludesFile = "${homePath}/.gitignore";
+        excludesFile = "${config.home.homeDirectory}/.gitignore";
         hooksPath = ".husky";
         pager = "bat";
       };

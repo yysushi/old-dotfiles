@@ -1,7 +1,4 @@
 { config, ... }:
-let
-  homePath = builtins.toString ../..;
-in
 {
   programs.zsh = {
     enable = true;
@@ -24,7 +21,7 @@ in
       eval "$(sheldon source)"
 
       bindkey '^N' autosuggest-accept
-      . "${homePath}/.dotfiles/agkozak_prompt.zsh"
+      . "${config.home.homeDirectory}/.dotfiles/agkozak_prompt.zsh"
     '';
   };
   programs.zoxide.enable = true;

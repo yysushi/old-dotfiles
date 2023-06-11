@@ -12,13 +12,13 @@ in
     homeDirectory = homePath;
     sessionPath = [
       # npm
-      "${homePath}/.dotfiles/packages/npm/node_modules/.bin"
+      "${config.home.homeDirectory}/.dotfiles/packages/npm/node_modules/.bin"
       # pipx
-      "${homePath}/.local/bin"
+      "${config.home.homeDirectory}/.local/bin"
       # cargo
-      "${homePath}/.cargo/bin"
+      "${config.home.homeDirectory}/.cargo/bin"
       # go
-      "${homePath}/go/bin"
+      "${config.home.homeDirectory}/go/bin"
     ];
     sessionVariables = lib.mkMerge [{
       # editor
@@ -26,7 +26,7 @@ in
       # pager
       PAGER = "more -R";
       # ghq
-      GHQ_ROOT = "${homePath}/git";
+      GHQ_ROOT = "${config.home.homeDirectory}/git";
       # locale
       LANG = "en_US.UTF-8";
       LC_ALL = "en_US.UTF-8";
@@ -48,27 +48,27 @@ in
         # NOTE: not work..
         # DISPLAY = "${lib.lists.last config.networking.nameservers}:0";
       } else {
-        DOCKER_HOST = "unix://${homePath}/.lima/default/sock/docker.sock";
+        DOCKER_HOST = "unix://${config.home.homeDirectory}/.lima/default/sock/docker.sock";
       })];
     file = {
       # symlink configurations
-      ".bashrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/bashrc";
-      ".screenrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/screenrc";
-      ".gitignore".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/gitignore";
-      ".tslint.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/tslint.json";
-      ".eslintrc.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/eslintrc.json";
-      ".dprint.json".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/dprint.json";
-      ".shellcheckrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/shellcheckrc";
-      ".clippy.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/clippy.toml";
-      ".flake8".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/flake8";
-      ".protolint.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/protolint.yaml";
-      ".inputrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/inputrc";
-      ".tigrc".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/tigrc";
-      ".config/cargo-atcoder.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/cargo-atcoder.toml";
-      ".config/pet/config.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/config.toml";
-      ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/pet/snippet.toml";
-      ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/lima.yaml";
-      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/nvim";
+      ".bashrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/bashrc";
+      ".screenrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/screenrc";
+      ".gitignore".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/gitignore";
+      ".tslint.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/tslint.json";
+      ".eslintrc.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/eslintrc.json";
+      ".dprint.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/dprint.json";
+      ".shellcheckrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/shellcheckrc";
+      ".clippy.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/clippy.toml";
+      ".flake8".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/flake8";
+      ".protolint.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/protolint.yaml";
+      ".inputrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/inputrc";
+      ".tigrc".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/tigrc";
+      ".config/cargo-atcoder.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/cargo-atcoder.toml";
+      ".config/pet/config.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/pet/config.toml";
+      ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/pet/snippet.toml";
+      ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/lima.yaml";
+      ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
       # fetch configs/scripts remotely
       "${config.xdg.dataHome}/repos/github.com/alacritty/alacritty-theme".source = pkgs.fetchFromGitHub {
         owner = "alacritty";
@@ -83,7 +83,7 @@ in
         hash = "sha256-rNoUOyoBJsRxKRB4XDfa3vtAkDACy2mXYMy4whtbn88=";
       };
       # symlink bin directories
-      ".npm-global/bin".source = config.lib.file.mkOutOfStoreSymlink "${homePath}/.dotfiles/packages/npm/node_modules/.bin";
+      ".npm-global/bin".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/packages/npm/node_modules/.bin";
     };
   };
 }
