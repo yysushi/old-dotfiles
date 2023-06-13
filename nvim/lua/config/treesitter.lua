@@ -8,6 +8,7 @@ treesitter.setup({
     "css",
     "dart",
     "go",
+    "gomod",
     "html",
     "java",
     "javascript",
