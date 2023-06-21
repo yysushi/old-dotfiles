@@ -10,6 +10,7 @@ lspconfig.clangd.setup({
   filetypes = { 'c', 'cpp' }
 })
 lspconfig.dagger.setup({})
+lspconfig.dartls.setup({})
 lspconfig.denols.setup({})
 -- lspconfig.docker_compose_language_service.setup({})
 -- lspconfig.dockerls.setup({})

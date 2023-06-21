@@ -41,6 +41,7 @@ in
     cue
     cuelsp
     cmake
+    dart
     dasel
     deno
     dprint
