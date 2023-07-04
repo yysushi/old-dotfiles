@@ -45,3 +45,6 @@ package packages
 
 // api-linter
 //go:generate go install github.com/googleapis/api-linter/cmd/api-linter@latest
+
+// gnostic
+//go:generate go install github.com/google/gnostic/cmd/...@latest
