@@ -122,3 +122,13 @@
   description = "print fingerprint of ssh key"
   command = "ssh-keygen -lf ~/.ssh/id_ed25519.pub"
   output = ""
+
+[[snippets]]
+  description = "remove all stopped docker processes"
+  command = "docker rm $(docker ps -a -q)"
+  output = ""
+
+[[snippets]]
+  description = "stop all running docker processes"
+  command = "docker kill $(docker ps -q)"
+  output = ""
