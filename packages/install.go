@@ -42,3 +42,6 @@ package packages
 
 // mockery
 //go:generate go install github.com/vektra/mockery/cmd/mockery@latest
+
+// api-linter
+//go:generate go install github.com/googleapis/api-linter/cmd/api-linter@latest
