@@ -99,6 +99,8 @@ in
     sqlint
     tailscale
     tcpdump
+    temporal-cli
+    temporalite
     terraform
     terraform-ls
     terraformer
