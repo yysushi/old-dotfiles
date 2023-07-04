@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
-  extraPackages =
+  pkgsUnstable = import <nixpkgs-unstable> { };
+  extraPackages1 =
     if pkgs.stdenv.isLinux then with pkgs;[
       # nixos-wsl
       (python310.withPackages (python-packages: with python-packages; [
@@ -33,7 +34,6 @@ in
     bash
     bazel
     bitwarden-cli
-    buf
     buf-language-server
     cargo
     ccls
@@ -109,5 +109,7 @@ in
     yarn
     yubikey-manager
     yq-go
-  ] ++ extraPackages;
+  ] ++ (with pkgsUnstable;[
+    buf
+  ]) ++ extraPackages1;
 }
