@@ -113,5 +113,6 @@ in
     yq-go
   ] ++ (with pkgsUnstable;[
     buf
+    gnostic
   ]) ++ extraPackages1;
 }
