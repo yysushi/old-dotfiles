@@ -55,6 +55,7 @@ in
     gnupg
     go
     go-jsonnet
+    gojq
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
       gke-gcloud-auth-plugin
       pubsub-emulator
