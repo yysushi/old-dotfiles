@@ -101,7 +101,7 @@ in
     shellcheck
     skaffold
     sqlite
-    sqlint
+    sqlfluff
     tailscale
     tcpdump
     temporal-cli
