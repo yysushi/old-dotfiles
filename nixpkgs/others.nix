@@ -60,6 +60,8 @@ in
       gke-gcloud-auth-plugin
       pubsub-emulator
     ]))
+    grpc-gateway
+    grpcui
     grpcurl
     hadolint
     htop

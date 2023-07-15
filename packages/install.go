@@ -48,3 +48,6 @@ package packages
 
 // gnostic
 //go:generate go install github.com/google/gnostic/cmd/...@latest
+
+// grpc-health-probe
+//go:generate go install github.com/grpc-ecosystem/grpc-health-probe@latest
