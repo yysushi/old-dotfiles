@@ -118,5 +118,6 @@ in
     yq-go
   ] ++ (with pkgsUnstable;[
     buf
+    sqlc
   ]) ++ extraPackages1;
 }
