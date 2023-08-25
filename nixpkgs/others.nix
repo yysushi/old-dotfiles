@@ -111,9 +111,9 @@ in
     terraform-ls
     terraformer
     tflint
-    tshark
     tree
     websocat
+    wireshark
     yarn
     yubikey-manager
     yq-go
