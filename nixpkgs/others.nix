@@ -45,6 +45,7 @@ in
     dasel
     deno
     dprint
+    etcd
     expect
     fd
     fzf
