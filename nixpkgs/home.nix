@@ -7,6 +7,11 @@ in
     ./others.nix
   ];
 
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "terraform"
+  ];
+
+
   home = {
     stateVersion = "23.05";
     homeDirectory = homePath;

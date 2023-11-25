@@ -93,9 +93,9 @@ in
     tcpdump
     temporal-cli
     temporalite
-    # terraform
-    # terraform-ls
-    # terraformer
+    terraform
+    terraform-ls
+    terraformer
     tflint
     tree
     websocat
