@@ -28,30 +28,21 @@ let
 in
 {
   home.packages = with pkgs;[
-    act
     age
-    auth0-cli
     bash
     bazel
     bitwarden-cli
     buf-language-server
     cargo
-    ccls
-    csvkit
     cue
     cuelsp
     cmake
     dart
-    dasel
     deno
     dprint
     etcd
-    expect
     fd
     fzf
-    gauge
-    gcc
-    gitRepo
     gnumake
     gnupg
     go-jsonnet
@@ -66,7 +57,6 @@ in
     hadolint
     htop
     inetutils
-    jdk
     jq
     jsonnet-bundler
     jsonnet-language-server
@@ -74,7 +64,6 @@ in
     kubectl
     kubectx
     kustomize
-    kotlin
     lima
     lua
     ngrep
@@ -85,7 +74,6 @@ in
     openssl
     pass
     parallel
-    plantuml
     pstree
     protobuf
     protoc-gen-connect-go
@@ -93,7 +81,6 @@ in
     protoc-gen-go-grpc
     protoc-gen-validate
     ripgrep
-    ruby
     rustc
     sd
     sequoia
@@ -106,9 +93,9 @@ in
     tcpdump
     temporal-cli
     temporalite
-    terraform
-    terraform-ls
-    terraformer
+    # terraform
+    # terraform-ls
+    # terraformer
     tflint
     tree
     websocat
