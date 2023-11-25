@@ -54,7 +54,6 @@ in
     gitRepo
     gnumake
     gnupg
-    go
     go-jsonnet
     gojq
     (google-cloud-sdk.withExtraComponents (with google-cloud-sdk.components; [
@@ -119,6 +118,7 @@ in
     yq-go
   ] ++ (with pkgsUnstable;[
     buf
+    go_1_21
     sqlc
   ]) ++ extraPackages1;
 }
