@@ -34,6 +34,7 @@ in
     bitwarden-cli
     buf-language-server
     cargo
+    colima
     cue
     cuelsp
     cmake
@@ -64,7 +65,6 @@ in
     kubectl
     kubectx
     kustomize
-    lima
     lua
     ngrep
     nil

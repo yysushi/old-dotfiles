@@ -19,7 +19,6 @@
       # "grishka/grishka/neardrop"
 
       "openssl@1.1"
-      "socket_vmnet"
     ];
   };
 }

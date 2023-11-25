@@ -53,7 +53,7 @@ in
         # NOTE: not work..
         # DISPLAY = "${lib.lists.last config.networking.nameservers}:0";
       } else {
-        DOCKER_HOST = "unix://${config.home.homeDirectory}/.lima/default/sock/docker.sock";
+        DOCKER_HOST = "unix://${config.home.homeDirectory}/.colima/default/docker.sock";
       })];
     file = {
       # symlink configurations
@@ -72,7 +72,6 @@ in
       ".config/cargo-atcoder.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/cargo-atcoder.toml";
       ".config/pet/config.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/pet/config.toml";
       ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/pet/snippet.toml";
-      ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/lima.yaml";
       ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
       # fetch configs/scripts remotely
       "${config.xdg.dataHome}/repos/github.com/alacritty/alacritty-theme".source = pkgs.fetchFromGitHub {
