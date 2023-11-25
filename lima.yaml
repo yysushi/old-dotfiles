@@ -89,4 +89,4 @@ networks:
 # - lima: shared
 # Interface "lima1": bridged mode (IP is assigned by a DHCP server on the physical network)
 # - lima: bridged
-- lima: bridged
+- lima: shared
