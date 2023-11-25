@@ -42,6 +42,12 @@ require('lazy').setup({
     ft = "markdown",
     config = function()
       vim.fn["mkdp#util#install"]()
+      vim.g.mkdp_preview_options = {
+        toc= {
+          listType = "ol",
+          level = 2,
+        }
+      }
     end,
   },
   -- treesitter
