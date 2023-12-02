@@ -6,10 +6,6 @@
       cat = "bat";
     };
     autocd = true;
-    sessionVariables = {
-      SHELDON_CONFIG_FILE = "${config.xdg.configHome}/sheldon/plugins.toml";
-      SHELDON_DATA_DIR = "${config.xdg.dataHome}/sheldon";
-    };
     profileExtra = ''
       DISPLAY="$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0"
       bindkey -v

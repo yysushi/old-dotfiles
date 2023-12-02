@@ -6,8 +6,12 @@ shell = "zsh"
 github = "romkatv/zsh-defer"
 
 [templates]
-defer = { value = 'zsh-defer source "{{ file }}"', each = true }
-source = { value = 'source "{{ file }}"', each = true }
+defer = """{% for file in files %}
+zsh-defer source "{{ file }}"
+{% endfor %}"""
+source = """{% for file in files %}
+source "{{ file }}"
+{% endfor %}"""
 PATH = 'export PATH="{{ dir }}:$PATH"'
 path = 'path=( "{{ dir }}" $path )'
 fpath = 'fpath=( "{{ dir }}" $fpath )'

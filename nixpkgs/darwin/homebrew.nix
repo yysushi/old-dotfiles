@@ -18,7 +18,7 @@
     brews = [
       # "grishka/grishka/neardrop"
 
-      "openssl@1.1"
+      "openssl@3"
     ];
   };
 }
