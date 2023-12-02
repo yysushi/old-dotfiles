@@ -1,5 +1,3 @@
-cargo-binstall
 cargo-edit
 cargo-atcoder
 git-brws
-sheldon

@@ -9,7 +9,6 @@ let
         pynvim
         python-lsp-server
       ]))
-      sheldon
       usbutils
       # x11docker
       linuxKernel.packages.linux_5_15.usbip
@@ -85,6 +84,7 @@ in
     sd
     sequoia
     screen
+    sheldon
     shellcheck
     skaffold
     sqlite
