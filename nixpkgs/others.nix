@@ -39,6 +39,7 @@ in
     cuelsp
     cmake
     dart
+    drawio
     deno
     dprint
     etcd
