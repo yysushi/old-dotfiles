@@ -222,7 +222,7 @@ require('lazy').setup({
       'Shougo/ddc-matcher_head',
       'Shougo/ddc-sorter_rank',
       'Shougo/ddc-converter_remove_overlap',
-      'Shougo/ddc-source-nvim-lsp',
+      'Shougo/ddc-source-lsp',
       'matsui54/denops-popup-preview.vim',
       'matsui54/denops-signature_help',
     },
