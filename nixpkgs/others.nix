@@ -66,6 +66,7 @@ in
     kind
     kubectl
     kubectx
+    kubernetes-helm
     kustomize
     lua
     ngrep
