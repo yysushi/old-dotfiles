@@ -51,3 +51,5 @@ package packages
 
 // grpc-health-probe
 //go:generate go install github.com/grpc-ecosystem/grpc-health-probe@latest
+
+//go:generate go install github.com/trzsz/trzsz-go/cmd/...@latest
