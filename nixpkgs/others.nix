@@ -16,6 +16,7 @@ let
     ] else with pkgs;[
       # darwin
       # what's diff with docker-client?
+      duti
       docker
       gnugrep
       gnused
