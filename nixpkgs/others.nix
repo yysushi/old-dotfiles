@@ -102,6 +102,7 @@ in
     terraformer
     tflint
     tree
+    ttyd
     websocat
     wireshark
     yarn
