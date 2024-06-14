@@ -43,21 +43,11 @@ use = ["_clang-format", "_direnv", "_openssl", "_protoc"]
 github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]
 
-[plugins.OMZL]
+[plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
-dir = "lib"
-use = ["git.zsh"]
-
-# [plugins.oh-my-zsh]
-# github = "ohmyzsh/ohmyzsh"
-# apply = ["defer"]
-# use = ["{{ name }}.sh"]
-[plugins.ohmyzsh-completions-docker]
-github = "ohmyzsh/ohmyzsh"
-apply = ["fpath"]
-dir = "plugins/docker"
-use = ["_docker"]
+dir = "plugins"
+use = ["{docker,git,rust}/*.plugin.zsh"]
 
 [plugins.ohmyzsh-completions-fd]
 github = "ohmyzsh/ohmyzsh"
@@ -65,23 +55,11 @@ apply = ["fpath"]
 dir = "plugins/fd"
 use = ["_fd"]
 
-[plugins.ohmyzsh-plugins-git]
-github = "ohmyzsh/ohmyzsh"
-apply = ["defer"]
-dir = "plugins/git"
-use = ["git.plugin.zsh"]
-
 [plugins.ohmyzsh-completions-pass]
 github = "ohmyzsh/ohmyzsh"
 apply = ["fpath"]
 dir = "plugins/pass"
 use = ["_pass"]
-
-[plugins.ohmyzsh-completions-rustc]
-github = "ohmyzsh/ohmyzsh"
-apply = ["fpath"]
-dir = "plugins/rust"
-use = ["_rustc"]
 
 [plugins.ohmyzsh-completions-vagrant]
 github = "ohmyzsh/ohmyzsh"
