@@ -52,19 +52,13 @@ apply = ["defer"]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
 dir = "plugins"
-use = ["{docker,git,rust}/*.plugin.zsh"]
+use = ["{git,rust}/*.plugin.zsh"]
 
 [plugins.ohmyzsh-completions-fd]
 github = "ohmyzsh/ohmyzsh"
 apply = ["fpath"]
 dir = "plugins/fd"
 use = ["_fd"]
-
-[plugins.ohmyzsh-completions-pass]
-github = "ohmyzsh/ohmyzsh"
-apply = ["fpath"]
-dir = "plugins/pass"
-use = ["_pass"]
 
 [plugins.zchee-zsh-completions]
 github = "zchee/zsh-completions"
@@ -77,6 +71,8 @@ github = "brennanfee/tmux-paste"
 use = ["readme.md"]
 apply = ["nop"]
 
+# completions by nixpkgs won't work?
+# https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/admin/azure-cli/default.nix
 [plugins.azure-cli]
 github = "Azure/azure-cli"
 branch = "dev"
