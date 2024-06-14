@@ -30,6 +30,7 @@ in
 {
   home.packages = with pkgs;[
     age
+    auth0-cli
     azure-cli
     bash
     bazel
