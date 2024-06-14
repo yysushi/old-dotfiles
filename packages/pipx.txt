@@ -5,6 +5,7 @@ flake8
 isort
 mypy
 pipenv
+poetry
 pylint
 pre-commit
 rstcheck
