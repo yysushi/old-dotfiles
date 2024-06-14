@@ -54,13 +54,6 @@ apply = ["defer"]
 dir = "plugins"
 use = ["{git,rust}/*.plugin.zsh"]
 
-# won't work?
-[plugins.ohmyzsh-completions-fd]
-github = "ohmyzsh/ohmyzsh"
-apply = ["fpath"]
-dir = "plugins/fd"
-use = ["_fd"]
-
 [plugins.zchee-zsh-completions]
 github = "zchee/zsh-completions"
 apply = ["defer"]
