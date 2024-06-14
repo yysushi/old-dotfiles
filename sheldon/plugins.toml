@@ -48,6 +48,12 @@ use = ["zsh-completions.plugin.zsh"]
 github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]
 
+[plugins.ohmyzsh-lib]
+github = "ohmyzsh/ohmyzsh"
+apply = ["defer"]
+dir = "lib"
+use = ["{git}.zsh"]
+
 [plugins.ohmyzsh]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
