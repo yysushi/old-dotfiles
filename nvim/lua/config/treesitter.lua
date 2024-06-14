@@ -21,6 +21,7 @@ treesitter.setup({
     "python",
     "rust",
     "scss",
+    "terraform",
     "toml",
     "tsx",
     "typescript",
