@@ -132,3 +132,8 @@
   description = "stop all running docker processes"
   command = "docker kill $(docker ps -q)"
   output = ""
+
+[[snippets]]
+  description = "Make a binardy runnable in macOS"
+  command = "xattr -d com.apple.quarantine <path-to-binary>"
+  output = ""
