@@ -1,0 +1,45 @@
+[font]
+size = 14
+# size = 12.5
+# size = 11
+
+[font.normal]
+# Default:
+#   - (macOS) Menlo
+#   - (Linux) monospace
+#   - (Windows) Consolas
+# family = monospace
+# family = InconsolataGo Nerf Font Mono
+family = "Source Code Pro"
+# family = Monaco
+style = "Regular"
+
+[font.bold]
+# If the bold family is not specified, it will fall back to the
+# value specified for the normal font.
+# family = monospace
+family = "Source Code Pro"
+# family = Monaco
+# style = Bold
+style = "Regular"
+
+[font.italic]
+# If the italic family is not specified, it will fall back to the
+# value specified for the normal font.
+# family = monospace
+family = "Source Code Pro"
+# family = Monaco
+# The `style` can be specified to pick a specific face.
+style = "Regular"
+# style = Italic
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "Regular"
+
+[shell]
+program = "zsh"
+# args = ["-l", "-c", "PATH=$PATH:/Users/y-tsuji/.nix-profile/bin && tmux attach"]
+
+[window]
+startup_mode = "Maximized"

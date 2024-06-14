@@ -78,8 +78,8 @@ in
       "${config.xdg.dataHome}/repos/github.com/alacritty/alacritty-theme".source = pkgs.fetchFromGitHub {
         owner = "alacritty";
         repo = "alacritty-theme";
-        rev = "e4464d5ed853d510db5d93b5199d4569d34669d8";
-        hash = "sha256-C0q4eBtxpER2ellG0Os/BTL3MDaq4rao3Yh+ytnR1X4=";
+        rev = "f03686afad05274f5fbd2507f85f95b1a6542df4";
+	hash = "sha256-457kKE3I4zGf1EKkEoyZu0Fa/1O3yiryzHVEw2rNZt8=";
       };
       "${config.xdg.dataHome}/repos/github.com/brennanfee/tmux-paste".source = pkgs.fetchFromGitHub {
         owner = "brennanfee";
