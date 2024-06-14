@@ -105,6 +105,9 @@ require('lazy').setup({
     keys = { "[", "]" },
   },
   {
+    "oasys/vim-textfsm",
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     event = "BufReadPre",
     config = function()
