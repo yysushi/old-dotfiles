@@ -103,6 +103,7 @@ in
     terraform-ls
     terraformer
     tflint
+    tmuxinator
     tree
     ttyd
     websocat
