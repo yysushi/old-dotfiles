@@ -293,6 +293,9 @@ require('lazy').setup({
       vim.api.nvim_call_function('ddc#enable', {})
     end
   },
+  {
+    'jparise/vim-graphql',
+  },
 },{
   lazy = true,
 })
