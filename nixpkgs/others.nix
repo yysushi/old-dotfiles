@@ -46,6 +46,7 @@ in
     drawio
     deno
     dprint
+    envsubst
     etcd
     fd
     fzf
