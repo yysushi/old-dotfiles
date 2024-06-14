@@ -16,3 +16,8 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   group = vimrcgroup,
   command = 'set shiftwidth=4 expandtab',
 })
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.spec',
+  group = vimrcgroup,
+  command = 'setf markdown',
+})
