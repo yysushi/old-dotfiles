@@ -66,12 +66,6 @@ apply = ["fpath"]
 dir = "plugins/pass"
 use = ["_pass"]
 
-[plugins.ohmyzsh-completions-vagrant]
-github = "ohmyzsh/ohmyzsh"
-apply = ["fpath"]
-dir = "plugins/vagrant"
-use = ["_vagrant"]
-
 [plugins.zchee-zsh-completions]
 github = "zchee/zsh-completions"
 apply = ["defer"]
