@@ -30,6 +30,7 @@ in
 {
   home.packages = with pkgs;[
     age
+    azure-cli
     bash
     bazel
     bitwarden-cli

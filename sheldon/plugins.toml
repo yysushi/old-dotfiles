@@ -99,3 +99,15 @@ use = ["zsh-completions.plugin.zsh"]
 github = "brennanfee/tmux-paste"
 use = ["readme.md"]
 apply = ["nop"]
+
+[plugins.azure-cli]
+github = "Azure/azure-cli"
+branch = "dev"
+use = ["az.completion"]
+apply = ["defer"]
+
+[plugins.bashcompinit]
+inline = "autoload bashcompinit && zsh-defer bashcompinit"
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"

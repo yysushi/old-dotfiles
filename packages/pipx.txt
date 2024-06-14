@@ -1,4 +1,3 @@
-azure-cli
 black
 docutils
 flake8
