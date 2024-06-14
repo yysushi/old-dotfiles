@@ -23,6 +23,7 @@ let
       (python312.withPackages (python-packages: with python-packages; [
         pipx
         pynvim
+        setuptools
       ]))
     ];
 in
