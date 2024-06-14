@@ -63,6 +63,7 @@ in
     jq
     jsonnet-bundler
     jsonnet-language-server
+    just
     kind
     kubectl
     kubectx
