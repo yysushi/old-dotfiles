@@ -20,10 +20,9 @@ let
       docker
       gnugrep
       gnused
-      (python311.withPackages (python-packages: with python-packages; [
+      (python312.withPackages (python-packages: with python-packages; [
         pipx
         pynvim
-        python-lsp-server
       ]))
     ];
 in
