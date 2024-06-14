@@ -92,6 +92,7 @@ in
     screen
     shellcheck
     skaffold
+    sshpass
     sqlite
     sqlfluff
     tailscale
