@@ -1,0 +1,21 @@
+[settings]
+experimental = true
+
+[tools]
+"pipx:black" = "latest"
+"pipx:docutils" = "latest"
+"pipx:flake8" = "latest"
+"pipx:isort" = "latest"
+"pipx:mypy" = "latest"
+"pipx:pipenv" = "latest"
+"pipx:poetry" = "latest"
+"pipx:pylint" = "latest"
+"pipx:python-lsp-server" = "latest"
+"pipx:pre-commit" = "latest"
+"pipx:rstcheck" = "latest"
+"pipx:tldr" = "latest"
+"pipx:tox" = "latest"
+"pipx:vint" = "latest"
+"pipx:virtualenv" = "latest"
+"pipx:yamllint" = "latest"
+"pipx:yq" = "latest"
