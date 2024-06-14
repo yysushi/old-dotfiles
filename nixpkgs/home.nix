@@ -24,6 +24,8 @@ in
       "${config.home.homeDirectory}/.cargo/bin"
       # go
       "${config.home.homeDirectory}/go/bin"
+      # mise
+      "${config.home.homeDirectory}/.local/share/mise/shims"
     ];
     sessionVariables = lib.mkMerge [{
       # editor
