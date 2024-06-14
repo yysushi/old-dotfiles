@@ -8,7 +8,6 @@ package packages
 //go:generate go install github.com/rogpeppe/godef@latest
 //go:generate go install golang.org/x/tools/cmd/goimports@latest
 //go:generate go install golang.org/x/lint/golint@latest
-//go:generate go install golang.org/x/tools/gopls@latest
 //go:generate go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 //go:generate go install github.com/fatih/gomodifytags@latest
 //go:generate go install golang.org/x/tools/cmd/gorename@latest
