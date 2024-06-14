@@ -35,9 +35,8 @@ apply = ["defer"]
 
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
-apply = ["fpath"]
-dir = "src"
-use = ["_clang-format", "_direnv", "_openssl", "_protoc"]
+apply = ["defer"]
+use = ["zsh-completions.plugin.zsh"]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
