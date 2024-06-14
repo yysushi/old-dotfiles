@@ -74,6 +74,7 @@ in
     kustomize
     lima
     lua
+    mise
     ngrep
     nil
     nixpkgs-fmt
