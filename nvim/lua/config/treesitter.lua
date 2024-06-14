@@ -12,6 +12,7 @@ treesitter.setup({
     "html",
     "java",
     "javascript",
+    "jinja2",
     "jsonnet",
     "lua",
     "markdown",

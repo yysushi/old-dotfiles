@@ -21,3 +21,8 @@ vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   group = vimrcgroup,
   command = 'setf markdown',
 })
+vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+  pattern = '*.j2',
+  group = vimrcgroup,
+  command = 'setf jinja2',
+})
