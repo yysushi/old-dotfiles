@@ -38,6 +38,7 @@ in
     bitwarden-cli
     buf-language-server
     cargo
+    cfssl
     cue
     cuelsp
     cmake
