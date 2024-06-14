@@ -78,3 +78,6 @@ github = "Azure/azure-cli"
 branch = "dev"
 use = ["az.completion"]
 apply = ["defer"]
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"
