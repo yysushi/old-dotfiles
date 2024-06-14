@@ -34,6 +34,7 @@ in
     azure-cli
     bash
     bazel
+    biome
     bitwarden-cli
     buf-language-server
     cargo

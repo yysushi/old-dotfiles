@@ -60,6 +60,7 @@ vim.g.ale_cpp_clangformat_options = '-style=google'
 vim.g.ale_completion_enabled = 0
 vim.g.ale_detail_to_floating_preview = 1
 vim.g.ale_floating_window_border = {'│', '─', '┌', '┐', '┘', '└', '│', '─'}
+vim.g.ale_biome_options = '--config-path=$HOME/.config/biome'
 
 vim.g.ale_disable_lsp = 1
 vim.g.ale_echo_cursor = 1

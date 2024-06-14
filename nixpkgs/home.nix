@@ -73,6 +73,7 @@ in
       ".config/pet/snippet.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/pet/snippet.toml";
       ".lima/default/lima.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/lima.yaml";
       ".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
+      ".config/biome".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/biome";
       # fetch configs/scripts remotely
       "${config.xdg.dataHome}/repos/github.com/alacritty/alacritty-theme".source = pkgs.fetchFromGitHub {
         owner = "alacritty";
