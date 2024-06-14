@@ -14,5 +14,5 @@ local vimrcgroup = vim.api.nvim_create_augroup('vimrc', { clear = false })
 vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
   pattern = '*.js',
   group = vimrcgroup,
-  command = 'set shiftwidth=2',
+  command = 'set shiftwidth=4 expandtab',
 })
