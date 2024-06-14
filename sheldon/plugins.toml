@@ -17,6 +17,12 @@ path = 'path=( "{{ dir }}" $path )'
 fpath = 'fpath=( "{{ dir }}" $fpath )'
 nop = 'true'
 
+[plugins.bashcompinit]
+inline = "autoload bashcompinit && zsh-defer bashcompinit"
+
+[plugins.compinit]
+inline = "autoload -Uz compinit && zsh-defer compinit"
+
 [plugins.agkozak-zsh-prompt]
 github = "agkozak/agkozak-zsh-prompt"
 use = ["*.zsh"]
@@ -82,9 +88,3 @@ github = "Azure/azure-cli"
 branch = "dev"
 use = ["az.completion"]
 apply = ["defer"]
-
-[plugins.bashcompinit]
-inline = "autoload bashcompinit && zsh-defer bashcompinit"
-
-[plugins.compinit]
-inline = "autoload -Uz compinit && zsh-defer compinit"
