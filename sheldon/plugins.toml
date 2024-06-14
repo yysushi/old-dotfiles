@@ -65,13 +65,5 @@ github = "brennanfee/tmux-paste"
 use = ["readme.md"]
 apply = ["nop"]
 
-# completions by nixpkgs won't work?
-# https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/admin/azure-cli/default.nix
-[plugins.azure-cli]
-github = "Azure/azure-cli"
-branch = "dev"
-use = ["az.completion"]
-apply = ["defer"]
-
 [plugins.compinit]
 inline = "autoload -Uz compinit && zsh-defer compinit"
