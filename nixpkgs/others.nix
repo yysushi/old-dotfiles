@@ -114,6 +114,7 @@ in
     yarn
     yubikey-manager
     yq-go
+    zoxide
   ] ++ (with pkgsUnstable;[
     buf
     sqlc

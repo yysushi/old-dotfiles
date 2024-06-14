@@ -22,5 +22,4 @@
       . "${config.home.homeDirectory}/.dotfiles/agkozak_prompt.zsh"
     '';
   };
-  programs.zoxide.enable = true;
 }

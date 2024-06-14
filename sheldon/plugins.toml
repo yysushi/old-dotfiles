@@ -58,7 +58,7 @@ use = ["{git}.zsh"]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
 dir = "plugins"
-use = ["{git,rust}/*.plugin.zsh"]
+use = ["{git,rust,zoxide}/*.plugin.zsh"]
 
 [plugins.zchee-zsh-completions]
 github = "zchee/zsh-completions"
