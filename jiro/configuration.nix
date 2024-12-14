@@ -135,6 +135,8 @@
       "SpellcheckEnabled" = true;
       "SpellcheckLanguage" = [ "en-US" ];
     };
+    defaultSearchProviderEnabled = true;
+    # defaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
