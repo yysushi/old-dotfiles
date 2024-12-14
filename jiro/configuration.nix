@@ -122,6 +122,14 @@
   # to enroll, execute `fprintd-enroll`
   services.fprintd.enable = true;
 
+  # chromium
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      "nngceckbapebfimnlniiiahkandclblb"  # Bitwarden Password Manager
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
