@@ -100,9 +100,6 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -113,6 +110,8 @@
   #  wget
      vim  # added without git management
      git
+
+     chromium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
