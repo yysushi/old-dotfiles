@@ -1,0 +1,21 @@
+
+left swipe
+https://discourse.nixos.org/t/configuring-touchegg/29905/2
+
+wezterm
+
+nightly neovim
+
+clipboard
+
+sway, wayland
+
+ghostty
+
+slack, discord
+
+VM
+
+zsh
+
+merge with existing configurations
