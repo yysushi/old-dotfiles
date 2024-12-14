@@ -128,6 +128,13 @@
     extensions = [
       "nngceckbapebfimnlniiiahkandclblb"  # Bitwarden Password Manager
     ];
+    extraOpts = {
+      "BrowserSignin" = 0;
+      "SyncDisabled" = true;
+      "PasswordManagerEnabled" = false;
+      "SpellcheckEnabled" = true;
+      "SpellcheckLanguage" = [ "en-US" ];
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
