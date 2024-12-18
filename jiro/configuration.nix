@@ -110,26 +110,7 @@
   #  wget
      vim  # added without git management
      git
-
-     chromium
   ];
-
-  # chromium
-  programs.chromium = {
-    enable = true;
-    extensions = [
-      "nngceckbapebfimnlniiiahkandclblb"  # Bitwarden Password Manager
-    ];
-    extraOpts = {
-      "BrowserSignin" = 0;
-      "SyncDisabled" = true;
-      "PasswordManagerEnabled" = false;
-      "SpellcheckEnabled" = true;
-      "SpellcheckLanguage" = [ "en-US" ];
-    };
-    defaultSearchProviderEnabled = true;
-    # defaultSearchProviderSearchURL = "https://duckduckgo.com/?q={searchTerms}";
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

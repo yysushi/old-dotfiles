@@ -23,6 +23,7 @@
 
         xremap-flake.nixosModules.default
 
+        ./chromium.nix
         ./fprintd.nix
       ];
     };
