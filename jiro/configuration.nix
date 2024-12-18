@@ -55,19 +55,6 @@
     variant = "";
   };
 
-  # Keymap using xremap
-  services.xremap = {
-    config = {
-      modmap = [
-        {
-          name = "Global";
-          # remap = { "CapsLock" = "Control"; };
-          remap = { "CapsLock" = "Control_L"; };
-        }
-      ];
-    };
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
