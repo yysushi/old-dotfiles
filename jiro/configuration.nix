@@ -112,15 +112,7 @@
      git
 
      chromium
-
-     usbutils
-
-     fprintd
   ];
-
-  # to check device, execute `lsusb | grep -i finger`
-  # to enroll, execute `fprintd-enroll`
-  services.fprintd.enable = true;
 
   # chromium
   programs.chromium = {

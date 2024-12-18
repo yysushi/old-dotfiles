@@ -22,6 +22,8 @@
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
 
         xremap-flake.nixosModules.default
+
+        ./fprintd.nix
       ];
     };
   };
