@@ -97,7 +97,12 @@
   #  wget
      vim  # added without git management
      git
+
+     usbutils
+     fprintd
   ];
+
+  services.fprintd.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

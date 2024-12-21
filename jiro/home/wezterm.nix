@@ -1,0 +1,4 @@
+{ wezterm-flake, ... }:
+
+{
+}
