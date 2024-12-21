@@ -7,10 +7,10 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    xremap-flake.url = "github:xremap/nix-flake";
+    xremap.url = "github:xremap/nix-flake";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, xremap-flake, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, xremap, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.jiro = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -21,7 +21,7 @@
 
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
 
-        xremap-flake.nixosModules.default
+        xremap.nixosModules.default
         ./xremap.nix
 
         ./chromium.nix
