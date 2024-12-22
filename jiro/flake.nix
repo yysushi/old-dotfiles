@@ -8,12 +8,16 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     wezterm-flake.url = "github:wez/wezterm?dir=nix";
     xremap-flake.url = "github:xremap/nix-flake";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, wezterm-flake, xremap-flake, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nur, wezterm-flake, xremap-flake, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.jiro = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -24,12 +28,16 @@
         (import ./xremap.nix inputs)
         ./chromium.nix
 
+        nur.modules.nixos.default
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = inputs // { username = "yysushi"; };
-          home-manager.users.yysushi = import ./home;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = inputs // { username = "yysushi"; };
+            users.yysushi = import ./home;
+            sharedModules = [ nur.modules.homeManager.default ];
+          };
         }
       ];
     };
