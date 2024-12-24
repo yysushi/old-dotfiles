@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  # home.packages = with pkgs; [
-  #   chromium 
-  # ];
   environment.systemPackages = with pkgs; [
      chromium
   ];

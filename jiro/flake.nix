@@ -26,7 +26,6 @@
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
 
         (import ./xremap.nix inputs)
-        ./chromium.nix
 
         nur.modules.nixos.default
         home-manager.nixosModules.home-manager
