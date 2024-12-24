@@ -8,9 +8,19 @@
         isDefault = true;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
-          # multi-account-containers
           ublock-origin
+          privacy-badger
+          clearurls
+          decentraleyes
+          multi-account-containers
+          duckduckgo-privacy-essentials
         ];
+        settings = {
+          "privacy.donottrackheader.enabled" = true;
+          "privacy.trackingprotection.enabled" = true;
+          "privacy.trackingprotection.socialtracking.enabled" = true;
+          "browser.contentblocking.report.lockwise.enabled" = false;
+        };
       };
     };
   };
