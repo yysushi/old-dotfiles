@@ -42,19 +42,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -74,8 +61,17 @@
     #media-session.enable = true;
   };
 
-  # Enable for sway in home-manager
-  security.polkit.enable = true;
+  # # Enable for sway in home-manager
+  # security.polkit.enable = true;
+  # Enable the gnome-keyring secrets vault. 
+  # Will be exposed through DBus to programs willing to store secrets.
+  services.gnome.gnome-keyring.enable = true;
+
+  # enable sway window manager
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -88,6 +84,7 @@
     packages = with pkgs; [
     #  thunderbird
       livecaptions
+      # alacritty
     ];
   };
 
@@ -104,6 +101,13 @@
 
      usbutils
      fprintd
+
+     # sway
+
+     grim # screenshot functionality
+     slurp # screenshot functionality
+     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+     mako # notification system developed by swaywm maintainer
   ];
 
   services.fprintd.enable = true;

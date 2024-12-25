@@ -3,7 +3,7 @@
   imports = [
     ./firefox.nix
     ./wezterm.nix
-    ./sway.nix
+    # ./sway.nix
   ];
 
   # todo
