@@ -1,14 +1,22 @@
 { ... }:
 {
+  programs = {
+    foot = {
+      enable = true;
+    };
+  };
   wayland.windowManager.sway = {
     enable = true;
-    config = rec {
+    # https://github.com/NixOS/nixpkgs/issues/128469
+    package = null;
+    config = {
       modifier = "Mod4";
-      # Use kitty as default terminal
-      terminal = "kitty"; 
+      # terminal = "wezterm";
+      terminal = "foot";
       startup = [
-        # Launch Firefox on start
+        # {command = "wezterm";}
         {command = "firefox";}
+        {command = "foot";}
       ];
     };
   };

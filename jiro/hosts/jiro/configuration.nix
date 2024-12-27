@@ -67,7 +67,7 @@
   # Will be exposed through DBus to programs willing to store secrets.
   services.gnome.gnome-keyring.enable = true;
 
-  # enable sway window manager
+  # Enable sway window manager
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
@@ -101,8 +101,6 @@
 
      usbutils
      fprintd
-
-     # sway
 
      grim # screenshot functionality
      slurp # screenshot functionality
