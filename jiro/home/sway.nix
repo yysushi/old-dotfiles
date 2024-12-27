@@ -4,6 +4,9 @@
     foot = {
       enable = true;
     };
+    swaylock = {
+      enable = true;
+    };
   };
   wayland.windowManager.sway = {
     enable = true;
@@ -19,5 +22,14 @@
         {command = "foot";}
       ];
     };
+    extraConfig = ''
+      # swayfx
+      # corner_radius 5
+      corner_radius 10
+      # decoration {
+      #   corner_radius 10
+      # }
+      gaps inner 10
+    '';
   };
 }
