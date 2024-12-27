@@ -61,6 +61,8 @@
     #media-session.enable = true;
   };
 
+  programs.light.enable = true;
+
   # # Enable for sway in home-manager
   # security.polkit.enable = true;
   # Enable the gnome-keyring secrets vault. 
@@ -80,7 +82,7 @@
   users.users.yysushi = {
     isNormalUser = true;
     description = "yysushi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [
     #  thunderbird
       livecaptions
