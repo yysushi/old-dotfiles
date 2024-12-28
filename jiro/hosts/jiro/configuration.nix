@@ -69,10 +69,6 @@
   # Will be exposed through DBus to programs willing to store secrets.
   services.gnome.gnome-keyring.enable = true;
 
-  # Enable niri window manager
-  programs.niri = {
-    enable = true;
-  };
   stylix = {
     enable = true;
     image = ./nix-wallpaper-simple-red.png;
@@ -82,6 +78,7 @@
     # };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     autoEnable = false;
+    targets.niri.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
