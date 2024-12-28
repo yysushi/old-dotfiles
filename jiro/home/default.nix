@@ -6,6 +6,7 @@
     ./sway.nix
     ./alacritty.nix
     ./kitty.nix
+    ./niri
   ];
 
   # todo
