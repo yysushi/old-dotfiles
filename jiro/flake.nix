@@ -27,7 +27,7 @@
         ./hosts/jiro/configuration.nix
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
         niri-flake.nixosModules.niri
-        # stylix-flake.nixosModules.stylix
+        stylix-flake.nixosModules.stylix
 
         (import ./xremap.nix inputs)
 
@@ -41,7 +41,6 @@
             users.yysushi = import ./home;
             sharedModules = [
               nur.modules.homeManager.default
-              stylix-flake.homeManagerModules.stylix
             ];
           };
         }
