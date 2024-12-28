@@ -1,9 +1,12 @@
-{ username, ... }:
+{ username, niri-flake, ... }:
 {
   imports = [
     ./firefox.nix
     ./wezterm.nix
     ./sway.nix
+    ./niri.nix
+
+    niri-flake.homeModules.niri
   ];
 
   # todo
