@@ -13,18 +13,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     niri-flake.url = "github:sodiboo/niri-flake";
+    stylix-flake.url = "github:danth/stylix";
 
     wezterm-flake.url = "github:wez/wezterm?dir=nix";
     xremap-flake.url = "github:xremap/nix-flake";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nur, niri-flake, wezterm-flake, xremap-flake, ... }@inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nur, niri-flake, stylix-flake, wezterm-flake, xremap-flake, ... }@inputs: {
     # Please replace my-nixos with your hostname
     nixosConfigurations.jiro = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./hosts/jiro/configuration.nix
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
+        niri-flake.nixosModules.niri
+        stylix-flake.nixosModules.stylix
 
         (import ./xremap.nix inputs)
 
@@ -34,9 +37,12 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = inputs // { username = "yysushi"; niri-flake = niri-flake; };
+            extraSpecialArgs = inputs // { username = "yysushi"; };
             users.yysushi = import ./home;
-            sharedModules = [ nur.modules.homeManager.default ];
+            sharedModules = [
+              nur.modules.homeManager.default
+              # stylix-flake.homeManagerModules.stylix
+            ];
           };
         }
       ];

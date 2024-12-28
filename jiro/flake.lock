@@ -210,7 +210,7 @@
     "flake-utils": {
       "inputs": {
         "systems": [
-          "stylix",
+          "stylix-flake",
           "systems"
         ]
       },
@@ -360,7 +360,7 @@
     "home-manager_2": {
       "inputs": {
         "nixpkgs": [
-          "stylix",
+          "stylix-flake",
           "nixpkgs"
         ]
       },
@@ -899,7 +899,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
-        "stylix": "stylix",
+        "stylix-flake": "stylix-flake",
         "wezterm-flake": "wezterm-flake",
         "xremap-flake": "xremap-flake"
       }
@@ -925,7 +925,7 @@
         "type": "github"
       }
     },
-    "stylix": {
+    "stylix-flake": {
       "inputs": {
         "base16": "base16",
         "base16-fish": "base16-fish",
