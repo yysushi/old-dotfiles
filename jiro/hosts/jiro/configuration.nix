@@ -63,23 +63,13 @@
 
   programs.light.enable = true;
 
+  programs.niri.enable = true;
+
   # # Enable for sway in home-manager
   # security.polkit.enable = true;
   # Enable the gnome-keyring secrets vault. 
   # Will be exposed through DBus to programs willing to store secrets.
   services.gnome.gnome-keyring.enable = true;
-
-  stylix = {
-    enable = true;
-    image = ./nix-wallpaper-simple-red.png;
-    # image = pkgs.fetchurl {
-    #   url = "https://github.com/NixOS/nixos-artwork/blob/63f68a917f4e8586c5d35e050cdaf1309832272d/wallpapers/nix-wallpaper-simple-red.png";
-    #   sha256 = "+Txk3Ht+02C0r4oDYF+58BhC1MFkTnthgje5xS3Gsn4=";
-    # };
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-    autoEnable = false;
-    targets.niri.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
