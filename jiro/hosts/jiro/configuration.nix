@@ -2,6 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+# { config, pkgs, username, ... }:
 { config, pkgs, ... }:
 
 {
@@ -74,6 +75,12 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # services.xserver.enable = true;  # confusing..
+  # services.xserver.displayManager.lightdm = {
+  #   enable = true;
+  #   background = pkgs.nixos-artwork.wallpapers.simple-dark-gray-bottom.gnomeFilePath;
+  # };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yysushi = {
     isNormalUser = true;
@@ -96,6 +103,9 @@
   #  wget
      vim  # added without git management
      git
+     tig
+
+     pstree
 
      usbutils
      fprintd
@@ -107,9 +117,17 @@
 
      swaylock
      swaybg
+     fuzzel
+     waybar
   ];
 
   services.fprintd.enable = true;
+
+  services.getty = {
+    loginOptions = "-p -- yysushi";
+    extraArgs = [ "--noclear" "--skip-login" ];
+    # helpLine = "";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

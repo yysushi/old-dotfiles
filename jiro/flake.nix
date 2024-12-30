@@ -23,6 +23,7 @@
     nixosConfigurations.jiro = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        # (import ./hosts/jiro/configuration.nix (inputs // { username = "yysushi"; } ) )
         ./hosts/jiro/configuration.nix
         nixos-hardware.nixosModules.lenovo-thinkpad-x1-11th-gen
 

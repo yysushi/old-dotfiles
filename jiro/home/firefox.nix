@@ -14,6 +14,7 @@
           decentraleyes
           multi-account-containers
           duckduckgo-privacy-essentials
+          tab-session-manager
         ];
         settings = {
           "privacy.donottrackheader.enabled" = true;

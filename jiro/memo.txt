@@ -19,3 +19,6 @@ VM
 zsh
 
 merge with existing configurations
+
+
+https://nixos.wiki/wiki/Wayland https://discourse.nixos.org/t/wayland-sessions/4315/9 https://mynixos.com/nixpkgs/option/services.xserver.displayManager.session https://wiki.archlinux.org/title/LightDM https://github.com/CrazedProgrammer/nix/blob/b92589c2a6f7f7a50688c2d02194d85c10d3e273/pkgs/custom/sway-session.nix#L9 https://github.com/tejasag/nixos-configs/blob/035c4d46e2635586fde0adefa586b1a07c2ac5b7/modules/lightdm.nix#L5
