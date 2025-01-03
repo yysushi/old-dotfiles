@@ -125,12 +125,7 @@
      slack
      
      spotify
-     
-     # todo: make it daemon
-     xwayland-satellite
   ];
-
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
