@@ -75,6 +75,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  programs.xwayland.enable = false;  # use xwayland-satellite instead
+  services.xserver.enable = false;
   # services.xserver.enable = true;  # confusing..
   # services.xserver.displayManager.lightdm = {
   #   enable = true;
@@ -119,7 +121,22 @@
      swaybg
      fuzzel
      waybar
+     
+     slack
+     
+     spotify
+     
+     # todo: make it daemon
+     xwayland-satellite
   ];
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "slack"
+      "spotify"
+    ];
 
   services.fprintd.enable = true;
 
