@@ -20,7 +20,7 @@
   programs.home-manager.enable = true;
 
   home.file.".profile".source = pkgs.writeText "profile" ''
-    [ "$(tty)" = "/dev/tty1" ] && exec niri
+    [ "$(tty)" = "/dev/tty1" ] && exec niri-session -l
     # if [[ -z $WAYLAND_DISPLAY ]]; then
     #   XDG_RUNTIME_DIR=/run/user/$(id -u) exec niri
     # fi
