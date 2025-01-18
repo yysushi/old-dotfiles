@@ -137,7 +137,8 @@ layout {
 // '~' won't work
 // the cwd locates where niri lanched
 // spawn-at-startup "swaybg" "-i" "./Downloads/nix-wallpaper-simple-red.png" "-m" "fill"
-spawn-at-startup "swaybg" "-i" "./Downloads/nix-wallpaper-simple-dark-gray.png" "-m" "fill"
+// spawn-at-startup "swaybg" "-i" "./Downloads/nix-wallpaper-simple-dark-gray.png" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "./Downloads/nix-wallpaper-simple-blue.png" "-m" "fill"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
