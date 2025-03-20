@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 # { config, pkgs, username, ... }:
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -125,12 +125,17 @@
      slack
      
      spotify
+
+     calibre
+     unrar
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "slack"
       "spotify"
+      "calibre"
+      "unrar"
     ];
 
   services.fprintd.enable = true;
